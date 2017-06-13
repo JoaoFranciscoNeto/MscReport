@@ -16,16 +16,20 @@
 \contentsline {subsection}{\numberline {3.1.2}Exemplo de Tabela}{10}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Sec\IeC {\c c}\IeC {\~a}o Exemplo}{12}{section.3.2}
 \contentsline {section}{\numberline {3.3}Resumo e Conclus\IeC {\~o}es}{12}{section.3.3}
-\contentsline {chapter}{\numberline {4}Implementa\IeC {\c c}\IeC {\~a}o}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Sec\IeC {\c c}\IeC {\~a}o Exemplo}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mais uma Sec\IeC {\c c}\IeC {\~a}o}{13}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resumo ou Conclus\IeC {\~o}es}{14}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalho Futuro}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Satisfa\IeC {\c c}\IeC {\~a}o dos Objetivos}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalho Futuro}{16}{section.5.2}
-\contentsline {chapter}{References}{17}{section*.17}
-\contentsline {chapter}{\numberline {A}Loren Ipsum}{19}{appendix.A}
-\contentsline {section}{\numberline {A.1}O que \IeC {\'e} o \emph {Loren Ipsum}?}{19}{section.A.1}
-\contentsline {section}{\numberline {A.2}De onde Vem o Loren?}{19}{section.A.2}
-\contentsline {section}{\numberline {A.3}Porque se usa o Loren?}{20}{section.A.3}
-\contentsline {section}{\numberline {A.4}Onde se Podem Encontrar Exemplos?}{20}{section.A.4}
+\contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Technology}{16}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}OpenCV}{16}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}JavaCV}{16}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Architecture}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Sec\IeC {\c c}\IeC {\~a}o Exemplo}{17}{section.4.3}
+\contentsline {section}{\numberline {4.4}Mais uma Sec\IeC {\c c}\IeC {\~a}o}{17}{section.4.4}
+\contentsline {section}{\numberline {4.5}Resumo ou Conclus\IeC {\~o}es}{18}{section.4.5}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalho Futuro}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Satisfa\IeC {\c c}\IeC {\~a}o dos Objetivos}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalho Futuro}{20}{section.5.2}
+\contentsline {chapter}{References}{21}{section*.19}
+\contentsline {chapter}{\numberline {A}Loren Ipsum}{23}{appendix.A}
+\contentsline {section}{\numberline {A.1}O que \IeC {\'e} o \emph {Loren Ipsum}?}{23}{section.A.1}
+\contentsline {section}{\numberline {A.2}De onde Vem o Loren?}{23}{section.A.2}
+\contentsline {section}{\numberline {A.3}Porque se usa o Loren?}{24}{section.A.3}
+\contentsline {section}{\numberline {A.4}Onde se Podem Encontrar Exemplos?}{24}{section.A.4}

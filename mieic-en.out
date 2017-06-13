@@ -19,16 +19,20 @@
 \BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Exemplo de Tabela}{section.3.1}% 19
 \BOOKMARK [1][-]{section.3.2}{3.2 Sec\347\343o Exemplo}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.3}{3.3 Resumo e Conclus\365es}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{4 Implementa\347\343o}{}% 22
-\BOOKMARK [1][-]{section.4.1}{4.1 Sec\347\343o Exemplo}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.2}{4.2 Mais uma Sec\347\343o}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.3}{4.3 Resumo ou Conclus\365es}{chapter.4}% 25
-\BOOKMARK [0][-]{chapter.5}{5 Conclus\365es e Trabalho Futuro}{}% 26
-\BOOKMARK [1][-]{section.5.1}{5.1 Satisfa\347\343o dos Objetivos}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.2}{5.2 Trabalho Futuro}{chapter.5}% 28
-\BOOKMARK [0][-]{section*.17}{References}{}% 29
-\BOOKMARK [0][-]{appendix.A}{A Loren Ipsum}{}% 30
-\BOOKMARK [1][-]{section.A.1}{A.1 O que \351 o Loren Ipsum?}{appendix.A}% 31
-\BOOKMARK [1][-]{section.A.2}{A.2 De onde Vem o Loren?}{appendix.A}% 32
-\BOOKMARK [1][-]{section.A.3}{A.3 Porque se usa o Loren?}{appendix.A}% 33
-\BOOKMARK [1][-]{section.A.4}{A.4 Onde se Podem Encontrar Exemplos?}{appendix.A}% 34
+\BOOKMARK [0][-]{chapter.4}{4 Implementation}{}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Technology}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 OpenCV}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 JavaCV}{section.4.1}% 25
+\BOOKMARK [1][-]{section.4.2}{4.2 Architecture}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{4.3 Sec\347\343o Exemplo}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.4}{4.4 Mais uma Sec\347\343o}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.5}{4.5 Resumo ou Conclus\365es}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{5 Conclus\365es e Trabalho Futuro}{}% 30
+\BOOKMARK [1][-]{section.5.1}{5.1 Satisfa\347\343o dos Objetivos}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.2}{5.2 Trabalho Futuro}{chapter.5}% 32
+\BOOKMARK [0][-]{section*.19}{References}{}% 33
+\BOOKMARK [0][-]{appendix.A}{A Loren Ipsum}{}% 34
+\BOOKMARK [1][-]{section.A.1}{A.1 O que \351 o Loren Ipsum?}{appendix.A}% 35
+\BOOKMARK [1][-]{section.A.2}{A.2 De onde Vem o Loren?}{appendix.A}% 36
+\BOOKMARK [1][-]{section.A.3}{A.3 Porque se usa o Loren?}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.4}{A.4 Onde se Podem Encontrar Exemplos?}{appendix.A}% 38

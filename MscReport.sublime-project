@@ -8,6 +8,10 @@
 	
 	"settings": {
 		"TEXroot": "mieic-en.tex"
-	}
-
+	},
+	"file_exclude_patterns":
+	[
+		"*.gz",
+		"*.aux"
+	]
 }
