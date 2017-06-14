@@ -21,8 +21,7 @@ It is expected that this chapter provides some insight on how the theoretical ba
 
 \section{Technology}
 
-\todo{Introduzir tecnologias}
-
+In order to build this project we needed both a library of already implemented computer vision algorithms as well as a simple way to retrieve frames from both video streams and files. This section describes what were the chosen technologies including a brief description and why it was chosen.
 
 \subsection{OpenCV}
 OpenCV is a library composed of implementations of useful computer vision algorithms implementation, widely used across the industry and academy. It has interfaces for multiple programming languages, like C++, Java and Python, but is natively written in C++ in order to take advantage of low level performance enhancements, as performance is an important factor in real time computer vision applications.
@@ -60,7 +59,6 @@ The analytics module was designed to comply with the following specifications, i
 	\item Process a large number of video inputs at the same time
 	\item Receive input from streams or files
 	\item Specify which analysis are to be run on a specific video
-	\item
 \end{itemize}
 \todo{Mais requirements?}
 
@@ -70,12 +68,51 @@ The project main thread runs an instance of the AnalyticsManager class that impl
 
 \todo{Sera relevante?}
 Camaras sao o principal ator
+
 Videos (streams e ficheiros) estao associados a uma camara
 
 
 \section{Segmentation}
 
-This section describes what were the steps taken in order to segment the image according to our needs, separating the moving actors 
+This section describes how the segmentation of the received images is performed, and how it returns a foreground mask representing the moving areas of the scene, specifying through what processors and filters it is passed through. \todo{Overview do processo?}
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.95\textwidth]{bgsub_01}
+    \caption{Background Subtraction - Background Model}
+    \label{fig:bgsub_01}
+  \end{center}
+\end{figure}
+
+In ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame\todo{Explain masking process} in order to prevent uninteresting regions of the image from even making it into the Background Subtracter. This solves an issue where moving or changing regions of the image outside our region of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
+
+The next step of the Segmentation process is to feed the masked frames into a Background Subtraction algorithm that will use them to update its internal representation of the scene. This project uses the OpenCV implementation of the Mixture of Gaussians algorithm that allows the user to tune:
+
+\begin{itemize}
+	\item Number of past frames considered on the background calculation
+	\item Threshold value from which a pixel is considered to be foreground, compared to the difference between its current value and the one from the background model
+	\item Learning rate of the algorithm, how much each new frame influences the model
+\end{itemize}
+
+After updating the background model we can retrieve from the Background Subtracter its foreground mask, a rough representation that is calculated by subtracting the background model from the current image and thresholding it, thus returning only the pixels where the difference is significant enough.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.95\textwidth]{bgsub_03}
+    \caption{Background Subtraction - Foreground Mask}
+    \label{fig:bgsub_02}
+  \end{center}
+\end{figure}
+
+As we can see in the middle image of figure ~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image, a squared erosion filter to remove the small speckles that appear in the mask, followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
+
+\section{Utility}
+
+\subsection{Video Wall}
+
+\subsection{Image Processors}
 
 \section{Secção Exemplo}
 
