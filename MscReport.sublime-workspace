@@ -8,16 +8,16 @@
 	"buffers":
 	[
 		{
-			"file": "chapter4.tex",
+			"file": "myrefs.bib",
 			"settings":
 			{
-				"buffer_size": 3936,
+				"buffer_size": 3969,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -65,27 +65,51 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				""
+				"Traditional"
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Traditional",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "Package Control: inst",
+		"height": 127.0,
+		"last_filter": "clear ca",
 		"selected_items":
 		[
 			[
+				"clear ca",
+				"LaTeXTools: Clear current bibliography cache"
+			],
+			[
+				"clear b",
+				"LaTeXTools: Clear current bibliography cache"
+			],
+			[
+				"bib",
+				"LaTeXTools: Clear current bibliography cache"
+			],
+			[
+				"latex",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
 				"Package Control: inst",
 				"Package Control: Install Package"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
 			]
 		],
-		"width": 400.0
+		"width": 432.0
 	},
 	"console":
 	{
-		"height": 51.0,
+		"height": 399.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
@@ -106,8 +130,24 @@
 	],
 	"file_history":
 	[
+		"/C/Users/JoaoNeto/Downloads/1_Relatorio/1_Relatorio/3_TemplRelatLaTex (2)/mieic-distrib/myrefs.bib",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/mieic-en.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/feupteses.sty",
 		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter1.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/appendix1.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/abbrevs_en.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter4.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter2.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter3.tex",
 		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter4.aux",
+		"/C/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/chapter1.aux",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/mieic-en.aux",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/mieic.tex",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/MscReport.sublime-project",
+		"/C/Program Files/Sublime Text 3/Packages/Default.sublime-package",
+		"/C/Users/JoaoNeto/AppData/Roaming/Sublime Text 3/Packages/User/vocabulary.txt",
+		"/C/Users/JoaoNeto/Desktop/1_Relatorio/3_TemplRelatLaTex (2)/MscReport/pdis.pdf",
 		"/C/Users/JoaoNeto/Desktop/Listagem.txt",
 		"/C/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty",
 		"/C/Users/JoaoNeto/Downloads/1_Relatorio/1_Relatorio/3_TemplRelatLaTex (2)/mieic-distrib/feupteses.sty",
@@ -116,13 +156,15 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 96.0,
 		"where_history":
 		[
+			"C:\\Users\\JoaoNeto\\Desktop\\1_Relatorio\\3_TemplRelatLaTex (2)\\MscReport",
+			"<open folders>"
 		]
 	},
 	"find_state":
@@ -130,6 +172,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"PrintBib",
+			"W3C",
+			"myrefs",
+			"\\svgcite",
+			"cite",
+			"~\\cite",
+			"kn:Fra",
+			"cite.kn",
+			"kn:",
+			"'cite{kn:'*'}'",
+			"\"cite{kn:\"*\"}\"",
+			"cite{kn:*}",
+			"cite",
+			"kn",
+			"kn:batik",
+			"\\cite",
+			"cite",
+			"myrefs",
+			"kn:batik",
+			"myrefs",
+			"bibliography",
+			"subsection",
+			"src:ma",
+			"todo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -137,6 +203,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"cite"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -152,27 +219,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "chapter4.tex",
+					"file": "myrefs.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3936,
+						"buffer_size": 3969,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								55,
-								55
+								175,
+								175
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -183,7 +252,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -218,13 +287,13 @@
 	},
 	"output.latextools":
 	{
-		"height": 284.0
+		"height": 203.0
 	},
 	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "MscReport.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -1,3 +1,5 @@
+%!TEX root = mieic-en.tex
+
 \chapter{Implementation}\label{chap:chap4}
 \listoftodos
 \section*{}
@@ -13,20 +15,41 @@ capítulo ou pode constituir um capítulo separado.
 }
 
 
-As previously stated, the work done for this project will consist of a module for the "Video Server" being developed by LIACC, that will perform all the required analytics of the video received. This chapter provides the details of the implementation of this module, developed during the dissertation semester between February and June 2017. Tasks performed involved designing an appropriate architecture, able to scale with the project, treating the images received from the video streams to detect events and extract information.
+As previously stated, the work done for this project consists of a module for the "Video Server" being developed by LIACC, that will perform all the required analytics of the video received. This chapter provides the details of the implementation of this module, developed during the dissertation semester between February and June 2017. Tasks performed involved designing an appropriate architecture, able to scale with the project, treating the images received from the video streams to detect events and extract information. 
 
 It is expected that this chapter provides some insight on how the theoretical backgrounds presented before were used during the project development, namely phase 2 and 3 of the presented project planning\missingfigure{Project Planning}. Phase 2 focused on the detection of relevant events to the traffic controller such as suspicious approximation to the camera, intrusion in prohibited areas, fallen objects on the road and wrong way travelling, while phase 3 aimed to count and classify vehicles in both urban and high-way scenarios.
 
 \section{Technology}
 
+\todo{Introduzir tecnologias}
+
+
 \subsection{OpenCV}
-OpenCV is a library composed of implementations of useful computer vision algorithms implementation, widely used across the industry and academy. It has interfaces for multiple programming languages, C++, Java and Python, but is natively written in C++ in order to take advantage of low level performance enhancements, as performance is an important factor in real time computer vision applications.
-The library contains over 2500 algorithms ranging from the more basic image processing such as filtering, morphology operators and geometric transformations to more complex ones that are able to, among others, compare images, track features and camera movements and recognize faces. Along with the image processing capabilities OpenCV also ships with interfaces to stereo cameras such as Kinect that allow users to retrieve a cloud of 3D points and a depth map from the captured image. This was the chosen library as there are researchers at LIACC that had already worked with it and provided invaluable guidance during the various development stages.
+OpenCV is a library composed of implementations of useful computer vision algorithms implementation, widely used across the industry and academy. It has interfaces for multiple programming languages, like C++, Java and Python, but is natively written in C++ in order to take advantage of low level performance enhancements, as performance is an important factor in real time computer vision applications.
+
+The library contains over 2500 algorithms ranging from the more basic image processing such as filtering, morphology operators and geometric transformations to more complex ones that are able to, among others, compare images, track features and camera movements and recognize faces. Along with the image processing capabilities OpenCV also ships with interfaces to stereo cameras such as Kinect that allow users to retrieve a cloud of 3D points and a depth map from the captured image. This was the chosen library as there existed already previous work at LIACC using it, which could be leveraged for this project.
 
 \subsection{JavaCV}
-JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP Presets, a project that provides Java interfaces for commonly used C++ libraries, such as OpenCV and FFmpeg, the ones we are using, as well as CUDA, ARToolKitPlus and others. It provides access to all the functionalities of OpenCV inside a Java environment, and was the chosen solution as there was already experience inside LIACC working with this technology.
+JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP Presets, a project that provides Java interfaces for commonly used C++ libraries, such as OpenCV and FFmpeg\todo{Adicionar referencias}, the ones we are using, as well as CUDA, ARToolKitPlus and others. It provides access to all the functionalities of OpenCV inside a Java environment, and was the chosen solution as there was already experience inside LIACC working with this technology.
+
+\subsection{FFmpeg}
+FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations on videos in all the well known video formats, across a large number of platforms. It is used in the "Video Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same methods.
+
+\begin{lstlisting}[float,language=Java, label=src:ffmpegframegrabber, caption=FFmpegFrameGrabber usage example] 
+
+// videopath can be either a stream path or a file path
+FFmpegFrameGrabber _frameGrabber = FFmpegFrameGrabber.createDefault(videopath);
+Frame currentFrame = null;
+
+while( (currentFrame = _frameGrabber.grabImage()) != null) {
+	// Use grabbed frame
+}
+
+\end{lstlisting}
 
 \section{Architecture}
+
+\subsection{Implementation Architecture}
 
 \missingfigure{Diagrama Arquitetura}
 
@@ -41,7 +64,18 @@ The analytics module was designed to comply with the following specifications, i
 \end{itemize}
 \todo{Mais requirements?}
 
-The project main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video, information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into it's representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawbacks of this solution are that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
+The project main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video, information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into its representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawbacks of this solution are that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
+
+\subsection{Database}
+
+\todo{Sera relevante?}
+Camaras sao o principal ator
+Videos (streams e ficheiros) estao associados a uma camara
+
+
+\section{Segmentation}
+
+This section describes what were the steps taken in order to segment the image according to our needs, separating the moving actors 
 
 \section{Secção Exemplo}
 
@@ -63,7 +97,7 @@ Proin vestibulum ligula a purus. Maecenas a nulla.
 Maecenas mattis est vitae neque auctor tempus. Etiam nulla dui,
 mattis vitae, porttitor sed, aliquet ut, enim. Cras nisl magna,
 aliquet et, laoreet at, gravida ac, neque. Sed id est. Nulla dapibus
-dolor quis ipsum rhoncus cursus. 
+dolor quis ipsum rhoncus cursus.
 
 \section{Mais uma Secção}
 
