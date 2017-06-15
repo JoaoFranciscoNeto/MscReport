@@ -35,7 +35,6 @@ JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP 
 FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations on videos in all the well known video formats, across a large number of platforms. It is used in the "Video Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same methods.
 
 \begin{lstlisting}[float,language=Java, label=src:ffmpegframegrabber, caption=FFmpegFrameGrabber usage example] 
-
 // videopath can be either a stream path or a file path
 FFmpegFrameGrabber _frameGrabber = FFmpegFrameGrabber.createDefault(videopath);
 Frame currentFrame = null;
@@ -43,7 +42,6 @@ Frame currentFrame = null;
 while( (currentFrame = _frameGrabber.grabImage()) != null) {
 	// Use grabbed frame
 }
-
 \end{lstlisting}
 
 \section{Architecture}
@@ -85,7 +83,7 @@ This section describes how the segmentation of the received images is performed,
   \end{center}
 \end{figure}
 
-In ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame\todo{Explain masking process} in order to prevent uninteresting regions of the image from even making it into the Background Subtracter. This solves an issue where moving or changing regions of the image outside our region of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
+In ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame \todo{Explain masking process} in order to prevent uninteresting regions of the image from being processed the Background Subtracter. This solves an issue where moving or changing regions of the image outside our region of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
 
 The next step of the Segmentation process is to feed the masked frames into a Background Subtraction algorithm that will use them to update its internal representation of the scene. This project uses the OpenCV implementation of the Mixture of Gaussians algorithm that allows the user to tune:
 
@@ -106,7 +104,27 @@ After updating the background model we can retrieve from the Background Subtract
   \end{center}
 \end{figure}
 
-As we can see in the middle image of figure ~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image, a squared erosion filter to remove the small speckles that appear in the mask, followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
+As we can see in the middle image of figure~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image, a squared erosion filter to remove the small speckles that appear in the mask, followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
+
+\section{Object Detection}
+
+When we have a foreground mask clean of noise and with solid regions we proceed to detect them and retrieve their position and size from the mask. \missingfigure{Deteçao dos Objetos}
+
+OpenCV provides BlobDetector, a family of functions that retrieve information of blobs in an image. It works by thresholding the image into multiple binary images using a range of threshold values, grouping the connected white pixels at each one of these images in binary blobs and then merging blobs that are close enough to each other into larger blobs.
+
+This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a region size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
+
+\section{Object Tracking}
+\missingfigure{Tracking dos Objetos}
+
+In order for the solution to correctly analyse  the objects of the scene it needs to track them during their lifetime, in other words, establish a relation between the objects identified on a frame with the objects identified in the next frame.
+
+This is done iterating through each one of the new objects and finding which existing object is closer to him. If the distance between them is smaller than the size of the existing object then they are matched. To enhance this mechanism a sub-set of the state machine presented \todo{Referenciar artigo da state machine} which allows us to model the life cycle of an object. 
+
+% State machine
+
+
+% Velocity prediction
 
 \section{Utility}
 
