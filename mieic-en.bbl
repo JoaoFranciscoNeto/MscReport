@@ -1,8 +1,58 @@
-\begin{thebibliography}{SS01}
+\begin{thebibliography}{ACM12}
+
+\bibitem[ACM12]{acm_2012_2012}
+ACM.
+\newblock The 2012 {{ACM Computing Classification System}} \textemdash{}
+  {{Association}} for {{Computing Machinery}}, 2012.
+
+\bibitem[Aya98]{ayache_medical_1998}
+N.~Ayache.
+\newblock Medical image analysis a challenge for computer vision research.
+\newblock In {\em Proceedings. {{Fourteenth International Conference}} on
+  {{Pattern Recognition}} ({{Cat}}. {{No}}.{{98EX170}})}, volume~2, pages
+  1255--1256 vol.2, August 1998.
+
+\bibitem[BT73]{binford_computer_1973-2}
+T.~O. Binford and J.~M. Tenenbaum.
+\newblock Computer vision.
+\newblock {\em Computer}, 6(5):19--24, May 1973.
+
+\bibitem[Dah17]{dahms_opencv_3_car_counting_cpp_2017}
+Chris Dahms.
+\newblock {{OpenCV}}\_3\_{{Car}}\_{{Counting}}\_{{Cpp}}, May 2017.
+
+\bibitem[DW84]{dickinson_image_1984}
+K.~W. Dickinson and R.~C. Waterfall.
+\newblock {{IMAGE PROCESSING APPLIED TO TRAFFIC}}, 1-{{A GENERAL REVIEW}}.
+\newblock {\em Traffic Engineering \& Control}, 25(1), January 1984.
+
+\bibitem[Hua96]{huang_computer_1996}
+T.~Huang.
+\newblock Computer {{Vision}} : {{Evolution And Promise}}, 1996.
+
+\bibitem[LB78]{l._baird_sight-i:_1978}
+Michael L.~Baird.
+\newblock {{SIGHT}}-{{I}}: {{A Computer Vision System}} for {{Automated IC Chip
+  Manufacture}}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics},
+  8(2):133--139, February 1978.
+
+\bibitem[Ope17a]{opencv_about_2017}
+OpenCV.
+\newblock About - {{OpenCV}} library, 2017.
+
+\bibitem[Ope17b]{opencv_opencv:_2017}
+OpenCV.
+\newblock {{OpenCV}}: Cv::{{SimpleBlobDetector Class Reference}}, 2017.
 
 \bibitem[SS01]{shapiro_computer_2001}
 Linda~G. Shapiro and George~C. Stockman.
 \newblock {\em Computer Vision}.
 \newblock {Prentice Hall}, Upper Saddle River, NJ, 2001.
+
+\bibitem[Sto80]{stout_computer_1980}
+K.~J. Stout.
+\newblock Computer vision and robots.
+\newblock {\em Production Engineer}, 59(4):9--, April 1980.
 
 \end{thebibliography}

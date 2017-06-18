@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  15 JUN 2017 03:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  18 JUN 2017 18:47
 entering extended mode
 **C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
 (C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
@@ -1115,7 +1115,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
 
-<figures/uporto-feup.pdf, id=178, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=166, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 
 <use figures/uporto-feup.pdf>
@@ -1232,29 +1232,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 [16
 
 
+] (mieic-en.tdo)
+\tf@tdo=\write8
+\openout8 = `mieic-en.tdo'.
+
+ [1
+
 ]
 \openout2 = `chapter1.aux'.
 
- (chapter1.tex
-Chapter 1.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-
-Overfull \hbox (33.32182pt too wide) in paragraph at lines 29--35
-\T1/ptm/m/n/10.95 que pode ser con-sul-tada, en-tre muitas out-ras refer-ên-cia
-s bib-li-ográ-fi-cas in-ter-es-san-tescitekn:Tha01,kn:PP05. 
- []
-
-[1
+ (chapter1.tex [2
 
 
 ]
-Overfull \hbox (10.0213pt too wide) in paragraph at lines 83--85
-\T1/ptm/m/n/10.95 Apresenta a mo-ti-vação e enu-mera os ob-je-tivos do tra-balh
-o ter-mi-nando com um re-sumo das metodolo-
- []
-
-) [2] [3]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
+) [3]
 \openout2 = `chapter2.aux'.
 
  (chapter2.tex [4
@@ -1263,176 +1257,201 @@ o ter-mi-nando com um re-sumo das metodolo-
 
 ]
 Chapter 2.
-
-Overfull \hbox (30.64987pt too wide) in paragraph at lines 35--41
+[5]
+Overfull \hbox (30.64987pt too wide) in paragraph at lines 40--46
 \T1/ptm/m/n/10.95 ou di-re-itos de au-tor e está to-tal-mente doc-u-men-tado, à
  semel-hança de out-ros W3C stan-dards citekn:svgdoc. 
  []
 
-[5]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
- [6]) [7]
+) [6]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [8
+ (chapter3.tex
+Chapter 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+[7
 
 
 
 ]
-Chapter 3.
-[9]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 53.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 58.
 
-<figures/puzzle.png, id=387, 915.42pt x 352.31625pt>
+<figures/puzzle.png, id=407, 915.42pt x 352.31625pt>
 File: figures/puzzle.png Graphic file (type png)
  <use figures/puzzle.png>
-Package pdftex.def Info: figures/puzzle.png used on input line 63.
+Package pdftex.def Info: figures/puzzle.png used on input line 66.
 (pdftex.def)             Requested size: 367.04082pt x 141.26268pt.
 
-Underfull \hbox (badness 3525) in paragraph at lines 98--98
+Underfull \hbox (badness 3525) in paragraph at lines 101--101
 []\T1/ptm/m/it/10.95 Architecture-Neutral Dis-tri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 []\T1/ptm/m/it/10.95 Application Pro-gram-ming
  []
 
-[10 <./figures/puzzle.png>]
+[8 <./figures/puzzle.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 155.
- [11]) [12]
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 158.
+ [9]) [10]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 4.
-[13
+<figures/proj_plan_02.png, id=426, 917.4275pt x 270.00874pt>
+File: figures/proj_plan_02.png Graphic file (type png)
+
+<use figures/proj_plan_02.png>
+Package pdftex.def Info: figures/proj_plan_02.png used on input line 27.
+(pdftex.def)             Requested size: 405.45047pt x 119.32744pt.
+ [11
 
 
 
-] [14
-
-] (mieic-en.tdo)
-\tf@tdo=\write8
-\openout8 = `mieic-en.tdo'.
-
+ <./figures/proj_plan_02.png>]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 20.
-
-Underfull \vbox (badness 3861) has occurred while \output is active []
-
- [15]
-[16] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+ine 46.
+ [12]
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 37.
-LaTeX Font Info:    Try loading font information for T1+pcrs on input line 37.
+nput line 53.
+LaTeX Font Info:    Try loading font information for T1+pcrs on input line 53.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\courier-scaled\t1pcrs.fd"
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 )
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 37.
+(Font)              scaled to size 8.54997pt on input line 53.
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 38.
+(Font)              scaled to size 7.59998pt on input line 54.
 LaTeX Font Info:    Font shape `T1/pcrs/m/it' in size <9> not available
-(Font)              Font shape `T1/pcrs/m/sl' tried instead on input line 38.
+(Font)              Font shape `T1/pcrs/m/sl' tried instead on input line 54.
 LaTeX Font Info:    Font shape `T1/pcrs/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 38.
+(Font)              scaled to size 8.54997pt on input line 54.
 LaTeX Font Info:    Font shape `T1/pcrs/bx/n' in size <9> not available
-(Font)              Font shape `T1/pcrs/b/n' tried instead on input line 40.
+(Font)              Font shape `T1/pcrs/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 40.
+(Font)              scaled to size 8.54997pt on input line 56.
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 45.
- [17]
-<figures/bgsub_01.png, id=458, 746.79pt x 287.57437pt>
+(Font)              scaled to size 10.40245pt on input line 61.
+
+<figures/ManagerArch.png, id=442, 694.595pt x 329.23pt>
+File: figures/ManagerArch.png Graphic file (type png)
+
+<use figures/ManagerArch.png>
+Package pdftex.def Info: figures/ManagerArch.png used on input line 70.
+(pdftex.def)             Requested size: 405.45047pt x 192.18431pt.
+ [13 <./figures/ManagerArch.png>]
+<figures/bgsub_01.png, id=460, 746.79pt x 287.57437pt>
 File: figures/bgsub_01.png Graphic file (type png)
 
 <use figures/bgsub_01.png>
-Package pdftex.def Info: figures/bgsub_01.png used on input line 80.
+Package pdftex.def Info: figures/bgsub_01.png used on input line 96.
 (pdftex.def)             Requested size: 405.45047pt x 156.13034pt.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-[18 <./figures/bgsub_01.png>]
-<figures/bgsub_03.png, id=465, 1115.66812pt x 295.1025pt>
+ [14 <./figures/bgsub_01.png>]
+<figures/bgsub_03.png, id=467, 1115.66812pt x 295.1025pt>
 File: figures/bgsub_03.png Graphic file (type png)
 
 <use figures/bgsub_03.png>
-Package pdftex.def Info: figures/bgsub_03.png used on input line 101.
+Package pdftex.def Info: figures/bgsub_03.png used on input line 117.
 (pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
- [19 <./figures/bgsub_03.png>]
-Overfull \hbox (3.04857pt too wide) in paragraph at lines 122--122
+ [15 <./figures/bgsub_03.png>]
+<figures/state_machine_02.png, id=476, 792.9625pt x 172.645pt>
+File: figures/state_machine_02.png Graphic file (type png)
+
+<use figures/state_machine_02.png>
+Package pdftex.def Info: figures/state_machine_02.png used on input line 147.
+(pdftex.def)             Requested size: 405.45047pt x 88.27696pt.
+
+Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
 
-Overfull \hbox (3.04857pt too wide) in paragraph at lines 122--122
+Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
 
-Overfull \hbox (3.04857pt too wide) in paragraph at lines 122--122
+Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
 
-Overfull \hbox (3.04857pt too wide) in paragraph at lines 122--122
+Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
-[20])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[16 <./figures/state_machine_02.png>]
+<figures/object_01.png, id=488, 1115.66812pt x 295.1025pt>
+File: figures/object_01.png Graphic file (type png)
 
- [21]
-[22]
+<use figures/object_01.png>
+Package pdftex.def Info: figures/object_01.png used on input line 167.
+(pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
+
+<figures/classifier_01.png, id=489, 377.91188pt x 280.04625pt>
+File: figures/classifier_01.png Graphic file (type png)
+
+<use figures/classifier_01.png>
+Package pdftex.def Info: figures/classifier_01.png used on input line 178.
+(pdftex.def)             Requested size: 213.39568pt x 158.1324pt.
+ [17 <./figures/object_01.png> <./figures/classifier_01.png>]) [18] [19]
 \openout2 = `chapter5.aux'.
 
- (chapter5.tex
-Chapter 5.
-[23
-
-
-
-]) [24] (mieic-en.bbl) [25
+ (chapter5.tex [20
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
- (mieic-en.aux (abstract_en.aux) (acknows_en.aux) (quote.aux) (abbrevs_en.aux) 
-(chapter1.aux) (chapter2.aux) (chapter3.aux)
+Chapter 5.
+)
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+[21] [22
+
+
+] (mieic-en.bbl) [23
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+ (mieic-en.aux (abstract_en.aux) (acknows_en.aux)
+(quote.aux) (abbrevs_en.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux)
 (chapter4.aux) (chapter5.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `mieic-en.out' has not changed.
-(rerunfilecheck)             Checksum: 60C52321E80BF045410DBA8C9B55BC26;2937.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+(rerunfilecheck)             Checksum: BB65F9E0BA62D3F241A891258E806BD5;2707.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 20833 strings out of 493323
- 372103 string characters out of 3139057
- 490789 words of memory out of 3000000
- 23728 multiletter control sequences out of 15000+200000
- 87766 words of font info for 114 fonts, out of 3000000 for 9000
+ 20853 strings out of 493323
+ 373266 string characters out of 3139057
+ 479790 words of memory out of 3000000
+ 23746 multiletter control sequences out of 15000+200000
+ 86054 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,80p,1239b,1378s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,80p,1243b,1378s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1441,13 +1460,14 @@ ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/
 ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
-mbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mieic-en.pdf (45 pages, 701482 bytes).
+ype1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on mieic-en.pdf (43 pages, 1050306 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 143 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
+ 378 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,39 +5,36 @@
 \BOOKMARK [0][-]{chapter.1}{1 Introdu\347\343o}{}% 5
 \BOOKMARK [1][-]{section.1.1}{1.1 Contexto/Enquadramento}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.2}{1.2 Projeto}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.3}{1.3 Motiva\347\343o e Objetivos}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{1.3 Motivation and Goals}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.4}{1.4 Estrutura da Disserta\347\343o}{chapter.1}% 9
 \BOOKMARK [0][-]{chapter.2}{2 Revis\343o Bibliogr\341fica}{}% 10
-\BOOKMARK [1][-]{section.2.1}{2.1 Introdu\347\343o}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.1}{2.1 History of Computer Vision}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.2}{2.2 Segmentation}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.3}{2.3 Sec\347\343o Exemplo}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Subsec\347\343o Exemplo}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Subsec\347\343o Exemplo}{section.2.3}% 15
-\BOOKMARK [1][-]{section.2.4}{2.4 Resumo ou Conclus\365es}{chapter.2}% 16
-\BOOKMARK [0][-]{chapter.3}{3 Visualiza\347\343o de Sin\363pticos SVG}{}% 17
-\BOOKMARK [1][-]{section.3.1}{3.1 Sec\347\343o Exemplo}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Exemplo de Figura}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Exemplo de Tabela}{section.3.1}% 20
-\BOOKMARK [1][-]{section.3.2}{3.2 Sec\347\343o Exemplo}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.3}{3.3 Resumo e Conclus\365es}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{4 Implementation}{}% 23
-\BOOKMARK [1][-]{section.4.1}{4.1 Technology}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 OpenCV}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 JavaCV}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 FFmpeg}{section.4.1}% 27
-\BOOKMARK [1][-]{section.4.2}{4.2 Architecture}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Implementation Architecture}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Database}{section.4.2}% 30
-\BOOKMARK [1][-]{section.4.3}{4.3 Segmentation}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.4}{4.4 Object Detection}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.5}{4.5 Object Tracking}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.6}{4.6 Utility}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Video Wall}{section.4.6}% 35
-\BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 Image Processors}{section.4.6}% 36
-\BOOKMARK [1][-]{section.4.7}{4.7 Sec\347\343o Exemplo}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.8}{4.8 Mais uma Sec\347\343o}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.9}{4.9 Resumo ou Conclus\365es}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{5 Conclus\365es e Trabalho Futuro}{}% 40
-\BOOKMARK [1][-]{section.5.1}{5.1 Satisfa\347\343o dos Objetivos}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.2}{5.2 Trabalho Futuro}{chapter.5}% 42
-\BOOKMARK [0][-]{section*.27}{References}{}% 43
+\BOOKMARK [1][-]{section.2.4}{2.4 Resumo ou Conclus\365es}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{3 Computer Vision applied to Traffic Analysis - An Overview}{}% 15
+\BOOKMARK [1][-]{section.3.1}{3.1 Sec\347\343o Exemplo}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Exemplo de Figura}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Exemplo de Tabela}{section.3.1}% 18
+\BOOKMARK [1][-]{section.3.2}{3.2 Sec\347\343o Exemplo}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{3.3 Resumo e Conclus\365es}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{4 Implementation}{}% 21
+\BOOKMARK [1][-]{section.4.1}{4.1 Technology}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 OpenCV}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 JavaCV}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 FFmpeg}{section.4.1}% 25
+\BOOKMARK [1][-]{section.4.2}{4.2 Architecture}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Implementation Architecture}{section.4.2}% 27
+\BOOKMARK [1][-]{section.4.3}{4.3 Segmentation}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{4.4 Object Detection}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{4.5 Object Tracking}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{4.6 Object Classification}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.7}{4.7 Feature Point Tracking}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.8}{4.8 Utility}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.8.1}{4.8.1 Video Wall}{section.4.8}% 34
+\BOOKMARK [2][-]{subsection.4.8.2}{4.8.2 Image Processors}{section.4.8}% 35
+\BOOKMARK [1][-]{section.4.9}{4.9 Summary}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{5 Conclus\365es e Trabalho Futuro}{}% 37
+\BOOKMARK [1][-]{section.5.1}{5.1 Satisfa\347\343o dos Objetivos}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{5.2 Trabalho Futuro}{chapter.5}% 39
+\BOOKMARK [0][-]{section*.34}{References}{}% 40
