@@ -1,4 +1,5 @@
-\begin{thebibliography}{ACM12}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{SMG{\etalchar{+}}93}
 
 \bibitem[ACM12]{acm_2012_2012}
 ACM.
@@ -12,10 +13,29 @@ N.~Ayache.
   {{Pattern Recognition}} ({{Cat}}. {{No}}.{{98EX170}})}, volume~2, pages
   1255--1256 vol.2, August 1998.
 
+\bibitem[BP98]{badenas_applying_1998}
+Jorge Badenas and Filiberto Pla.
+\newblock Applying computer vision techniques to traffic monitoring tasks.
+\newblock In {\em Methodology and {{Tools}} in {{Knowledge}}-{{Based
+  Systems}}}, pages 776--785. {Springer, Berlin, Heidelberg}, June 1998.
+
 \bibitem[BT73]{binford_computer_1973-2}
 T.~O. Binford and J.~M. Tenenbaum.
 \newblock Computer vision.
 \newblock {\em Computer}, 6(5):19--24, May 1973.
+
+\bibitem[BVO11]{buch_review_2011-1}
+N.~Buch, S.~A. Velastin, and J.~Orwell.
+\newblock A {{Review}} of {{Computer Vision Techniques}} for the {{Analysis}}
+  of {{Urban Traffic}}.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  12(3):920--939, September 2011.
+
+\bibitem[CGPP03]{cucchiara_detecting_2003}
+R.~Cucchiara, C.~Grana, M.~Piccardi, and A.~Prati.
+\newblock Detecting moving objects, ghosts, and shadows in video streams.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  25(10):1337--1342, October 2003.
 
 \bibitem[Dah17]{dahms_opencv_3_car_counting_cpp_2017}
 Chris Dahms.
@@ -25,6 +45,21 @@ Chris Dahms.
 K.~W. Dickinson and R.~C. Waterfall.
 \newblock {{IMAGE PROCESSING APPLIED TO TRAFFIC}}, 1-{{A GENERAL REVIEW}}.
 \newblock {\em Traffic Engineering \& Control}, 25(1), January 1984.
+
+\bibitem[HBJ{\etalchar{+}}16]{hammoudi_self-driven_2016}
+K.~Hammoudi, H.~Benhabiles, A.~Jandial, F.~Dornaika, and J.~Mouzna.
+\newblock Self-driven and direct spatio-temporal mechanisms for the
+  vision-based parking slot surveillance.
+\newblock In {\em 2016 {{SAI Computing Conference}} ({{SAI}})}, pages
+  1327--1329, July 2016.
+
+\bibitem[HK12]{hashmi_analysis_2012}
+M.~F. Hashmi and A.~G. Keskar.
+\newblock Analysis and monitoring of a high density traffic flow at
+  {{T}}-intersection using statistical computer vision based approach.
+\newblock In {\em 2012 12th {{International Conference}} on {{Intelligent
+  Systems Design}} and {{Applications}} ({{ISDA}})}, pages 52--57, November
+  2012.
 
 \bibitem[Hua96]{huang_computer_1996}
 T.~Huang.
@@ -37,6 +72,32 @@ Michael L.~Baird.
 \newblock {\em IEEE Transactions on Systems, Man, and Cybernetics},
   8(2):133--139, February 1978.
 
+\bibitem[LBT17]{loce_detection_2017-1}
+Robert~P. Loce, Raja Bala, and Mohan Trivedi.
+\newblock Detection of {{Passenger Compartment Violations}}.
+\newblock In {\em Computer {{Vision}} and {{Imaging}} in {{Intelligent
+  Transportation Systems}}}, pages 432--. {Wiley-IEEE Press}, 2017.
+
+\bibitem[LCC12]{li_detection_2012}
+X.~Li, Q.~Chen, and H.~Chen.
+\newblock Detection and tracking of moving object based on {{PTZ}} camera.
+\newblock In {\em 2012 {{IEEE Fifth International Conference}} on {{Advanced
+  Computational Intelligence}} ({{ICACI}})}, pages 493--497, October 2012.
+
+\bibitem[LKR{\etalchar{+}}16]{lira_computer-vision_2016}
+G.~Lira, Z.~Kokkinogenis, R.~J.~F. Rossetti, D.~C. Moura, and T.~R{\'u}bio.
+\newblock A computer-vision approach to traffic analysis over intersections.
+\newblock In {\em 2016 {{IEEE}} 19th {{International Conference}} on
+  {{Intelligent Transportation Systems}} ({{ITSC}})}, pages 47--53, November
+  2016.
+
+\bibitem[LV01]{lo_automatic_2001}
+B.~P.~L. Lo and S.~A. Velastin.
+\newblock Automatic congestion detection system for underground platforms.
+\newblock In {\em Proceedings of 2001 {{International Symposium}} on
+  {{Intelligent Multimedia}}, {{Video}} and {{Speech Processing}}. {{ISIMP}}
+  2001 ({{IEEE Cat}}. {{No}}.{{01EX489}})}, pages 158--161, 2001.
+
 \bibitem[Ope17a]{opencv_about_2017}
 OpenCV.
 \newblock About - {{OpenCV}} library, 2017.
@@ -45,14 +106,64 @@ OpenCV.
 OpenCV.
 \newblock {{OpenCV}}: Cv::{{SimpleBlobDetector Class Reference}}, 2017.
 
+\bibitem[Pic04]{piccardi_background_2004}
+M.~Piccardi.
+\newblock Background subtraction techniques: A review.
+\newblock In {\em 2004 {{IEEE International Conference}} on {{Systems}},
+  {{Man}} and {{Cybernetics}} ({{IEEE Cat}}. {{No}}.{{04CH37583}})}, volume~4,
+  pages 3099--3104 vol.4, October 2004.
+
+\bibitem[SJK09]{sheikh_background_2009}
+Y.~Sheikh, O.~Javed, and T.~Kanade.
+\newblock Background {{Subtraction}} for {{Freely Moving Cameras}}.
+\newblock In {\em 2009 {{IEEE}} 12th {{International Conference}} on {{Computer
+  Vision}}}, pages 1219--1225, September 2009.
+
+\bibitem[SLZ16]{supriyanto_unsupervised_2016}
+C.~Supriyanto, A.~Luthfiarta, and J.~Zeniarja.
+\newblock An unsupervised approach for traffic sign recognition based on
+  bag-of-visual-words.
+\newblock In {\em 2016 8th {{International Conference}} on {{Information
+  Technology}} and {{Electrical Engineering}} ({{ICITEE}})}, pages 1--4,
+  October 2016.
+
+\bibitem[SMG{\etalchar{+}}93]{snell_model-based_1993}
+J.~W. Snell, M.~B. Merickel, J.~C. Goble, J.~B. Brookeman, and N.~F. Kassell.
+\newblock Model-based segmentation of the brain from 3-{{D MRI}} using active
+  surfaces.
+\newblock In {\em 1993 {{IEEE Annual Northeast Bioengineering Conference}}},
+  pages 164--165, March 1993.
+
 \bibitem[SS01]{shapiro_computer_2001}
 Linda~G. Shapiro and George~C. Stockman.
 \newblock {\em Computer Vision}.
 \newblock {Prentice Hall}, Upper Saddle River, NJ, 2001.
 
+\bibitem[SS11]{soendoro_traffic_2011}
+D.~Soendoro and I.~Supriana.
+\newblock Traffic sign recognition with {{Color}}-based {{Method}}, shape-arc
+  estimation and {{SVM}}.
+\newblock In {\em Proceedings of the 2011 {{International Conference}} on
+  {{Electrical Engineering}} and {{Informatics}}}, pages 1--6, July 2011.
+
 \bibitem[Sto80]{stout_computer_1980}
 K.~J. Stout.
 \newblock Computer vision and robots.
 \newblock {\em Production Engineer}, 59(4):9--, April 1980.
+
+\bibitem[Ziv04]{zivkovic_improved_2004}
+Z.~Zivkovic.
+\newblock Improved adaptive {{Gaussian}} mixture model for background
+  subtraction.
+\newblock In {\em Proceedings of the 17th {{International Conference}} on
+  {{Pattern Recognition}}, 2004. {{ICPR}} 2004.}, volume~2, pages 28--31 Vol.2,
+  August 2004.
+
+\bibitem[ZY14]{zamalieva_background_2014}
+Daniya Zamalieva and Alper Yilmaz.
+\newblock Background subtraction for the moving camera: {{A}} geometric
+  approach.
+\newblock {\em Computer Vision and Image Understanding}, 127:73--85, October
+  2014.
 
 \end{thebibliography}
