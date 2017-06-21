@@ -65,6 +65,10 @@ M.~F. Hashmi and A.~G. Keskar.
 T.~Huang.
 \newblock Computer {{Vision}} : {{Evolution And Promise}}, 1996.
 
+\bibitem[Lab17]{labs_theory_2017}
+Virtual Labs.
+\newblock Theory - {{Virtual Lab}} in {{Image Processing}}, 2017.
+
 \bibitem[LB78]{l._baird_sight-i:_1978}
 Michael L.~Baird.
 \newblock {{SIGHT}}-{{I}}: {{A Computer Vision System}} for {{Automated IC Chip
@@ -97,6 +101,12 @@ B.~P.~L. Lo and S.~A. Velastin.
 \newblock In {\em Proceedings of 2001 {{International Symposium}} on
   {{Intelligent Multimedia}}, {{Video}} and {{Speech Processing}}. {{ISIMP}}
   2001 ({{IEEE Cat}}. {{No}}.{{01EX489}})}, pages 158--161, 2001.
+
+\bibitem[MH80]{Marr1980TheoryOE}
+D.~Marr and E.~Hildreth.
+\newblock Theory of edge detection.
+\newblock {\em Proceedings of the Royal Society of London. Series B, Biological
+  sciences}, 207 1167:187--217, 1980.
 
 \bibitem[Ope17a]{opencv_about_2017}
 OpenCV.
@@ -133,6 +143,11 @@ J.~W. Snell, M.~B. Merickel, J.~C. Goble, J.~B. Brookeman, and N.~F. Kassell.
   surfaces.
 \newblock In {\em 1993 {{IEEE Annual Northeast Bioengineering Conference}}},
   pages 164--165, March 1993.
+
+\bibitem[Sob89]{sobel_isotropic_1989}
+Irwin Sobel.
+\newblock An {{Isotropic}} 3 3 {{Image Gradient Operator}} ({{PDF Download
+  Available}}), 1989.
 
 \bibitem[SS01]{shapiro_computer_2001}
 Linda~G. Shapiro and George~C. Stockman.

@@ -31,7 +31,7 @@ As previously stated, the work done for this project consists of a module for th
 \end{figure}
 
 
-It is expected that this chapter provides some insight on how the theoretical backgrounds presented before were used during the project development, namely phase 2 and 3 of the presented project planning in~\ref{fig:proj_plan}. Phase 2 focused on the detection of relevant events to the traffic controller such as suspicious approximation to the camera, intrusion in prohibited areas, fallen objects on the road and wrong way travelling, while phase 3 aimed to count and classify vehicles in both urban and high-way scenarios.
+It is expected that this chapter provides some insight on how the theoretical backgrounds presented before were used during the project development, namely phase 2 and 3 of the planning presented in~\ref{fig:proj_plan}. Phase 2 focused on the detection of relevant events to the traffic controller such as suspicious approximation to the camera, intrusion in prohibited areas, fallen objects on the road and wrong way travelling, while phase 3 aimed to count and classify vehicles in both urban and high-way scenarios.
 
 \section{Technology}
 
@@ -40,7 +40,7 @@ In order to build this project we needed both a library of already implemented c
 \subsection{OpenCV}
 OpenCV is a library composed of implementations of useful computer vision algorithms implementation, widely used across the industry and academy. It has interfaces for multiple programming languages, like C++, Java and Python, but is natively written in C++ in order to take advantage of low level performance enhancements, as performance is an important factor in real time computer vision applications ~\cite{opencv_about_2017}.
 
-The library contains over 2500 algorithms ranging from the more basic image processing such as filtering, morphology operators and geometric transformations to more complex ones that are able to, among others, compare images, track features and camera movements and recognize faces. Along with the image processing capabilities OpenCV also ships with interfaces to stereo cameras such as Kinect that allow users to retrieve a cloud of 3D points and a depth map from the captured image. This was the chosen library as there existed already previous work at LIACC using it, which could be leveraged for this project.
+The library contains over 2500 algorithms ranging from the more basic image processing, such as filtering, morphology operators and geometric transformations, to more complex ones that are able to compare images, track features, follow camera movements and recognize faces, among others. Along with the image processing capabilities, OpenCV also ships with interfaces to stereo cameras such as Kinect that allow users to retrieve a cloud of 3D points and a depth map from the captured image. This was the chosen library as there existed already previous work at LIACC using it, which could be leveraged for this project.
 
 \subsection{JavaCV}
 JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP Presets, a project that provides Java interfaces for commonly used C++ libraries, such as OpenCV and FFmpeg\todo{Adicionar referencias}, the ones we are using, as well as CUDA, ARToolKitPlus and others. It provides access to all the functionalities of OpenCV inside a Java environment, and was the chosen solution as there was already experience inside LIACC working with this technology.
@@ -48,7 +48,7 @@ JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP 
 Even though the code is written in Java and runs inside a Java Virtual Machine, the code from OpenCV is compiled from C/C++ and the memory of the objects created there is allocated in a separate thread. This made it impossible to rely on the garbage collector to do the memory management, and necessary to manually delete the native objects. Failure to address this issue causes the system to run out of memory and a subsequent program crash.
 
 \subsection{FFmpeg}
-FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations on videos in all the well known video formats, across a large number of platforms. It is used in the "Video Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same code, as shown in ~\ref{src:ffmpegframegrabber}.
+FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations in all the well known video formats, across a large number of platforms. It is used in the "Video Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same code, as shown in ~\ref{src:ffmpegframegrabber}.
 
 \begin{lstlisting}[float,language=Java, label={src:ffmpegframegrabber}, caption=FFmpegFrameGrabber usage example] 
 // videopath can be either a stream path or a file path
@@ -74,7 +74,7 @@ while( (currentFrame = _frameGrabber.grabImage()) != null) {
 \end{figure}
 
 
-The analytics module was designed to comply with the following specifications, imposed by both our partner and to comply with the already developed modules. 
+The Analytics module was designed to comply with the following specifications, imposed by both our partner and to comply with the already developed modules. 
 
 \begin{itemize}
 	\item Run uninterruptedly waiting for requests to be made
@@ -84,7 +84,7 @@ The analytics module was designed to comply with the following specifications, i
 \end{itemize}
 \todo{Mais requirements?}
 
-The application main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video, information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into its representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawbacks of this solution are that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
+The application main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video through information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into its representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawback of this solution is that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
 
 \section{Segmentation}
 
@@ -99,14 +99,14 @@ This section describes how the segmentation of the received images is performed,
   \end{center}
 \end{figure}
 
-In figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame \todo{Explain masking process} in order to prevent uninteresting regions of the image from being processed the Background Subtracter. This solves an issue where moving or changing regions of the image outside our region of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
+In figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame \todo{Explain masking process} in order to prevent uninteresting regions of the image from being processed by the Background Subtracter. This solves an issue where moving or changing regions of the image outside our area of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
 
 The next step of the Segmentation process is to feed the masked frames into a Background Subtraction algorithm that will use them to update its internal representation of the scene. This project uses the OpenCV implementation of the Mixture of Gaussians algorithm that allows the user to tune:
 
 \begin{itemize}
-	\item Number of past frames considered on the background calculation
-	\item Threshold value from which a pixel is considered to be foreground, compared to the difference between its current value and the one from the background model
-	\item Learning rate of the algorithm, how much each new frame influences the model
+	\item The number of past frames considered on the background calculation
+	\item The threshold value from which a pixel is considered to be foreground, compared to the difference between its current value and the one from the background model
+	\item The learning rate of the algorithm, how much each new frame influences the model
 \end{itemize}
 
 After updating the background model we can retrieve from the Background Subtracter its foreground mask, a rough representation that is calculated by subtracting the background model from the current image and thresholding it, thus returning only the pixels where the difference is significant enough.
@@ -120,13 +120,13 @@ After updating the background model we can retrieve from the Background Subtract
   \end{center}
 \end{figure}
 
-As we can see in the middle image of figure~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image, a squared erosion filter to remove the small speckles that appear in the mask, followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
+As we can see in the middle image of figure~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image: a squared erosion filter to remove the small speckles that appear in the mask; followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
 
 \section{Object Detection}
 
 This section describes how the information about the objects' size and position are retrieved from the binary mask returned from the segmentation process. 
 
-OpenCV provides BlobDetector~\cite{opencv_opencv:_2017},  a family of functions that retrieve information of blobs in an image. It works by thresholding the image into multiple binary images using a range of threshold values, grouping the connected white pixels at each one of these images in binary blobs and then merging blobs that are close enough to each other into larger blobs. This method allows users to filter returned blobs based on 3 properties:
+OpenCV provides BlobDetector~\cite{opencv_opencv:_2017},  a family of functions that retrieve information of blobs in an image. It works by thresholding the input into multiple binary images using a range of threshold values, grouping the connected white pixels at each one of these images in binary blobs and then merging those that are close enough to each other into larger blobs. This method allows users to filter returned blobs based on 3 properties:
 
 \begin{itemize}
 	\item Area - The area of the region
@@ -135,11 +135,11 @@ OpenCV provides BlobDetector~\cite{opencv_opencv:_2017},  a family of functions 
 	\item Inertia - Elongation of the region (0 for lines, 1 for circles)
 \end{itemize}
 
-This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}\todo{Italico para nomes de funçoes?}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a region size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
+This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}\todo{Italico para nomes de funçoes?}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
 
 \section{Object Tracking}
 
-In order for the solution to correctly analyse the objects of the scene it needs to track them during their lifetime, in other words, establish a relation between the objects identified on a frame with the objects identified in the next frame. This is done iterating through each one of the new objects and finding which existing object is closer to him. If the distance between them is smaller than the size of the existing object then they are matched.
+In order for the solution to correctly analyse the objects of the scene it needs to track them during their lifetime, in other words, establish a relation between the objects identified on a frame with the objects identified in the next one. This is done by iterating through each one of the new objects and finding which existing object is closer to him. If the distance between them is smaller than the size of the existing object then they are matched.
 
 \begin{figure}[h]
   \begin{center}
@@ -159,7 +159,7 @@ This technique relies on objects appearing close to their previous position in t
 NextPos = CurrentPos + \sum_{i=1}^{5} (PosHist(i) - PosHist(i-1)) * (5-i)
 \end{eqnarray}
 
-In image \ref{fig:object_tracking} we can see the result of the tracking process on the right most image. Each detected object is circled in a colour representing its current state in the state machine, blue for normal and red for lost, and shows the trail represents its path across the scene. 
+In figure \ref{fig:object_tracking} we can see the result of the tracking process on the right most image. Each detected object is circled in a colour representing its current state in the state machine, blue for normal and red for lost, and shows the trail represents its path across the scene. 
 
 \begin{figure}[h]
   \begin{center}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  20 JUN 2017 08:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  21 JUN 2017 14:53
 entering extended mode
 **C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
 (C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
@@ -964,25 +964,83 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \c@@todonotes@numberoftodonotes=\count134
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks33
+\ex@=\dimen178
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen179
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count135
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count136
+\leftroot@=\count137
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count138
+\DOTSCASE@=\count139
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box40
+\strutbox@=\box41
+\big@size=\dimen180
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count140
+\c@MaxMatrixCols=\count141
+\dotsspace@=\muskip11
+\c@parentequation=\count142
+\dspbrk@lvl=\count143
+\tag@help=\toks34
+\row@=\count144
+\column@=\count145
+\maxfields@=\count146
+\andhelp@=\toks35
+\eqnshift@=\dimen181
+\alignsep@=\dimen182
+\tagshift@=\dimen183
+\tagwidth@=\dimen184
+\totwidth@=\dimen185
+\lineht@=\dimen186
+\@envbody=\toks36
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count135
-\lst@gtempboxa=\box40
-\lst@token=\toks33
-\lst@length=\count136
-\lst@currlwidth=\dimen178
-\lst@column=\count137
-\lst@pos=\count138
-\lst@lostspace=\dimen179
-\lst@width=\dimen180
-\lst@newlines=\count139
-\lst@lineno=\count140
-\lst@maxwidth=\dimen181
+\lst@mode=\count147
+\lst@gtempboxa=\box42
+\lst@token=\toks38
+\lst@length=\count148
+\lst@currlwidth=\dimen187
+\lst@column=\count149
+\lst@pos=\count150
+\lst@lostspace=\dimen188
+\lst@width=\dimen189
+\lst@newlines=\count151
+\lst@lineno=\count152
+\lst@maxwidth=\dimen190
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count141
-\lst@skipnumbers=\count142
-\lst@framebox=\box41
+\c@lstnumber=\count153
+\lst@skipnumbers=\count154
+\lst@framebox=\box43
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1055,20 +1113,19 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\big@size=\dimen182
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen183
-\scratchbox=\box42
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen184
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count155
+\scratchdimen=\dimen191
+\scratchbox=\box44
+\nofMPsegments=\count156
+\nofMParguments=\count157
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen192
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
+\everyMPtoPDFconversion=\toks40
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1086,7 +1143,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box43
+\AtBeginShipoutBox=\box45
 Package hyperref Info: Link coloring ON on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
@@ -1095,7 +1152,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count161
 )
 LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
@@ -1106,8 +1163,8 @@ LaTeX Info: Redefining \nameref on input line 89.
 \openout4 = `mieic-en.out'.
 
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count150
-\@crestbox=\box44
+\c@lstlisting=\count162
+\@crestbox=\box46
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <14.4> not available
@@ -1278,28 +1335,32 @@ File: figures/convolution.jpg Graphic file (type jpg)
 
 <use figures/convolution.jpg>
 Package pdftex.def Info: figures/convolution.jpg used on input line 106.
-(pdftex.def)             Requested size: 213.39568pt x 160.04578pt.
+(pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
 
-<figures/gaussian.png, id=506, 421.575pt x 316.18124pt>
+<figures/gaussian.png, id=508, 421.575pt x 316.18124pt>
 File: figures/gaussian.png Graphic file (type png)
 
 <use figures/gaussian.png>
-Package pdftex.def Info: figures/gaussian.png used on input line 126.
+Package pdftex.def Info: figures/gaussian.png used on input line 124.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (30.64987pt too wide) in paragraph at lines 144--150
+[9 <./figures/convolution.jpg>] [10 <./figures/gaussian.png>]
+Overfull \hbox (30.64987pt too wide) in paragraph at lines 172--178
 \T1/ptm/m/n/10.95 ou di-re-itos de au-tor e está to-tal-mente doc-u-men-tado, à
  semel-hança de out-ros W3C stan-dards citekn:svgdoc. 
  []
 
-[9 <./figures/convolution.jpg>]) [10 <./figures/gaussian.png>]
+) [11]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex
+ (chapter3.tex [12
+
+
+
+]
 Chapter 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
@@ -1307,11 +1368,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-[11
-
-
-
-]
+[13]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 53.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
@@ -1319,7 +1376,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-<figures/puzzle.png, id=530, 915.42pt x 352.31625pt>
+<figures/puzzle.png, id=549, 915.42pt x 352.31625pt>
 File: figures/puzzle.png Graphic file (type png)
  <use figures/puzzle.png>
 Package pdftex.def Info: figures/puzzle.png used on input line 66.
@@ -1334,25 +1391,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 []\T1/ptm/m/it/10.95 Application Pro-gram-ming
  []
 
-[12 <./figures/puzzle.png>]
+[14 <./figures/puzzle.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 158.
- [13]) [14]
+ [15]) [16]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 4.
-<figures/proj_plan_02.png, id=547, 917.4275pt x 270.00874pt>
+<figures/proj_plan_02.png, id=566, 917.4275pt x 270.00874pt>
 File: figures/proj_plan_02.png Graphic file (type png)
 
 <use figures/proj_plan_02.png>
 Package pdftex.def Info: figures/proj_plan_02.png used on input line 27.
 (pdftex.def)             Requested size: 405.45047pt x 119.32744pt.
- [15
+ [17
 
 
 
- <./figures/proj_plan_02.png>] [16]
+ <./figures/proj_plan_02.png>] [18]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1378,28 +1435,28 @@ LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 61.
 
-<figures/ManagerArch.png, id=562, 694.595pt x 329.23pt>
+<figures/ManagerArch.png, id=582, 694.595pt x 329.23pt>
 File: figures/ManagerArch.png Graphic file (type png)
 
 <use figures/ManagerArch.png>
 Package pdftex.def Info: figures/ManagerArch.png used on input line 70.
 (pdftex.def)             Requested size: 405.45047pt x 192.18431pt.
- [17 <./figures/ManagerArch.png>]
-<figures/bgsub_01.png, id=581, 746.79pt x 287.57437pt>
+ [19 <./figures/ManagerArch.png>]
+<figures/bgsub_01.png, id=600, 746.79pt x 287.57437pt>
 File: figures/bgsub_01.png Graphic file (type png)
 
 <use figures/bgsub_01.png>
 Package pdftex.def Info: figures/bgsub_01.png used on input line 96.
 (pdftex.def)             Requested size: 405.45047pt x 156.13034pt.
- [18 <./figures/bgsub_01.png>]
-<figures/bgsub_03.png, id=588, 1115.66812pt x 295.1025pt>
+ [20 <./figures/bgsub_01.png>]
+<figures/bgsub_03.png, id=607, 1115.66812pt x 295.1025pt>
 File: figures/bgsub_03.png Graphic file (type png)
 
 <use figures/bgsub_03.png>
 Package pdftex.def Info: figures/bgsub_03.png used on input line 117.
 (pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
- [19 <./figures/bgsub_03.png>]
-<figures/state_machine_02.png, id=597, 792.9625pt x 172.645pt>
+ [21 <./figures/bgsub_03.png>]
+<figures/state_machine_02.png, id=616, 792.9625pt x 172.645pt>
 File: figures/state_machine_02.png Graphic file (type png)
 
 <use figures/state_machine_02.png>
@@ -1425,24 +1482,24 @@ Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
-[20 <./figures/state_machine_02.png>]
-<figures/object_01.png, id=609, 1115.66812pt x 295.1025pt>
+[22 <./figures/state_machine_02.png>]
+<figures/object_01.png, id=628, 1115.66812pt x 295.1025pt>
 File: figures/object_01.png Graphic file (type png)
 
 <use figures/object_01.png>
 Package pdftex.def Info: figures/object_01.png used on input line 167.
 (pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
 
-<figures/classifier_01.png, id=610, 377.91188pt x 280.04625pt>
+<figures/classifier_01.png, id=629, 377.91188pt x 280.04625pt>
 File: figures/classifier_01.png Graphic file (type png)
 
 <use figures/classifier_01.png>
 Package pdftex.def Info: figures/classifier_01.png used on input line 178.
 (pdftex.def)             Requested size: 213.39568pt x 158.1324pt.
- [21 <./figures/object_01.png> <./figures/classifier_01.png>]) [22] [23]
+ [23 <./figures/object_01.png> <./figures/classifier_01.png>]) [24] [25]
 \openout2 = `chapter5.aux'.
 
- (chapter5.tex [24
+ (chapter5.tex [26
 
 
 
@@ -1450,17 +1507,17 @@ Package pdftex.def Info: figures/classifier_01.png used on input line 178.
 Chapter 5.
 )
 
-LaTeX Warning: Marginpar on page 25 moved.
+LaTeX Warning: Marginpar on page 27 moved.
 
 
-LaTeX Warning: Marginpar on page 25 moved.
+LaTeX Warning: Marginpar on page 27 moved.
 
-[25] [26
+[27] [28
 
 
-] (mieic-en.bbl [27
+] (mieic-en.bbl [29
 
-] [28]) [29]
+] [30]) [31]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
  (mieic-en.aux (abstract_en.aux)
@@ -1469,17 +1526,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `mieic-en.out' has not changed.
-(rerunfilecheck)             Checksum: 45DEA5C390B01F26DAFB22364F8B740C;3420.
+(rerunfilecheck)             Checksum: C6E2A0E608853E89F82E4F80C2B86CE3;3410.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 20973 strings out of 493323
- 375656 string characters out of 3139057
- 480790 words of memory out of 3000000
- 23814 multiletter control sequences out of 15000+200000
+ 21544 strings out of 493323
+ 382177 string characters out of 3139057
+ 490216 words of memory out of 3000000
+ 24363 multiletter control sequences out of 15000+200000
  89626 words of font info for 119 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,80p,1243b,1378s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,80p,1248b,1396s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1493,9 +1550,9 @@ b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on mieic-en.pdf (49 pages, 1243355 bytes).
+Output written on mieic-en.pdf (51 pages, 1249375 bytes).
 PDF statistics:
- 742 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
+ 761 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 
