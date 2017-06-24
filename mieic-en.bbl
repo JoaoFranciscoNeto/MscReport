@@ -1,10 +1,16 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{SMG{\etalchar{+}}93}
+\begin{thebibliography}{FPWW03}
 
 \bibitem[ACM12]{acm_2012_2012}
 ACM.
 \newblock The 2012 {{ACM Computing Classification System}} \textemdash{}
   {{Association}} for {{Computing Machinery}}, 2012.
+
+\bibitem[AQIS07]{abubaker_one_2007}
+A.~AbuBaker, R.~Qahwaji, S.~Ipson, and M.~Saleh.
+\newblock One {{Scan Connected Component Labeling Technique}}.
+\newblock In {\em 2007 {{IEEE International Conference}} on {{Signal
+  Processing}} and {{Communications}}}, pages 1283--1286, November 2007.
 
 \bibitem[Aya98]{ayache_medical_1998}
 N.~Ayache.
@@ -31,6 +37,21 @@ N.~Buch, S.~A. Velastin, and J.~Orwell.
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   12(3):920--939, September 2011.
 
+\bibitem[CCL04]{chang_linear-time_2004}
+Fu~Chang, Chun-Jen Chen, and Chi-Jen Lu.
+\newblock A linear-time component-labeling algorithm using contour tracing
+  technique.
+\newblock {\em Computer Vision and Image Understanding}, 93(2):206--220,
+  February 2004.
+
+\bibitem[CGPP00]{cucchiara_statistic_2000}
+R.~Cucchiara, C.~Grana, M.~Piccardi, and A.~Prati.
+\newblock Statistic and knowledge-based moving object detection in traffic
+  scenes.
+\newblock In {\em {{ITSC2000}}. 2000 {{IEEE Intelligent Transportation
+  Systems}}. {{Proceedings}} ({{Cat}}. {{No}}.{{00TH8493}})}, pages 27--32,
+  2000.
+
 \bibitem[CGPP03]{cucchiara_detecting_2003}
 R.~Cucchiara, C.~Grana, M.~Piccardi, and A.~Prati.
 \newblock Detecting moving objects, ghosts, and shadows in video streams.
@@ -41,10 +62,32 @@ R.~Cucchiara, C.~Grana, M.~Piccardi, and A.~Prati.
 Chris Dahms.
 \newblock {{OpenCV}}\_3\_{{Car}}\_{{Counting}}\_{{Cpp}}, May 2017.
 
+\bibitem[Dou92]{dougherty_introduction_1992}
+Edward~R. Dougherty.
+\newblock {\em An Introduction to Morphological Image Processing}.
+\newblock {SPIE Optical Engineering Press}, 1992.
+\newblock Google-Books-ID: 1kvxAAAAMAAJ.
+
 \bibitem[DW84]{dickinson_image_1984}
 K.~W. Dickinson and R.~C. Waterfall.
 \newblock {{IMAGE PROCESSING APPLIED TO TRAFFIC}}, 1-{{A GENERAL REVIEW}}.
 \newblock {\em Traffic Engineering \& Control}, 25(1), January 1984.
+
+\bibitem[FPWW03]{fisher_morphology_2003}
+R.~Fisher, S.~Perkins, A.~Walker, and Wolfart.
+\newblock Morphology, 2003.
+
+\bibitem[GBBV16]{grana_yacclab_2016}
+C.~Grana, F.~Bolelli, L.~Baraldi, and R.~Vezzani.
+\newblock {{YACCLAB}} - {{Yet Another Connected Components Labeling
+  Benchmark}}.
+\newblock In {\em 2016 23rd {{International Conference}} on {{Pattern
+  Recognition}} ({{ICPR}})}, pages 3109--3114, December 2016.
+
+\bibitem[GW92]{gonzalez_digital_1992}
+Rafael~C. Gonzalez and Richard~E. Woods.
+\newblock {\em Digital {{Image Processing}}}.
+\newblock 1992.
 
 \bibitem[HBJ{\etalchar{+}}16]{hammoudi_self-driven_2016}
 K.~Hammoudi, H.~Benhabiles, A.~Jandial, F.~Dornaika, and J.~Mouzna.
@@ -52,6 +95,13 @@ K.~Hammoudi, H.~Benhabiles, A.~Jandial, F.~Dornaika, and J.~Mouzna.
   vision-based parking slot surveillance.
 \newblock In {\em 2016 {{SAI Computing Conference}} ({{SAI}})}, pages
   1327--1329, July 2016.
+
+\bibitem[HCS10]{he_run-based_2010}
+L.~He, Y.~Chao, and K.~Suzuki.
+\newblock A {{Run}}-based one-and-a-half-scan connected-component labeling
+  algorithm.
+\newblock {\em International Journal of Pattern Recognition and Artificial
+  Intelligence}, 24(4):557--579, 2010.
 
 \bibitem[HK12]{hashmi_analysis_2012}
 M.~F. Hashmi and A.~G. Keskar.
@@ -102,11 +152,22 @@ B.~P.~L. Lo and S.~A. Velastin.
   {{Intelligent Multimedia}}, {{Video}} and {{Speech Processing}}. {{ISIMP}}
   2001 ({{IEEE Cat}}. {{No}}.{{01EX489}})}, pages 158--161, 2001.
 
+\bibitem[MCKT00]{mikic_moving_2000}
+I.~Mikic, P.~C. Cosman, G.~T. Kogut, and M.~M. Trivedi.
+\newblock Moving shadow and object detection in traffic scenes.
+\newblock In {\em Proceedings 15th {{International Conference}} on {{Pattern
+  Recognition}}. {{ICPR}}-2000}, volume~1, pages 321--324 vol.1, 2000.
+
 \bibitem[MH80]{Marr1980TheoryOE}
 D.~Marr and E.~Hildreth.
 \newblock Theory of edge detection.
 \newblock {\em Proceedings of the Royal Society of London. Series B, Biological
   sciences}, 207 1167:187--217, 1980.
+
+\bibitem[MH07]{martin-herrero_hybrid_2007}
+J.~Mart{\'\i}n-Herrero.
+\newblock Hybrid object labelling in digital images.
+\newblock {\em Machine Vision and Applications}, 18(1):1--15, 2007.
 
 \bibitem[Ope17a]{opencv_about_2017}
 OpenCV.
@@ -122,6 +183,14 @@ M.~Piccardi.
 \newblock In {\em 2004 {{IEEE International Conference}} on {{Systems}},
   {{Man}} and {{Cybernetics}} ({{IEEE Cat}}. {{No}}.{{04CH37583}})}, volume~4,
   pages 3099--3104 vol.4, October 2004.
+
+\bibitem[PMGT01]{prati_shadow_2001}
+A.~Prati, I.~Mikic, C.~Grana, and M.~M. Trivedi.
+\newblock Shadow detection algorithms for traffic flow analysis: A comparative
+  study.
+\newblock In {\em {{ITSC}} 2001. 2001 {{IEEE Intelligent Transportation
+  Systems}}. {{Proceedings}} ({{Cat}}. {{No}}.{{01TH8585}})}, pages 340--345,
+  2001.
 
 \bibitem[SJK09]{sheikh_background_2009}
 Y.~Sheikh, O.~Javed, and T.~Kanade.
@@ -165,6 +234,11 @@ D.~Soendoro and I.~Supriana.
 K.~J. Stout.
 \newblock Computer vision and robots.
 \newblock {\em Production Engineer}, 59(4):9--, April 1980.
+
+\bibitem[Wik17]{wikipedia_connected_2017}
+Wikipedia.
+\newblock Connected component labeling, June 2017.
+\newblock Page Version ID: 783324000.
 
 \bibitem[Ziv04]{zivkovic_improved_2004}
 Z.~Zivkovic.

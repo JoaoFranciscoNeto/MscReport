@@ -138,7 +138,7 @@ Detecting the edges in an image is an important step into the understanding of i
 \nabla^{2} G(x,y)*I(x,y)
 \end{eqnarray}
 
-What the authors noted was that if an edge was detected at a certain scale it appears also at adjacent scales, which they called "spatial coincidence assumption". This theory can be reversed, if there is a convergence of edges on multiple scales there is a real physical edge, and based on this, if we find zero-crossings on neighbour scales, we can assume there is a real edge in that region. From here multiple implementations of the algorithm appeared, the most used one being presented below, the Canny Edge Detector using a Sobel filter. Although this was among the first implementations of an edge detector it is still the state-of-the-art process and is used regularly in a variety of applications
+What the authors noted was that if an edge was detected at a certain scale it appears also at adjacent scales, which they called "spatial coincidence assumption". This theory can be reversed, if there is a convergence of edges on multiple scales there is a real physical edge, and based on this, if we find zero-crossings on neighbour scales, we can assume there is a real edge in that region. From here multiple implementations of the algorithm appeared, the most used one being presented below, the Canny Edge Detector using a Sobel filter. Although this was among the first implementations of an edge detector it is the most rigorously defined one and is still considered to be state of the art.
 
 The Sobel filter is used to create an image that accentuates the edges of an original image. This process works by convolving two kernels with the image, one for the horizontal and the other for the vertical direction, that return the intesity change in that pixel for each one. The filters can be seen in ~\ref{eq:sobel_filter} as they were presented by Irwin Sobel ~\cite{sobel_isotropic_1989}.
 
@@ -149,7 +149,7 @@ G_{x} =
 +1 & 0 & -1\\ 
 +2 & 0 & -2\\ 
 +1 & 0 & -1
-\end{bmatrix}  G_{y} = \begin{bmatrix}
+\end{bmatrix} , G_{y} = \begin{bmatrix}
 +1 & +2 & +1\\ 
 0 & 0 & 0\\ 
 -1 & -2 & -1
@@ -160,30 +160,165 @@ Using $G_{x}$ and $G_{y}$ it is possible to retrieve the regions of the image th
 
 The Canny Edge Detector uses the result of the Sobel filter as input and filters the most relevant edges as well as thinning them to 1-pixel wide lines. To accomplish this Canny used an optimization process comparing the value of the gradient magnitude to the one of the neighbour pixels along the direction returned by the Sobel filter, and keeping only the one with the largest value along the edge.
 
-\subsection{Morphology Operators}
+\subsection{Mathematical Morphology}
 
+Mathematical Morphology is a set theory, offering solutions to multiple image processing problems, where the sets are composed of tuples corresponding to the 2D coordinates of each pixel in the image. These sets identify the white or the black pixels in a binary image, depending on the convention adopted, or the intensity of the pixel in a grey-scale image ~\cite{dougherty_introduction_1992}. During this chapter we will consider that all images are binary and that the pixels to process are black in a white background. This theory provides a set of operators that can be used to detect convexity and connectivity of shapes in an image, enhancing features, detecting edges and removing noise. 
+
+The operators are defined by a structuring element, also known as kernel, a set of coordinates represented in a binary image, usually much smaller than the image to process. The centre of the kernel is not in the top left corner as in most images but rather in the geometrical centre, meaning that there some of the pixels have negative coordinates. The kernel shapes in figure ~\ref{fig:morh_operators} are the ones typically used for most applications, but the process allows the user to design their own if needed.
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{morph_operators}
+    \captionsetup{justification=centering}
+    \caption{Morphology Operators typical structuring elements (5x5)\\a) Rectangular b) Cross c) Diamond d) Elliptical}
+    \label{fig:morh_operators}
+  \end{center}
+\end{figure}
+
+According to Gonzalez and Woods ~\cite{gonzalez_digital_1992} an operator is defined by an image and a structuring element, and to run it the origin point of the element needs to be placed at every pixel of the image. At each of these locations a verification is done depending on the operation being performed and an output image is created using the independent output of these operations.
+
+The two most basic operations are erosion and dilation, essential to morphological processing. The erosion operator translates the structuring element to every black pixel of the image and in each position checks if all the active pixels of the kernel match with black pixels in the image. If it is true then the returned pixel is black, otherwise it is white. An example of the usage of such an operator can be seen in figure ~\ref{fig:erosion}. These operators are mainly used to remove noise from binary images or to separate objects to enable individual labelling and counting.
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{erosion}
+    \captionsetup{justification=centering}
+    \caption{Result of the Erosion operator using a cross 3x3 kernel}
+    \label{fig:erosion}
+  \end{center}
+\end{figure}
+
+The dilation operator works by setting to black all the pixels that match the position of the translated kernel's pixels, resulting in the closing of holes in the image and the enhancing of small features. Results can be seen in figure ~\ref{fig:dilation}. Using a non-symmetrical kernel the dilation will be directional, enabling the user to fine tune the process to their needs.
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{dilation}
+    \captionsetup{justification=centering}
+    \caption{Result of the Dilation operator using a cross 3x3 kernel}
+    \label{fig:dilation}
+  \end{center}
+\end{figure}
+
+The dilation and erosion operators can be combined to form the opening and closing operators. An opening operator is formed by an erosion followed by a dilations using the same structuring element. This results in a less destructive erosion, preserving some of the image details as seen in figure ~\ref{fig:opening}. The closing operator is formed by a dilation followed by an erosion and the results can be seen in figure ~\ref{fig:closing}. It is commonly used to remove salt noise and to extract objects of a particular shape as long as they all share the same orientation ~\cite{fisher_morphology_2003}.
+
+\begin{figure}[H]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{opening}
+    \captionsetup{justification=centering}
+    \caption{Result of the Opening operator using a cross 3x3 kernel}
+    \label{fig:opening}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{closing}
+    \captionsetup{justification=centering}
+    \caption{Result of the Closing operator using a cross 3x3 kernel}
+    \label{fig:closing}
+  \end{center}
+\end{figure}
 
 \subsection{Shadow Removal}
-Rain Removal
-Shadow Removal
 
-\section{Secção Exemplo}\label{sec:dialecto}
+Since shadows can be detected as foreground during the segmentation process, a process to remove them is important in certain scenarios. We will now describe some of the more interesting proposed methods to perform this task in this section.
 
-\emph{Scalable Vector Graphics}\index{SVG}\index{XML!SVG} é uma
-linguagem em formato XML que descreve gráficos de duas dimensões. 
-Este formato padronizado pela W3C (\emph{World Wide Web Consortium})
-é livre de patentes ou direitos de autor e está totalmente
-documentado, à semelhança de outros W3C
-standards~cite{kn:svgdoc}.
+In ~\cite{prati_shadow_2001} Prati et al. discussed how critical the shadow removal process is to traffic analysis, and they proceed to compare two ITS \todo{Adicionar a abreviaçoes} management systems, SAKBOT (Statistical and Knowledge-BasedObject Tracker) and ATON(Autonomous Transportation Agents for On-scene Networked incident manager), developed in Italy and the United States of America respectively.
 
-Sendo uma linguagem XML, o \svg{} herda uma série de vantagens: a
-possibilidade de transformar \svg{} usando técnicas como
-XSLT\index{XML!XSLT}, de embeber \svg{} em qualquer documento
-XML\index{XML} usando \textit{namespaces} ou até de  
-estilizar \svg{} recorrendo a CSS\index{CSS} (\emph{Cascade Style Sheets}). 
-De uma forma geral, pode dizer-se que \svg{}s interagem bem com as
-atuais tecnologias ligadas ao XML e à Web, tal como referido
-em~cite{kn:svgibm,kn:svgw3c}.
+SAKBOT adopts a method presented in ~\cite{cucchiara_statistic_2000}, which uses the chrominance information, converting pixel colours from RGB to HSV space, as it most closely relates to the human perception of colour. The process then evaluates how the scene colours components change due to the passing of vehicles and shadows, as seen in figure ~\ref{fig:sakbot-hsv}. From this we can extract that a shadow darkens a pixel and saturates its colour, and is the difference between an object point and a shadow point. The model then concludes that a point is considered as shadow if:
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{sakbot-hsv}
+    \captionsetup{justification=centering}
+    \caption{HSV color space components change due to shadows. Red arrows indicate a shadow passing on the point. Blue arrow indicates a vehicle passing. ~\cite{prati_shadow_2001}}
+    \label{fig:sakbot-hsv}
+  \end{center}
+\end{figure}
+
+\begin{itemize}
+	\item The ratio between the luminance of the image and the background is between two thresholds ($\alpha$ and $\beta$)
+	\item The difference between the saturation of the image and the background is below a threshold ($\tau_{S}$)
+	\item The absolute difference between the hue of the image and the background is below a threshold ($\tau_{H}$)
+\end{itemize}
+
+The $\beta$ value adjusts the tolerance to noise in the image to be considered as shadow and $\alpha$ takes into account the "power" of the shadow, how strong the light source is. $\tau_{S}$ and $\tau_{H}$ are considered by the authors to be harder to assign, and thus assigned empirically. This method main advantage is it's capability to detect moving shadows.
+
+The method used by ATON is described in ~\cite{mikic_moving_2000} and begins by identifying three separate sources of information to detect shadows and objects:
+\begin{itemize}
+	\item Local information, the appearance of an individual pixel
+	\item Spatial information, objects and shadows are compact regions
+	\item Temporal information, the location of shadows and objects can be predicted from previous frames
+\end{itemize}
+
+The local information can be used to create a background model, both the mean and variance of the colour for each pixel when shadowed and not shadowed. In the segmentation process the values in the image are compared to the mean value of the background and if significantly different it is assigned a probability to belong to the background, foreground or shadow. The probability values are 0.3, 0.4 and 0.4 respectively. In the next iterations the neighbour pixels probabilities are considered in order to take advantage of the spatial transformation. The iterative process stops when there are no relevant changes, usually after the third iteration. Morphological operators are then computed over the output of the process to close unwanted openings in the regions. ATON does not use temporal information as of the time of the publication of the work. This process can identify with near 90\% accuracy shadows and object accuracy.
+
+\todo{Se houver tempo adicionar mais metodos}
+
+\section{Object Detection}
+
+In this section we will analyse processes to detect objects of interest in images, a necessary step of any traffic surveillance system.
+
+
+\subsection{Connected Component Labelling}
+
+Connected component labelling is a process by witch the subsets of connected components are labelled according to the user needs. We will explore some of the most common implementations and how they evolved over time.
+
+The one-pass solution presented by Abubaker ~\cite{abubaker_one_2007} is a fast and simple method to implement. It begins by labelling the first pixel of the image to 1, if it is a background pixel, skip to the next one, otherwise add it to a queue. While there are elements in the queue remove the one at the top and analyse its neighbours, if they are in the foreground add them to the queue with the current label. When there are no more elements in the queue increase the label number by one and proceed to the next unexplored pixel.
+
+The two-pass solution presented by Shapiro et al. ~\cite{shapiro_computer_2001} uses the bi-dimensionality of the image data to transverse the pixels. The process, as the name implies, iterates over the image two times, the first time to assign temporary labels and the second to reassign these labels to the smallest ones available. It uses a neighbouring table to know what labels are adjacent to each other.
+
+\begin{itemize}
+	\item First pass
+		\subitem Perform a Raster Scan to analyse all the pixels
+		\subitem For each pixel, if it belongs to the foreground
+			\subsubitem Get all its neighbours (four or eight depending on the connectivity assumed)
+				\subsubitem Assign the smallest label from the neighbours
+				\subsubitem Add the the previous and the new label to the neighbouring table
+			\subsubitem If there are no neighbour pixels add a new label
+	\item Second pass
+		\subitem Perform a Raster Scan to analyse all the pixels
+		\subitem For each pixel assign the lowest label from the neighbouring table
+\end{itemize}
+
+The process is illustrated in figure ~\ref{fig:two_pass_example}.
+
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.9\textwidth]{two_pass_example}
+    \captionsetup{justification=centering}
+    \caption{Graphical example of the two-pass algorithm ~\cite{wikipedia_connected_2017}\\a) Original Image b) First Pass c) Second Pass d) Coloured Result}
+    \label{fig:two_pass_example}
+  \end{center}
+\end{figure}
+
+While these are the most basic solutions for the problem, a number of authors proposed enhancements to improve their performance, the most prominent ones being listed below:
+
+\begin{itemize}
+	\item Contour Tracing Labelling - F. Chang et al. ~\cite{chang_linear-time_2004} present a method that uses contour tracing to identify internal and external contours of each component. These contours are then used to label the connected components when the image is traversed horizontally by counting the number of contours passed.
+	\item Hybrid Object Labelling - Herrero ~\cite{martin-herrero_hybrid_2007} presents a method that combines recursive and iterative analysis, finding unlabelled pixels and recursively finding their neighbours until a labelled one is found, then proceeding to the assignment in the adjacent rows.
+	\item Improved Run-based Connected-component Labelling - L. He et al. ~\cite{he_run-based_2010}
+\end{itemize}
+
+\todo{Adicionar mais modelos?}
+
+It is interesting to note the YACCLAB (Yet Another Connected Components Labelling Benchmark) ~\cite{grana_yacclab_2016} project, a benchmark platform that allows researchers to compare the performance of their connected components labelling methods to the methods of other researchers. The novelty of this platform is the fact that it uses the authors implementations instead of their own, allowing the algorithms to perform exactly as intended, with all the tweaks and tricks.
+
+\subsection{Blob Detection}
+
+A blob is defined as being a region with similar pixels based on some of their properties: intensity, 
+
+\section{Object Tracking}
+
+
 
 \section{Resumo ou Conclusões}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  21 JUN 2017 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.13)  24 JUN 2017 16:54
 entering extended mode
 **C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
 (C:/Users/JoaoNeto/Desktop/MscReport/mieic-en.tex
@@ -1022,25 +1022,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count147
+\float@exts=\toks38
+\float@box=\box42
+\@float@everytoks=\toks39
+\@floatcapt=\box43
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count147
-\lst@gtempboxa=\box42
-\lst@token=\toks38
-\lst@length=\count148
+\lst@mode=\count148
+\lst@gtempboxa=\box44
+\lst@token=\toks40
+\lst@length=\count149
 \lst@currlwidth=\dimen187
-\lst@column=\count149
-\lst@pos=\count150
+\lst@column=\count150
+\lst@pos=\count151
 \lst@lostspace=\dimen188
 \lst@width=\dimen189
-\lst@newlines=\count151
-\lst@lineno=\count152
+\lst@newlines=\count152
+\lst@lineno=\count153
 \lst@maxwidth=\dimen190
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count153
-\lst@skipnumbers=\count154
-\lst@framebox=\box43
+\c@lstnumber=\count154
+\lst@skipnumbers=\count155
+\lst@framebox=\box45
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1061,21 +1069,21 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (chapter5.aux))
 \openout1 = `mieic-en.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 91.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1115,17 +1123,17 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count155
+\scratchcounter=\count156
 \scratchdimen=\dimen191
-\scratchbox=\box44
-\nofMPsegments=\count156
-\nofMParguments=\count157
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count158
+\scratchbox=\box46
+\nofMPsegments=\count157
+\nofMParguments=\count158
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count159
 \MPscratchDim=\dimen192
-\MPnumerator=\count159
-\makeMPintoPDFobject=\count160
-\everyMPtoPDFconversion=\toks40
+\MPnumerator=\count160
+\makeMPintoPDFobject=\count161
+\everyMPtoPDFconversion=\toks42
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1140,11 +1148,12 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 89.
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1152,31 +1161,31 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count161
+\c@section@level=\count162
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (mieic-en.out) (mieic-en.out)
 \@outlinefile=\write4
 \openout4 = `mieic-en.out'.
 
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count162
-\@crestbox=\box46
+\c@lstlisting=\count163
+\@crestbox=\box48
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 128.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 126.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 128.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 128.
 
-<figures/uporto-feup.pdf, id=202, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=214, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 
 <use figures/uporto-feup.pdf>
-Package pdftex.def Info: figures/uporto-feup.pdf used on input line 126.
+Package pdftex.def Info: figures/uporto-feup.pdf used on input line 128.
 (pdftex.def)             Requested size: 204.85983pt x 76.59618pt.
  [-3
 
@@ -1190,7 +1199,7 @@ Package pdftex.def Info: figures/uporto-feup.pdf used on input line 126.
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 128.
  [-1] [0
 
 ]
@@ -1317,7 +1326,7 @@ Chapter 2.
 [5]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
- <figures/traffic_scene.jpg, id=449, 265.99374pt x 190.7125pt>
+ <figures/traffic_scene.jpg, id=488, 265.99374pt x 190.7125pt>
 File: figures/traffic_scene.jpg Graphic file (type jpg)
 
 <use figures/traffic_scene.jpg>
@@ -1330,14 +1339,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 51.
 [6] [7 <./figures/traffic_scene.jpg>] [8]
-<figures/convolution.jpg, id=502, 1284.8pt x 963.6pt>
+<figures/convolution.jpg, id=541, 1284.8pt x 963.6pt>
 File: figures/convolution.jpg Graphic file (type jpg)
 
 <use figures/convolution.jpg>
 Package pdftex.def Info: figures/convolution.jpg used on input line 106.
 (pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
 
-<figures/gaussian.png, id=508, 421.575pt x 316.18124pt>
+<figures/gaussian.png, id=547, 421.575pt x 316.18124pt>
 File: figures/gaussian.png Graphic file (type png)
 
 <use figures/gaussian.png>
@@ -1348,15 +1357,80 @@ Package pdftex.def Info: figures/gaussian.png used on input line 124.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9 <./figures/convolution.jpg>] [10 <./figures/gaussian.png>]
-Overfull \hbox (30.64987pt too wide) in paragraph at lines 172--178
-\T1/ptm/m/n/10.95 ou di-re-itos de au-tor e está to-tal-mente doc-u-men-tado, à
- semel-hança de out-ros W3C stan-dards citekn:svgdoc. 
- []
+<figures/morph_operators.png, id=571, 1451.4225pt x 377.15906pt>
+File: figures/morph_operators.png Graphic file (type png)
 
-) [11]
+<use figures/morph_operators.png>
+Package pdftex.def Info: figures/morph_operators.png used on input line 172.
+(pdftex.def)             Requested size: 384.1096pt x 99.80855pt.
+ [11 <./figures/morph_operators.png>]
+<figures/erosion.png, id=582, 2518.91063pt x 871.00406pt>
+File: figures/erosion.png Graphic file (type png)
+
+<use figures/erosion.png>
+Package pdftex.def Info: figures/erosion.png used on input line 186.
+(pdftex.def)             Requested size: 384.1096pt x 132.81131pt.
+
+<figures/dilation.png, id=584, 2518.91063pt x 871.00406pt>
+File: figures/dilation.png Graphic file (type png)
+
+<use figures/dilation.png>
+Package pdftex.def Info: figures/dilation.png used on input line 198.
+(pdftex.def)             Requested size: 384.1096pt x 132.81131pt.
+
+<figures/opening.png, id=588, 2518.91063pt x 871.00406pt>
+File: figures/opening.png Graphic file (type png)
+
+<use figures/opening.png>
+Package pdftex.def Info: figures/opening.png used on input line 210.
+(pdftex.def)             Requested size: 384.1096pt x 132.81131pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./figures/erosion.png> <./figures/dilation.png>]
+<figures/closing.png, id=596, 2518.91063pt x 871.00406pt>
+File: figures/closing.png Graphic file (type png)
+
+<use figures/closing.png>
+Package pdftex.def Info: figures/closing.png used on input line 220.
+(pdftex.def)             Requested size: 384.1096pt x 132.81131pt.
+
+<figures/sakbot-hsv.png, id=600, 499.8675pt x 146.04562pt>
+File: figures/sakbot-hsv.png Graphic file (type png)
+
+<use figures/sakbot-hsv.png>
+Package pdftex.def Info: figures/sakbot-hsv.png used on input line 238.
+(pdftex.def)             Requested size: 384.1096pt x 112.22815pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 246.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 246.
+ [13 <./figures/opening.png> <./figures/closing.png>] [14 <./figures/sakbot-hsv
+.png>]
+<figures/two_pass_example.png, id=620, 651.18282pt x 443.40656pt>
+File: figures/two_pass_example.png Graphic file (type png)
+
+<use figures/two_pass_example.png>
+Package pdftex.def Info: figures/two_pass_example.png used on input line 296.
+(pdftex.def)             Requested size: 384.1096pt x 261.55347pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./figures/two_pass_example.png>]) [17]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [12
+ (chapter3.tex [18
 
 
 
@@ -1368,17 +1442,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-[13]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 53.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
-
-<figures/puzzle.png, id=549, 915.42pt x 352.31625pt>
+[19] <figures/puzzle.png, id=660, 915.42pt x 352.31625pt>
 File: figures/puzzle.png Graphic file (type png)
- <use figures/puzzle.png>
+
+<use figures/puzzle.png>
 Package pdftex.def Info: figures/puzzle.png used on input line 66.
 (pdftex.def)             Requested size: 367.04082pt x 141.26268pt.
 
@@ -1391,25 +1458,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 []\T1/ptm/m/it/10.95 Application Pro-gram-ming
  []
 
-[14 <./figures/puzzle.png>]
+[20 <./figures/puzzle.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 158.
- [15]) [16]
+ [21]) [22]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 4.
-<figures/proj_plan_02.png, id=566, 917.4275pt x 270.00874pt>
+<figures/proj_plan_02.png, id=677, 917.4275pt x 270.00874pt>
 File: figures/proj_plan_02.png Graphic file (type png)
 
 <use figures/proj_plan_02.png>
 Package pdftex.def Info: figures/proj_plan_02.png used on input line 27.
 (pdftex.def)             Requested size: 405.45047pt x 119.32744pt.
- [17
+ [23
 
 
 
- <./figures/proj_plan_02.png>] [18]
+ <./figures/proj_plan_02.png>] [24]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1435,28 +1502,28 @@ LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 61.
 
-<figures/ManagerArch.png, id=582, 694.595pt x 329.23pt>
+<figures/ManagerArch.png, id=693, 694.595pt x 329.23pt>
 File: figures/ManagerArch.png Graphic file (type png)
 
 <use figures/ManagerArch.png>
 Package pdftex.def Info: figures/ManagerArch.png used on input line 70.
 (pdftex.def)             Requested size: 405.45047pt x 192.18431pt.
- [19 <./figures/ManagerArch.png>]
-<figures/bgsub_01.png, id=600, 746.79pt x 287.57437pt>
+ [25 <./figures/ManagerArch.png>]
+<figures/bgsub_01.png, id=711, 746.79pt x 287.57437pt>
 File: figures/bgsub_01.png Graphic file (type png)
 
 <use figures/bgsub_01.png>
 Package pdftex.def Info: figures/bgsub_01.png used on input line 96.
 (pdftex.def)             Requested size: 405.45047pt x 156.13034pt.
- [20 <./figures/bgsub_01.png>]
-<figures/bgsub_03.png, id=607, 1115.66812pt x 295.1025pt>
+ [26 <./figures/bgsub_01.png>]
+<figures/bgsub_03.png, id=718, 1115.66812pt x 295.1025pt>
 File: figures/bgsub_03.png Graphic file (type png)
 
 <use figures/bgsub_03.png>
 Package pdftex.def Info: figures/bgsub_03.png used on input line 117.
 (pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
- [21 <./figures/bgsub_03.png>]
-<figures/state_machine_02.png, id=616, 792.9625pt x 172.645pt>
+ [27 <./figures/bgsub_03.png>]
+<figures/state_machine_02.png, id=727, 792.9625pt x 172.645pt>
 File: figures/state_machine_02.png Graphic file (type png)
 
 <use figures/state_machine_02.png>
@@ -1482,24 +1549,24 @@ Overfull \hbox (3.04857pt too wide) in paragraph at lines 153--153
 [][][][]\T1/ptm/m/n/10.95 Referenciar 
  []
 
-[22 <./figures/state_machine_02.png>]
-<figures/object_01.png, id=628, 1115.66812pt x 295.1025pt>
+[28 <./figures/state_machine_02.png>]
+<figures/object_01.png, id=739, 1115.66812pt x 295.1025pt>
 File: figures/object_01.png Graphic file (type png)
 
 <use figures/object_01.png>
 Package pdftex.def Info: figures/object_01.png used on input line 167.
 (pdftex.def)             Requested size: 405.45047pt x 107.24545pt.
 
-<figures/classifier_01.png, id=629, 377.91188pt x 280.04625pt>
+<figures/classifier_01.png, id=740, 377.91188pt x 280.04625pt>
 File: figures/classifier_01.png Graphic file (type png)
 
 <use figures/classifier_01.png>
 Package pdftex.def Info: figures/classifier_01.png used on input line 178.
 (pdftex.def)             Requested size: 213.39568pt x 158.1324pt.
- [23 <./figures/object_01.png> <./figures/classifier_01.png>]) [24] [25]
+ [29 <./figures/object_01.png> <./figures/classifier_01.png>]) [30] [31]
 \openout2 = `chapter5.aux'.
 
- (chapter5.tex [26
+ (chapter5.tex [32
 
 
 
@@ -1507,36 +1574,36 @@ Package pdftex.def Info: figures/classifier_01.png used on input line 178.
 Chapter 5.
 )
 
-LaTeX Warning: Marginpar on page 27 moved.
+LaTeX Warning: Marginpar on page 33 moved.
 
 
-LaTeX Warning: Marginpar on page 27 moved.
+LaTeX Warning: Marginpar on page 33 moved.
 
-[27] [28
+[33] [34
 
 
-] (mieic-en.bbl [29
+] (mieic-en.bbl [35
 
-] [30]) [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+] [36] [37]) [38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  (mieic-en.aux (abstract_en.aux)
 (acknows_en.aux) (quote.aux) (abbrevs_en.aux) (chapter1.aux) (chapter2.aux)
 (chapter3.aux) (chapter4.aux) (chapter5.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `mieic-en.out' has not changed.
-(rerunfilecheck)             Checksum: C6E2A0E608853E89F82E4F80C2B86CE3;3410.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+(rerunfilecheck)             Checksum: 6193905D5E930CEBACAA23E5ADC80C92;3641.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
  ) 
 Here is how much of TeX's memory you used:
- 21544 strings out of 493323
- 382177 string characters out of 3139057
- 490216 words of memory out of 3000000
- 24363 multiletter control sequences out of 15000+200000
+ 21704 strings out of 493323
+ 385189 string characters out of 3139057
+ 493165 words of memory out of 3000000
+ 24480 multiletter control sequences out of 15000+200000
  89626 words of font info for 119 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,80p,1248b,1396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,80p,1248b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1550,9 +1617,9 @@ b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on mieic-en.pdf (51 pages, 1249375 bytes).
+Output written on mieic-en.pdf (58 pages, 1543003 bytes).
 PDF statistics:
- 761 PDF objects out of 1000 (max. 8388607)
- 188 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 884 PDF objects out of 1000 (max. 8388607)
+ 220 named destinations out of 1000 (max. 500000)
+ 524 words of extra memory for PDF output out of 10000 (max. 10000000)
 
