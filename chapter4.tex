@@ -43,7 +43,7 @@ OpenCV is a library composed of implementations of useful computer vision algori
 The library contains over 2500 algorithms ranging from the more basic image processing, such as filtering, morphology operators and geometric transformations, to more complex ones that are able to compare images, track features, follow camera movements and recognize faces, among others. Along with the image processing capabilities, OpenCV also ships with interfaces to stereo cameras such as Kinect that allow users to retrieve a cloud of 3D points and a depth map from the captured image. This was the chosen library as there existed already previous work at LIACC using it, which could be leveraged for this project.
 
 \subsection{JavaCV}
-JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP Presets, a project that provides Java interfaces for commonly used C++ libraries, such as OpenCV and FFmpeg\todo{Adicionar referencias}, the ones we are using, as well as CUDA, ARToolKitPlus and others. It provides access to all the functionalities of OpenCV inside a Java environment, and was the chosen solution as there was already experience inside LIACC working with this technology.
+JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP Presets, a project that provides Java interfaces for commonly used C++ libraries, such as OpenCV and FFmpeg, the ones we are using, as well as CUDA, ARToolKitPlus and others. It provides access to all the functionalities of OpenCV inside a Java environment, and was the chosen solution as there was already experience inside LIACC working with this technology.
 
 Even though the code is written in Java and runs inside a Java Virtual Machine, the code from OpenCV is compiled from C/C++ and the memory of the objects created there is allocated in a separate thread. This made it impossible to rely on the garbage collector to do the memory management, and necessary to manually delete the native objects. Failure to address this issue causes the system to run out of memory and a subsequent program crash.
 
@@ -77,12 +77,15 @@ while( (currentFrame = _frameGrabber.grabImage()) != null) {
 The Analytics module was designed to comply with the following specifications, imposed by both our partner and to comply with the already developed modules. 
 
 \begin{itemize}
-	\item Run uninterruptedly waiting for requests to be made
-	\item Process a large number of video inputs at the same time
-	\item Receive input from streams or files
-	\item Specify which analysis are to be run on a specific video
+	\item Run uninterruptedly waiting for requests to be made;
+	\item Allow for video analysis with no significant delay;
+	\item Process a large number of video inputs at the same time;
+	\item Receive input from streams or files;
+	\item Specify which analysis are to be run on a specific video;
+	\item Use free-to-use or open-source tools;
+	\item Allow for deployment scalability.
 \end{itemize}
-\todo{Mais requirements?}
+
 
 The application main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video through information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into its representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawback of this solution is that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
 
@@ -99,7 +102,9 @@ This section describes how the segmentation of the received images is performed,
   \end{center}
 \end{figure}
 
-In figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame \todo{Explain masking process} in order to prevent uninteresting regions of the image from being processed by the Background Subtracter. This solves an issue where moving or changing regions of the image outside our area of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
+In figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame in order to prevent uninteresting regions of the image from being processed by the Background Subtracter. The masking process consists in placing a binary image, called a mask, over the original image and removing all the information where the mask has false values. 
+
+The application of the mask solves an issue where moving or changing regions of the image outside our area of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
 
 The next step of the Segmentation process is to feed the masked frames into a Background Subtraction algorithm that will use them to update its internal representation of the scene. This project uses the OpenCV implementation of the Mixture of Gaussians algorithm that allows the user to tune:
 
@@ -135,7 +140,7 @@ OpenCV provides BlobDetector~\cite{opencv_opencv:_2017},  a family of functions 
 	\item Inertia - Elongation of the region (0 for lines, 1 for circles)
 \end{itemize}
 
-This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}\todo{Italico para nomes de funçoes?}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
+This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
 
 \section{Object Tracking}
 
@@ -150,7 +155,7 @@ In order for the solution to correctly analyse the objects of the scene it needs
   \end{center}
 \end{figure}
 
-To enhance this mechanism a sub-set of the state machine presented \todo{Referenciar artigo da state machine} which allows us to model the life cycle of an object. As seen in~\ref{fig:object_state_machine} an object starts as an Hypothesis, and cannot be used for analytics while in this state. After being tracked for 5 frames it then changes its state to Normal, where it stays until no match can be found, either from leaving the scene or due to problems with the input frame. An object in this state remains for a maximum of 5 frames, after which it is deleted or until a new object is found in the vicinities of it's last known position.
+To enhance this mechanism a sub-set of the state machine presented by Jodoin et. al~\cite{jodoin_urban_2014} which allows us to model the life cycle of an object. As seen in~\ref{fig:object_state_machine} an object starts as an Hypothesis, and cannot be used for analytics while in this state. After being tracked for 5 frames it then changes its state to Normal, where it stays until no match can be found, either from leaving the scene or due to problems with the input frame. An object in this state remains for a maximum of 5 frames, after which it is deleted or until a new object is found in the vicinities of it's last known position.
 
 This technique relies on objects appearing close to their previous position in the next scene, and because the project was designed to run in high-way scenarios, where vehicles travel at high speeds, there was the need to improve it. The chosen solution was to follow a method used by Chris Dahms in his vehicle counting software ~\cite{dahms_opencv_3_car_counting_cpp_2017} that predicts an object next position by calculating an weighted average of the previous inter-position deltas and summing it to its current position as shown in ~\ref{eq:pos_pred}.
 
@@ -191,21 +196,19 @@ When an object is counted in one of the virtual sensors its area is passed to th
 
 \section{Feature Point Tracking}
 
-\missingfigure{Feature Points}
-
 The need to track feature points stems from the fact that without them we rely wholly on the background subtraction to process the image. Using feature points we can extract and track details of the vehicles that would otherwise be lost due to the process only working with a binary mask. 
 
 We can use these points to distinguish vehicles grouped in a single binary region, as they are characterized by 
-This way, even if a vehicle stops for a long time and starts to be considered background we can use its tracked points to maintain the position of \todo{Finish}
+This way, even if a vehicle stops for a long time and starts to be considered background we can use its tracked points to maintain the position of these stopped vehicles as they regain motion.
 
 \section{Utility}
 
 Over the development of the project the rise needed to implement some functionalities to enhance the code flow and to help the visualization of the implemented algorithms. This section will describe the most relevant ones for the reader to analyse and implement in its own projects.
 
-\subsection{Video Wall}
+% \subsection{Video Wall}
 
-\subsection{Image Processors}
+% \subsection{Image Processors}
 
 \section{Summary}
 
-Although dealing with a framework with no proper documentation was a difficult challenge to overcome, the performance obtained from the native code was essential for the final result, as the software is now able to track objects in a busy scene faster than the camera's capture rate, allowing us to process a video file in a shorter period of time than it's length. This was a request 
+Although dealing with a framework with no proper documentation was a difficult challenge to overcome, the performance obtained from the native code was essential for the final result, as the software is now able to track objects in a busy scene faster than the camera's capture rate, allowing us to process a video file in a shorter period of time than it's length.

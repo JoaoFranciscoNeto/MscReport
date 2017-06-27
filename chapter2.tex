@@ -1,29 +1,10 @@
 %!TEX root = mieic-en.tex
 
-\chapter{Literature Review} \label{chap:sota}
-
-\section*{}
-\textit{
-Neste capítulo é descrito o estado da arte e são
-apresentados trabalhos relacionados para mostrar o que existe no
-mesmo domínio e quais os problemas em aberto.
-Deve deixar claro que existe uma oportunidade de desenvolvimento que
-cobre alguma falha concreta .
-O capítulo deve também efetuar uma revisão tecnológica às principais
-ferramentas utilizáveis no âmbito do projeto, justificando futuras
-escolhas.
-}
-
-Resenha utilizaçao computer vision em trafego e em transportes
-Concluir com os desafios da armis (drive, quere aplicaro computer vision para automatizar determinados aspetos)
-Sequência de funcionalidades que respondem ao desafio da Armis(segmentaçao,deteçao,...)
-Uma secção para cada um
-
-Tese Gustavo Lira / Pedro Loureiro
+\chapter{Computer Vision and Traffic Analysis - A literature review} \label{chap:sota}
 
 \section{History of Computer Vision}
 
-Computer vision appeared as an area of investigation around the mid 60's at the MIT by Professor Larry Roberts, whose PhD. thesis focused on methods to extract 3D information from a 2D image ~\cite{huang_computer_1996} in order to reconstruct entire scenes from the geometry gathered. This area is now considered by the ACM as a branch of artificial intelligence according to the 2012 ACM Computing Classification System ~\cite{acm_2012_2012}. From this point onward scientists began applying the techniques developed in multiple fields.
+Computer vision appeared as an area of investigation around the mid 60's at the MIT by Professor Larry Roberts, whose doctorate thesis focused on methods to extract 3D information from a 2D image ~\cite{huang_computer_1996} in order to reconstruct entire scenes from the geometry gathered. This area is now considered by the ACM as a branch of artificial intelligence according to the 2012 ACM Computing Classification System ~\cite{acm_2012_2012}. From this point onward scientists began applying the techniques developed in multiple fields.
 
 The use of computer vision in manufacturing industry was among the first to be explored, as there were already multiple robots working in the assembly lines of the factories that needed to be improved, as noted by Stout in 1980 ~\cite{stout_computer_1980}. These robots were becoming outdated due to the lack of interaction with the environment. This meant that for a robot to work with a part in an assembly line it needed to be placed in a pre-determined position, and any deviation could mean that the line needed to be stopped. Michael Baird relates in ~\cite{l._baird_sight-i:_1978} a computer vision system developed to inspect circuit chips rotation deviation in a welding base, indicating to the welder that the chip needed to be adjusted. Computer vision was also used as a tool to automatically analyse weather satellite images ~\cite{binford_computer_1973-2} and multidimensional medical images ~\cite{ayache_medical_1998}, with applications being developed in these areas being now common in our daily life.
 
@@ -48,49 +29,18 @@ The scenes also have varying light according to the time of the day, and propose
 
 \subsection{Our Challenge}
 
-The "Analytics Server" module of the "Video Server" project had a list of requirements that needed to be \todo{Acabar}
+The "Analytics Server" module of the "Video Server" project had a list of requirements that needed to be addressed:
 
-Detetar eventos relevantes
-	Contra mao
-	Objetos caidos
+\begin{itemize}
+	\item Detect relevant events:
+		\subitem Wrong way driving;
+		\subitem Fallen objects on the road;
+		\subitem Prohibited zone entering;
+		\subitem Suspicious camera approximation
+	\item Count and classify vehicles into light and heavy categories
+\end{itemize}
 
-Contar Veiculos
-
-Apenas para camaras fixas
-
-
-\section{Foreground Segmentation}
-
-Image segmentation is the process through which  an image is separated into its different regions according to the desired output, usually objects of interest. These regions are composed by pixels that have a common characteristic ~\cite{shapiro_computer_2001} dependant on the desired result. There are several ways one can accomplish an adequate segmentation of an image, and the most relevant ones to our purpose are described below.
-
-\subsection{Background Subtraction}
-
-Background Subtraction is a segmentation technique based on the analysis of the difference of consecutive frames and use that information to create a background model, a representation of what the image looks like without any moving objects present. Given the nature of the process, cameras must be static and although some research has been made to overcome this issue ~\cite{li_detection_2012} ~\cite{sheikh_background_2009} ~\cite{zamalieva_background_2014}, this is beyond the scope of the project, due to the requirements given.
-
-There are however a number of different ways to implement the background subtraction developed across the years with increasing segmentation accuracy and computational performance. Piccardi presented an overview of the most relevant ones in ~\cite{piccardi_background_2004}, aiming to present each method's strengths and weaknesses. From this work we can present a list of the algorithms considered for implementation in the project.
-
-\subsubsection{Frame Differencing}
-
-This is the simplest approach to the problem as it only considers two frames at a time, making it only work in certain scenarios where the speed of the objects and frame rate of the camera allow it. In this model a pixel is considered as foreground if it satisfies the equation presented in ~\ref{eq:frame_diff}, and since the only parametrizable value is the Threshold, the whole segmentation process is very sensitive to any changes in this value.
-
-\begin{eqnarray}
-\label{eq:frame_diff}
-\left | frame_{i} - frame_{i-1} \right | >= Threshold
-\end{eqnarray}
-\subsubsection{History Based Background Model}
-
-In order to make this segmentation method more robust, in the early 2000's Velastin ~\cite{lo_automatic_2001} and Cucchiara ~\cite{cucchiara_detecting_2003} proposed a mathematical model to take into consideration past frames when calculating the Background Model of the scene. The most simple version of the improved algorithm used a running average of the past frames as seen in ~\ref{eq:running_average}. This eliminates the need to store the frames in memory as the new average can be calculated using the previous results.
-
-\begin{eqnarray}
-\label{eq:running_average}
-BackgroundModel _{i+1} = \alpha * Frame_{i} + (1-\alpha)* BackgroundModel _{i}
-\end{eqnarray}
-
-Instead of the running average one can use the median value of the last n frames, improving the method reaction to outlying values. In both however, the history can be just the n frames or a weighted average where recent frames have more weight. Both these methods cannot cope with intermittent changes on the background, such as moving leaves against a building facade, and to solve this problem a new approach was proposed, the Mixture of Gaussians which models each pixel according to a mixture of Gaussian distributions, usually 3 to 5, but in later research ~\cite{zivkovic_improved_2004} a method was developed to calculate the number of distributions needed on a per pixel basis.
-
-\subsection{Object Based}
-
-Object Based segmentation relies on the a priori knowledge of the geometry of the objects we want to extract from the image. It is mainly used in medical applications such as in ~\cite{snell_model-based_1993} where it is used to extract a model of the brain surface from MRI scans \todo{Acabar}
+The following sections of this document will explore the theoretical basis on which our solution was built, aimed at tackling these specific points.
 
 \section{Image Treatment}
 
@@ -128,37 +78,6 @@ This equation returns a filter consisting of concentric circles that results in 
 \end{figure}
 
 This kind of filters have multiple uses in computer vision. Blurring an image removes the grain noise it contains, creating more even surfaces that ease the process of image processing, as well as making edges easier to detect with edge detection algorithms.
-
-\subsection{Edge Detection}
-
-Detecting the edges in an image is an important step into the understanding of its contents, allowing segmentation based on surfaces and a spatial perception of the scene. The work presented by Marr and Hildreth ~\cite{Marr1980TheoryOE} defines edges as part visual and part physical and proceeds to show that the two are interconnected. The first step of the proposed process is to calculate the zero-crossings of equation ~\ref{eq:intensity}, the Laplacian of a two dimensional Gaussian applied to different scales of the image, which returns both the points of intensity change and the slopes of the function at that point.
-
-\begin{eqnarray}
-\label{eq:intensity}
-\nabla^{2} G(x,y)*I(x,y)
-\end{eqnarray}
-
-What the authors noted was that if an edge was detected at a certain scale it appears also at adjacent scales, which they called "spatial coincidence assumption". This theory can be reversed, if there is a convergence of edges on multiple scales there is a real physical edge, and based on this, if we find zero-crossings on neighbour scales, we can assume there is a real edge in that region. From here multiple implementations of the algorithm appeared, the most used one being presented below, the Canny Edge Detector using a Sobel filter. Although this was among the first implementations of an edge detector it is the most rigorously defined one and is still considered to be state of the art.
-
-The Sobel filter is used to create an image that accentuates the edges of an original image. This process works by convolving two kernels with the image, one for the horizontal and the other for the vertical direction, that return the intesity change in that pixel for each one. The filters can be seen in ~\ref{eq:sobel_filter} as they were presented by Irwin Sobel ~\cite{sobel_isotropic_1989}.
-
-\begin{eqnarray}
-\label{eq:sobel_filter}
-G_{x} =
-\begin{bmatrix}
-+1 & 0 & -1\\ 
-+2 & 0 & -2\\ 
-+1 & 0 & -1
-\end{bmatrix} , G_{y} = \begin{bmatrix}
-+1 & +2 & +1\\ 
-0 & 0 & 0\\ 
--1 & -2 & -1
-\end{bmatrix}
-\end{eqnarray}
-
-Using $G_{x}$ and $G_{y}$ it is possible to retrieve the regions of the image that contain edges by calculating the magnitude of the gradient vector as the square root of the sum of the squares of both components and thresholding these values. One of the features of this process is the ability to retrieve the direction of the edge from these values, using the inverse tangent operation.
-
-The Canny Edge Detector uses the result of the Sobel filter as input and filters the most relevant edges as well as thinning them to 1-pixel wide lines. To accomplish this Canny used an optimization process comparing the value of the gradient magnitude to the one of the neighbour pixels along the direction returned by the Sobel filter, and keeping only the one with the largest value along the edge.
 
 \subsection{Mathematical Morphology}
 
@@ -228,7 +147,7 @@ The dilation and erosion operators can be combined to form the opening and closi
 
 Since shadows can be detected as foreground during the segmentation process, a process to remove them is important in certain scenarios. We will now describe some of the more interesting proposed methods to perform this task in this section.
 
-In ~\cite{prati_shadow_2001} Prati et al. discussed how critical the shadow removal process is to traffic analysis, and they proceed to compare two ITS \todo{Adicionar a abreviaçoes} management systems, SAKBOT (Statistical and Knowledge-BasedObject Tracker) and ATON(Autonomous Transportation Agents for On-scene Networked incident manager), developed in Italy and the United States of America respectively.
+In ~\cite{prati_shadow_2001} Prati et al. discussed how critical the shadow removal process is to traffic analysis, and they proceed to compare two ITS management systems, SAKBOT (Statistical and Knowledge-BasedObject Tracker) and ATON(Autonomous Transportation Agents for On-scene Networked incident manager), developed in Italy and the United States of America respectively.
 
 SAKBOT adopts a method presented in ~\cite{cucchiara_statistic_2000}, which uses the chrominance information, converting pixel colours from RGB to HSV space, as it most closely relates to the human perception of colour. The process then evaluates how the scene colours components change due to the passing of vehicles and shadows, as seen in figure ~\ref{fig:sakbot-hsv}. From this we can extract that a shadow darkens a pixel and saturates its colour, and is the difference between an object point and a shadow point. The model then concludes that a point is considered as shadow if:
 
@@ -237,7 +156,7 @@ SAKBOT adopts a method presented in ~\cite{cucchiara_statistic_2000}, which uses
     \leavevmode
     \includegraphics[width=0.9\textwidth]{sakbot-hsv}
     \captionsetup{justification=centering}
-    \caption{HSV color space components change due to shadows. Red arrows indicate a shadow passing on the point. Blue arrow indicates a vehicle passing. ~\cite{prati_shadow_2001}}
+    \caption{HSV color space components change due to shadows. Red arrows indicate a shadow passing on the point. Blue arrow indicates a vehicle passing ~\cite{prati_shadow_2001} ©[2001] IEEE}
     \label{fig:sakbot-hsv}
   \end{center}
 \end{figure}
@@ -259,12 +178,89 @@ The method used by ATON is described in ~\cite{mikic_moving_2000} and begins by 
 
 The local information can be used to create a background model, both the mean and variance of the colour for each pixel when shadowed and not shadowed. In the segmentation process the values in the image are compared to the mean value of the background and if significantly different it is assigned a probability to belong to the background, foreground or shadow. The probability values are 0.3, 0.4 and 0.4 respectively. In the next iterations the neighbour pixels probabilities are considered in order to take advantage of the spatial transformation. The iterative process stops when there are no relevant changes, usually after the third iteration. Morphological operators are then computed over the output of the process to close unwanted openings in the regions. ATON does not use temporal information as of the time of the publication of the work. This process can identify with near 90\% accuracy shadows and object accuracy.
 
-\todo{Se houver tempo adicionar mais metodos}
+\section{Foreground Segmentation}
+
+Image segmentation is the process through which  an image is separated into its different regions according to the desired output, usually objects of interest. These regions are composed by pixels that have a common characteristic ~\cite{shapiro_computer_2001} dependant on the desired result. There are several ways one can accomplish an adequate segmentation of an image, and the most relevant ones to our purpose are described below.
+
+\subsection{Background Subtraction}
+
+Background Subtraction is a segmentation technique based on the analysis of the difference of consecutive frames and use that information to create a background model, a representation of what the image looks like without any moving objects present. Given the nature of the process, cameras must be static and although some research has been made to overcome this issue ~\cite{li_detection_2012} ~\cite{sheikh_background_2009} ~\cite{zamalieva_background_2014}, this is beyond the scope of the project, due to the requirements given.
+
+There are however a number of different ways to implement the background subtraction developed across the years with increasing segmentation accuracy and computational performance. Piccardi presented an overview of the most relevant ones in ~\cite{piccardi_background_2004}, aiming to present each method's strengths and weaknesses. From this work we can present a list of the algorithms considered for implementation in the project.
+
+\subsubsection{Frame Differencing}
+
+This is the simplest approach to the problem as it only considers two frames at a time, making it only work in certain scenarios where the speed of the objects and frame rate of the camera allow it. In this model a pixel is considered as foreground if it satisfies the equation presented in ~\ref{eq:frame_diff}, and since the only parametrizable value is the Threshold, the whole segmentation process is very sensitive to any changes in this value.
+
+\begin{eqnarray}
+\label{eq:frame_diff}
+\left | frame_{i} - frame_{i-1} \right | >= Threshold
+\end{eqnarray}
+\subsubsection{History Based Background Model}
+
+In order to make this segmentation method more robust, in the early 2000's Velastin ~\cite{lo_automatic_2001} and Cucchiara ~\cite{cucchiara_detecting_2003} proposed a mathematical model to take into consideration past frames when calculating the Background Model of the scene. The most simple version of the improved algorithm used a running average of the past frames as seen in ~\ref{eq:running_average}. This eliminates the need to store the frames in memory as the new average can be calculated using the previous results.
+
+\begin{eqnarray}
+\label{eq:running_average}
+BackgroundModel _{i+1} = \alpha * Frame_{i} + (1-\alpha)* BackgroundModel _{i}
+\end{eqnarray}
+
+Instead of the running average one can use the median value of the last n frames, improving the method reaction to outlying values. In both however, the history can be just the n frames or a weighted average where recent frames have more weight. Both these methods cannot cope with intermittent changes on the background, such as moving leaves against a building facade, and to solve this problem a new approach was proposed, the Mixture of Gaussians which models each pixel according to a mixture of Gaussian distributions, usually 3 to 5, but in later research ~\cite{zivkovic_improved_2004} a method was developed to calculate the number of distributions needed on a per pixel basis.
+
+\todo{Copiar resto dos metodos}
+
+\subsection{Feature Tracking}
+
+When the literature mentions features it is referring to interesting parts of the image that can be detected and matched in multiple different images of the same scene. The process of detecting these features is a basic step in many computer vision applications, as they allow for a broad comprehension of the scene being observed. These features can take the shape of:
+
+\begin{itemize}
+	\item Edges - A boundary in an image (Further explored in the next section)
+	\item Corners or Interest Points - Points in the image that have distinctive neighbourhood, making them good candidates for tracking
+	\item Blobs or Regions of Interest - Connected areas of the image that share a property like colour or intensity
+\end{itemize}
+
+The OpenCV implementation of \textit{goodFeaturesToTrack} is based on the work of Jianbo Shi et al. ~\cite{shi_good_1994} that tackles the problem of selecting features that can be tracked consistently across the scene, usually feature points that correspond to physical points in the scene. It does so by calculating a value they named \textit{dissimilarity} that quantifies how much the feature appearance has changed between the first and the current frame. When this value grows past a certain threshold, the point is discarded and no longer tracked.
+
+The two main improvements presented in this paper regarding this problem are the fact that the authors allow for both linear warping and translation regarding the image motion model, and the second being a numerically superior method for calculating the \textit{dissimilarity} value when compared to existing work. The other main contribution is a new value to measure how good a feature is, beside the already common \textit{interest} and \textit{cornerness}. This value is the \textit{texturedness} and is a result of the authors findings that features with good texture are more easily tracked.
+
+\subsection{Edge Detection}
+
+Detecting the edges in an image is an important step into the understanding of its contents, allowing segmentation based on surfaces and a spatial perception of the scene. The work presented by Marr and Hildreth ~\cite{Marr1980TheoryOE} defines edges as part visual and part physical and proceeds to show that the two are interconnected. The first step of the proposed process is to calculate the zero-crossings of equation ~\ref{eq:intensity}, the Laplacian of a two dimensional Gaussian applied to different scales of the image, which returns both the points of intensity change and the slopes of the function at that point.
+
+\begin{eqnarray}
+\label{eq:intensity}
+\nabla^{2} G(x,y)*I(x,y)
+\end{eqnarray}
+
+What the authors noted was that if an edge was detected at a certain scale it appears also at adjacent scales, which they called "spatial coincidence assumption". This theory can be reversed, if there is a convergence of edges on multiple scales there is a real physical edge, and based on this, if we find zero-crossings on neighbour scales, we can assume there is a real edge in that region. From here multiple implementations of the algorithm appeared, the most used one being presented below, the Canny Edge Detector using a Sobel filter. Although this was among the first implementations of an edge detector it is the most rigorously defined one and is still considered to be state of the art.
+
+The Sobel filter is used to create an image that accentuates the edges of an original image. This process works by convolving two kernels with the image, one for the horizontal and the other for the vertical direction, that return the intesity change in that pixel for each one. The filters can be seen in ~\ref{eq:sobel_filter} as they were presented by Irwin Sobel ~\cite{sobel_isotropic_1989}.
+
+\begin{eqnarray}
+\label{eq:sobel_filter}
+G_{x} =
+\begin{bmatrix}
++1 & 0 & -1\\ 
++2 & 0 & -2\\ 
++1 & 0 & -1
+\end{bmatrix} , G_{y} = \begin{bmatrix}
++1 & +2 & +1\\ 
+0 & 0 & 0\\ 
+-1 & -2 & -1
+\end{bmatrix}
+\end{eqnarray}
+
+Using $G_{x}$ and $G_{y}$ it is possible to retrieve the regions of the image that contain edges by calculating the magnitude of the gradient vector as the square root of the sum of the squares of both components and thresholding these values. One of the features of this process is the ability to retrieve the direction of the edge from these values, using the inverse tangent operation.
+
+The Canny Edge Detector uses the result of the Sobel filter as input and filters the most relevant edges as well as thinning them to 1-pixel wide lines. To accomplish this John Canny ~\cite{canny_computational_1986} used an optimization process comparing the value of the gradient magnitude to the one of the neighbour pixels along the direction returned by the Sobel filter, and keeping only the one with the largest value along the edge.
+
+\subsection{Object Based}
+
+Object Based segmentation relies on the a priori knowledge of the geometry of the objects we want to extract from the image. It is mainly used in medical applications such as in ~\cite{snell_model-based_1993} where it is used to extract a model of the brain surface from MRI scans. To be able to use this approach to solve our issue of vehicle detection we would need detailed models of all the vehicles that can possibly pass through the scene we are analysing, which is not feasible, and thus this method was not further explored.
 
 \section{Object Detection}
 
 In this section we will analyse processes to detect objects of interest in images, a necessary step of any traffic surveillance system.
-
 
 \subsection{Connected Component Labelling}
 
@@ -289,7 +285,6 @@ The two-pass solution presented by Shapiro et al. ~\cite{shapiro_computer_2001} 
 
 The process is illustrated in figure ~\ref{fig:two_pass_example}.
 
-
 \begin{figure}[h]
   \begin{center}
     \leavevmode
@@ -300,34 +295,95 @@ The process is illustrated in figure ~\ref{fig:two_pass_example}.
   \end{center}
 \end{figure}
 
-While these are the most basic solutions for the problem, a number of authors proposed enhancements to improve their performance, the most prominent ones being listed below:
+While these are the most basic solutions for the problem, a number of authors proposed enhancements to improve their performance, the most prominent ones being the Contour Tracing Labelling by F. Chang et al. ~\cite{chang_linear-time_2004}, a method that uses contour tracing to identify internal and external contours of each component. These contours are then used to label the connected components when the image is traversed horizontally by counting the number of contours passed. The Hybrid Object Labelling presented by Herrero ~\cite{martin-herrero_hybrid_2007} presents a method that combines recursive and iterative analysis, finding unlabelled pixels and recursively finding their neighbours until a labelled one is found, then proceeding to the assignment in the adjacent rows.
 
-\begin{itemize}
-	\item Contour Tracing Labelling - F. Chang et al. ~\cite{chang_linear-time_2004} present a method that uses contour tracing to identify internal and external contours of each component. These contours are then used to label the connected components when the image is traversed horizontally by counting the number of contours passed.
-	\item Hybrid Object Labelling - Herrero ~\cite{martin-herrero_hybrid_2007} presents a method that combines recursive and iterative analysis, finding unlabelled pixels and recursively finding their neighbours until a labelled one is found, then proceeding to the assignment in the adjacent rows.
-	\item Improved Run-based Connected-component Labelling - L. He et al. ~\cite{he_run-based_2010}
-\end{itemize}
-
-\todo{Adicionar mais modelos?}
+The implementation of OpenCV is based on the work of Grana et. al ~\cite{grana_optimized_2010}. It uses a new concept in this area that the authors describe as a single entry decision table and enhancing them to create the OR-decision tables that allow multiple equivalent decisions for the same conditions. The most convenient decision is selected by creating a decision tree, branching it whenever multiple decisions are possible. To improve the method performance the access to the image is made block-wise instead of the more usual pixel-wise manner. This is the chosen method for implementation in OpenCV due to it's performance compared to other state of the art algorithms.
 
 It is interesting to note the YACCLAB (Yet Another Connected Components Labelling Benchmark) ~\cite{grana_yacclab_2016} project, a benchmark platform that allows researchers to compare the performance of their connected components labelling methods to the methods of other researchers. The novelty of this platform is the fact that it uses the authors implementations instead of their own, allowing the algorithms to perform exactly as intended, with all the tweaks and tricks.
 
-\subsection{Blob Detection}
+\subsection{Convex Hull}
 
-A blob is defined as being a region with similar pixels based on some of their properties: intensity, 
+A convex hull is the smallest convex shape that encompasses all the points of the figure. This problem is usually solved in two or three dimensions, although some solutions can solve it for higher number of dimensions ~\cite{chazelle_optimal_1993}. In the field of computer vision however only the second and third dimension are needed.
 
-\section{Object Tracking}
+An algorithm to calculate a convex hull from a set of points ~\cite{berg_computational_2008} can be seen in listing ~\ref{src:convex_hull}.
 
+\begin{lstlisting}[float,language=C, label={src:convex_hull}, caption=Convex Hull calculation] 
+Input: Set of points in the plane
+Output: List of vertices of the convex hull in clockwise order
 
+Sort the points by their x-coordinate, creating a sequence p_{1}, p_{2}, ..., p_{n}
 
-\section{Resumo ou Conclusões}
+Put point p_{1} and p_{2} in a list called L_{upper}
+for i=3 to n
+	Append p_{i} to L_{upper}
+		While L_{upper} has more than two points and the last three points don't form a right turn
+			Delete the middle of the last three points from L_{upper}
 
-No final do capítulo deverá ser apresentado um resumo com as 
-principais conclusões que se podem tirar. 
+Put points p_{n} and p_{n-1} in a list called L_{lower}
+for i=n-2 down to n
+	Append p_{i} to L_{lower}
+		While L_{lower} has more than two points and the last three points don't form a right turn
+			Delete the middle of the last three points from L_{lower}
 
-Vivamus non nunc nec risus tempor varius. Quisque bibendum mi at
-dolor. Aliquam consectetuer condimentum risus. Aliquam luctus pulvinar
-sem. Duis aliquam, urna et vulputate tristique, dui elit aliquet nibh,
-vel dignissim magna turpis id sapien. Duis commodo sem id
-quam. Phasellus dolor. Class aptent taciti sociosqu ad litora torquent
-per conubia nostra, per inceptos himenaeos. 
+Remove first and last point from L_{lower} to avoid duplication of the points where the upper and the lower hull meet
+Append L_{lower} and L_{upper} and return that list
+\end{lstlisting}
+
+\section{Fuzzy Sets}
+
+Fuzzy sets were introduced by L.A. Zadeh ~\cite{zadeh_fuzzy_1965} and Dieter Klaua ~\cite{klaua_ansatz_1967} in the mid 60's. Although the work from Klaua is written in german, a very detailed analysis of his work can be found in a paper by Siegfried Gottwald ~\cite{gottwald_early_2010}.
+
+Fuzzy sets are a class of sets where instead of each member belonging to a class like in regular sets, they have a degree of membership to each class ranging from zero to one. This degree is determined by the membership or characteristic function of the class it represents, and can also be seen as a truth value in certain applications. 
+
+Since their formulation, the use of these sets as spread to multiple areas: text processing ~\cite{cock_modelling_2000} where they are used to model linguistic modifiers taking into account relationships between objects; vehicle safety ~\cite{dattathreya_detection_2012} in which they are used to build a fuzzy deterministic non controller type system that is able to indicate if a battery is on fire given a broad range of inputs; quality of life analysis ~\cite{pal_effect_2012} where they are used to analyse the effect of noise pollution caused by road traffic on the efficiency of human workers.
+
+\section{Traffic Analysis}
+
+The topic of traffic analysis using computer vision has been studied by multiple authors who tackled multiple problems. Since our solution is to be able to run on both highway and urban environments, both areas were studied.
+
+\subsection{Highway Scenarios}
+
+Highway scenes are more easily analysed due to the following attributes contributing to a controlled environment:
+
+\begin{itemize}
+	\item Known object types in the scene, as we only have vehicles to analyse, with no pedestrians or other actors present;
+	\item Cameras positioning is studied towards this type of application, meaning there is little to no occlusion of objects;
+	\item The trajectory of the objects has little to no deviation.
+\end{itemize}
+
+In their work "\textit{Detection and classification of vehicles}" ~\cite{gupte_detection_2002} S. Gupte et al. present a method to replace the magnetic loop detectors with a vision-based video monitoring system. Their approach needs minimum scene-specific knowledge, an advantage that speeds up the set-up process. The vehicle tracking method proposed is based on a state machine where a region can belong to one of five different states:
+
+\begin{itemize}
+	\item Update, when a region from the current frame matches exactly to a region in the previous frame;
+	\item Merge, when multiple regions from the previous frame merge into a single one in the current frame;
+	\item Split, when a single region from the previous frame split into multiple regions in the current frame;
+	\item Disappear, when a region from the previous frame is not matched to any region from the current frame;
+	\item Appear, when a region appears and is not near a recently disappeared region;
+\end{itemize}
+
+Using these five states they are able to track vehicles crossing the scene even if they are partially occluded behind other vehicles or scene features. They also present a classification technique that distinguishes cars from non-cars (vans, SUVs, semis and buses) based on the size of the region using a fix threshold value. This was able to achieve a 70\% classification success rate in a 20 minutes video.
+
+Goo Jun et al. ~\cite{jun_tracking_2008} present a method for segmenting different vehicles inside the same region retrieved by the background subtracter. To do so they calculate a motion vector for each vehicle by tracking feature points across multiple frames and then clustering them based on their velocity.
+
+\subsection{Urban Scenarios}
+
+Urban scenes are harder to analyse due to the following attributes:
+
+\begin{itemize}
+	\item Unknown object types in the scene, making it difficult to segment and classify them;
+	\item Cameras are positioned in low locations, creating a lot of occlusion between objects and other objects, and objects and features in the scene;
+	\item Unexpected trajectories of the objects present in the scene;
+	\item Objects may stop at any point and be classified as background by the segmentation process.
+\end{itemize}
+
+Buch et. al ~\cite{buch_detection_2008} present a method to detect and classify vehicles in urban scenes that use 3D models whose projections are compared to the segmented regions. This method has a reported accuracy of 100\% under sunny weather but this value declines when faced with foggy or rainy weather.
+
+Hashmi et. al ~\cite{hashmi_analysis_2012} propose an approach to gather statistics of intersection usage, analysing how many vehicles pass through the scene and also from where they come and where they exit. This evaluation is only possible using video, as the traditional methods of counting vehicles cannot establish a relationship between detections at different points of the intersection. This paper however can only deal with free-flowing traffic and has problems with stopped vehicles.
+
+\section{Summary}
+
+This chapter covered the beginning of the field of computer vision and its multiple usages, reviewed basic concepts of image treatment, focusing on the ones that would be used during the development of the solution. 
+
+When reading the works related to traffic analysis we detected a largely unsolved issue, related to the segmentation of stopped vehicles in urban scenes. 
+
+This review was written taking into consideration that some of the readers may not be familiarized with the area, and thus contains overviews of some basic methodologies that are common in computer vision.

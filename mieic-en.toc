@@ -1,51 +1,47 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Contexto/Enquadramento}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Projeto}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Motivation and Goals}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Estrutura da Disserta\IeC {\c c}\IeC {\~a}o}{3}{section.1.4}
-\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}History of Computer Vision}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Computer Vision in Intelligent Transport Systems}{6}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Our Challenge}{6}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Foreground Segmentation}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Background Subtraction}{7}{subsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.1.1}Frame Differencing}{7}{subsubsection.2.2.1.1}
-\contentsline {subsubsection}{\numberline {2.2.1.2}History Based Background Model}{8}{subsubsection.2.2.1.2}
-\contentsline {subsection}{\numberline {2.2.2}Object Based}{8}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Image Treatment}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Blur}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Edge Detection}{9}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Mathematical Morphology}{11}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Shadow Removal}{13}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Object Detection}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Connected Component Labelling}{15}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Blob Detection}{17}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Object Tracking}{17}{section.2.5}
-\contentsline {section}{\numberline {2.6}Resumo ou Conclus\IeC {\~o}es}{17}{section.2.6}
-\contentsline {chapter}{\numberline {3}Computer Vision applied to Traffic Analysis - An Overview}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sec\IeC {\c c}\IeC {\~a}o Exemplo}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Exemplo de Figura}{20}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Exemplo de Tabela}{20}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Sec\IeC {\c c}\IeC {\~a}o Exemplo}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Resumo e Conclus\IeC {\~o}es}{22}{section.3.3}
-\contentsline {chapter}{\numberline {4}Implementation}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Technology}{24}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}OpenCV}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}JavaCV}{24}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}FFmpeg}{24}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Architecture}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Implementation Architecture}{25}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Segmentation}{26}{section.4.3}
-\contentsline {section}{\numberline {4.4}Object Detection}{27}{section.4.4}
-\contentsline {section}{\numberline {4.5}Object Tracking}{28}{section.4.5}
-\contentsline {section}{\numberline {4.6}Object Classification}{29}{section.4.6}
-\contentsline {section}{\numberline {4.7}Feature Point Tracking}{30}{section.4.7}
-\contentsline {section}{\numberline {4.8}Utility}{30}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Video Wall}{30}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Image Processors}{30}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}Summary}{30}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalho Futuro}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Satisfa\IeC {\c c}\IeC {\~a}o dos Objetivos}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalho Futuro}{33}{section.5.2}
-\contentsline {chapter}{References}{35}{section*.49}
+\contentsline {section}{\numberline {1.2}Project}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Motivation and Goals}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Estrutura da Disserta\IeC {\c c}\IeC {\~a}o}{5}{section.1.4}
+\contentsline {chapter}{\numberline {2}Computer Vision and Traffic Analysis - A literature review}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}History of Computer Vision}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Computer Vision in Intelligent Transport Systems}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Our Challenge}{8}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Image Treatment}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Blur}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mathematical Morphology}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Shadow Removal}{13}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Foreground Segmentation}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Background Subtraction}{14}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Frame Differencing}{14}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}History Based Background Model}{15}{subsubsection.2.3.1.2}
+\contentsline {subsection}{\numberline {2.3.2}Feature Tracking}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Edge Detection}{16}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Object Based}{17}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Object Detection}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Connected Component Labelling}{17}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Convex Hull}{19}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Fuzzy Sets}{20}{section.2.5}
+\contentsline {section}{\numberline {2.6}Traffic Analysis}{20}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Highway Scenarios}{20}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Urban Scenarios}{21}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Summary}{22}{section.2.7}
+\contentsline {chapter}{\numberline {3}Implementation}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Technology}{24}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}OpenCV}{24}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}JavaCV}{24}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}FFmpeg}{24}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Architecture}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Implementation Architecture}{25}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Segmentation}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4}Object Detection}{27}{section.3.4}
+\contentsline {section}{\numberline {3.5}Object Tracking}{28}{section.3.5}
+\contentsline {section}{\numberline {3.6}Object Classification}{29}{section.3.6}
+\contentsline {section}{\numberline {3.7}Feature Point Tracking}{30}{section.3.7}
+\contentsline {section}{\numberline {3.8}Utility}{30}{section.3.8}
+\contentsline {section}{\numberline {3.9}Summary}{30}{section.3.9}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es e Trabalho Futuro}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Satisfa\IeC {\c c}\IeC {\~a}o dos Objetivos}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trabalho Futuro}{33}{section.4.2}
+\contentsline {chapter}{References}{35}{section*.35}

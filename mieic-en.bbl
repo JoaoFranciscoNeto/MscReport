@@ -19,6 +19,18 @@ N.~Ayache.
   {{Pattern Recognition}} ({{Cat}}. {{No}}.{{98EX170}})}, volume~2, pages
   1255--1256 vol.2, August 1998.
 
+\bibitem[BMCM97]{beymer_real-time_1997}
+D.~Beymer, P.~McLauchlan, B.~Coifman, and J.~Malik.
+\newblock A real-time computer vision system for measuring traffic parameters.
+\newblock In {\em Proceedings of {{IEEE Computer Society Conference}} on
+  {{Computer Vision}} and {{Pattern Recognition}}}, pages 495--501, June 1997.
+
+\bibitem[BOV08]{buch_detection_2008}
+N.~Buch, J.~Orwell, and S.~A. Velastin.
+\newblock Detection and classification of vehicles for urban traffic scenes.
+\newblock In {\em 2008 5th {{International Conference}} on {{Visual Information
+  Engineering}} ({{VIE}} 2008)}, pages 182--187, July 2008.
+
 \bibitem[BP98]{badenas_applying_1998}
 Jorge Badenas and Filiberto Pla.
 \newblock Applying computer vision techniques to traffic monitoring tasks.
@@ -30,12 +42,24 @@ T.~O. Binford and J.~M. Tenenbaum.
 \newblock Computer vision.
 \newblock {\em Computer}, 6(5):19--24, May 1973.
 
-\bibitem[BVO11]{buch_review_2011-1}
-N.~Buch, S.~A. Velastin, and J.~Orwell.
-\newblock A {{Review}} of {{Computer Vision Techniques}} for the {{Analysis}}
-  of {{Urban Traffic}}.
-\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
-  12(3):920--939, September 2011.
+\bibitem[Can86]{canny_computational_1986}
+J.~Canny.
+\newblock A {{Computational Approach}} to {{Edge Detection}}.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  PAMI-8(6):679--698, November 1986.
+
+\bibitem[CBK00]{cock_modelling_2000}
+Martine~De Cock, Ulrich Bodenhofer, and Etienne~E. Kerre.
+\newblock Modelling {{Linguistic Expressions Using Fuzzy Relations}}.
+\newblock In {\em In `{{Proceedings}} of the 6th {{International Conference}}
+  on {{Soft Computing}}}, pages 353--360, 2000.
+
+\bibitem[CBMM98]{coifman_real-time_1998}
+Benjamin Coifman, David Beymer, Philip McLauchlan, and Jitendra Malik.
+\newblock A real-time computer vision system for vehicle tracking and traffic
+  surveillance.
+\newblock {\em Transportation Research Part C: Emerging Technologies},
+  6(4):271--288, August 1998.
 
 \bibitem[CCL04]{chang_linear-time_2004}
 Fu~Chang, Chun-Jen Chen, and Chi-Jen Lu.
@@ -58,15 +82,34 @@ R.~Cucchiara, C.~Grana, M.~Piccardi, and A.~Prati.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   25(10):1337--1342, October 2003.
 
+\bibitem[Cha93]{chazelle_optimal_1993}
+Bernard Chazelle.
+\newblock An optimal convex hull algorithm in any fixed dimension.
+\newblock {\em Discrete \& Computational Geometry}, 10(4):377--409, December
+  1993.
+
 \bibitem[Dah17]{dahms_opencv_3_car_counting_cpp_2017}
 Chris Dahms.
 \newblock {{OpenCV}}\_3\_{{Car}}\_{{Counting}}\_{{Cpp}}, May 2017.
+
+\bibitem[dB08]{berg_computational_2008}
+Mark de~Berg.
+\newblock {\em Computational {{Geometry}}: {{Algorithms}} and
+  {{Applications}}}.
+\newblock {Springer Science \& Business Media}, March 2008.
+\newblock Google-Books-ID: tkyG8W2163YC.
 
 \bibitem[Dou92]{dougherty_introduction_1992}
 Edward~R. Dougherty.
 \newblock {\em An Introduction to Morphological Image Processing}.
 \newblock {SPIE Optical Engineering Press}, 1992.
 \newblock Google-Books-ID: 1kvxAAAAMAAJ.
+
+\bibitem[DSM12]{dattathreya_detection_2012}
+Macam~S. Dattathreya, Harpreet Singh, and Thomas Meitzler.
+\newblock Detection and {{Elimination}} of a {{Potential Fire}} in {{Engine}}
+  and {{Battery Compartments}} of {{Hybrid Electric Vehicles}}.
+\newblock {\em Advances in Fuzzy Systems}, 2012:e687652, 2012.
 
 \bibitem[DW84]{dickinson_image_1984}
 K.~W. Dickinson and R.~C. Waterfall.
@@ -84,6 +127,25 @@ C.~Grana, F.~Bolelli, L.~Baraldi, and R.~Vezzani.
 \newblock In {\em 2016 23rd {{International Conference}} on {{Pattern
   Recognition}} ({{ICPR}})}, pages 3109--3114, December 2016.
 
+\bibitem[GBC10]{grana_optimized_2010}
+C.~Grana, D.~Borghesani, and R.~Cucchiara.
+\newblock Optimized {{Block}}-{{Based Connected Components Labeling With
+  Decision Trees}}.
+\newblock {\em IEEE Transactions on Image Processing}, 19(6):1596--1609, June
+  2010.
+
+\bibitem[GMMP02]{gupte_detection_2002}
+S.~Gupte, O.~Masoud, R.~F.~K. Martin, and N.~P. Papanikolopoulos.
+\newblock Detection and classification of vehicles.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  3(1):37--47, March 2002.
+
+\bibitem[Got10]{gottwald_early_2010}
+Siegfried Gottwald.
+\newblock An early approach toward graded identity and graded membership in set
+  theory.
+\newblock {\em Fuzzy Sets and Systems}, 161(18):2369--2379, September 2010.
+
 \bibitem[GW92]{gonzalez_digital_1992}
 Rafael~C. Gonzalez and Richard~E. Woods.
 \newblock {\em Digital {{Image Processing}}}.
@@ -96,13 +158,6 @@ K.~Hammoudi, H.~Benhabiles, A.~Jandial, F.~Dornaika, and J.~Mouzna.
 \newblock In {\em 2016 {{SAI Computing Conference}} ({{SAI}})}, pages
   1327--1329, July 2016.
 
-\bibitem[HCS10]{he_run-based_2010}
-L.~He, Y.~Chao, and K.~Suzuki.
-\newblock A {{Run}}-based one-and-a-half-scan connected-component labeling
-  algorithm.
-\newblock {\em International Journal of Pattern Recognition and Artificial
-  Intelligence}, 24(4):557--579, 2010.
-
 \bibitem[HK12]{hashmi_analysis_2012}
 M.~F. Hashmi and A.~G. Keskar.
 \newblock Analysis and monitoring of a high density traffic flow at
@@ -114,6 +169,36 @@ M.~F. Hashmi and A.~G. Keskar.
 \bibitem[Hua96]{huang_computer_1996}
 T.~Huang.
 \newblock Computer {{Vision}} : {{Evolution And Promise}}, 1996.
+
+\bibitem[JAG08]{jun_tracking_2008}
+G.~Jun, J.~K. Aggarwal, and M.~Gokmen.
+\newblock Tracking and {{Segmentation}} of {{Highway Vehicles}} in
+  {{Cluttered}} and {{Crowded Scenes}}.
+\newblock In {\em 2008 {{IEEE Workshop}} on {{Applications}} of {{Computer
+  Vision}}}, pages 1--6, January 2008.
+
+\bibitem[JBS14]{jodoin_urban_2014}
+J.~P. Jodoin, G.~A. Bilodeau, and N.~Saunier.
+\newblock Urban {{Tracker}}: {{Multiple}} object tracking in urban mixed
+  traffic.
+\newblock In {\em {{IEEE Winter Conference}} on {{Applications}} of {{Computer
+  Vision}}}, pages 885--892, March 2014.
+
+\bibitem[Jen15]{jenkins_245_2015}
+Niall Jenkins.
+\newblock 245 million video surveillance cameras installed globally in 2014 -
+  {{IHS Technology}}, 2015.
+
+\bibitem[Kla67]{klaua_ansatz_1967}
+Dieter Klaua.
+\newblock Ein {{Ansatz}} zur mehrwertigen {{Mengenlehre}}.
+\newblock {\em Mathematische Nachrichten}, 33(5-6):273--296, January 1967.
+
+\bibitem[Koz17]{koziol_world_2017}
+Michael Koziol.
+\newblock '{{World}} first': {{Government}} moves to radically overhaul
+  {{Australia}}'s international airports.
+\newblock {\em The Sydney Morning Herald}, January 2017.
 
 \bibitem[Lab17]{labs_theory_2017}
 Virtual Labs.
@@ -169,6 +254,11 @@ J.~Mart{\'\i}n-Herrero.
 \newblock Hybrid object labelling in digital images.
 \newblock {\em Machine Vision and Applications}, 18(1):1--15, 2007.
 
+\bibitem[Nav00]{navigant_transportation_2017}
+Navigant.
+\newblock Transportation {{Forecast}}: {{Light Duty Vehicles}},
+  2017-04-18T20:30:25+00:00.
+
 \bibitem[Ope17a]{opencv_about_2017}
 OpenCV.
 \newblock About - {{OpenCV}} library, 2017.
@@ -176,6 +266,14 @@ OpenCV.
 \bibitem[Ope17b]{opencv_opencv:_2017}
 OpenCV.
 \newblock {{OpenCV}}: Cv::{{SimpleBlobDetector Class Reference}}, 2017.
+
+\bibitem[PB12]{pal_effect_2012}
+Debasish Pal and Debasish Bhattacharya.
+\newblock Effect of {{Road Traffic Noise Pollution}} on {{Human Work
+  Efficiency}} in {{Government Offices}}, {{Private Organizations}}, and
+  {{Commercial Business Centres}} in {{Agartala City Using Fuzzy Expert
+  System}}: {{A Case Study}}.
+\newblock {\em Advances in Fuzzy Systems}, 2012:e828593, 2012.
 
 \bibitem[Pic04]{piccardi_background_2004}
 M.~Piccardi.
@@ -191,6 +289,17 @@ A.~Prati, I.~Mikic, C.~Grana, and M.~M. Trivedi.
 \newblock In {\em {{ITSC}} 2001. 2001 {{IEEE Intelligent Transportation
   Systems}}. {{Proceedings}} ({{Cat}}. {{No}}.{{01TH8585}})}, pages 340--345,
   2001.
+
+\bibitem[RBH90]{rourke_road_1990}
+A.~Rourke, M.~G.~H. Bell, and N.~Hoose.
+\newblock Road traffic monitoring using image processing.
+\newblock In {\em Third {{International Conference}} on {{Road Traffic
+  Control}}, 1990.}, pages 163--167, May 1990.
+
+\bibitem[Rep17]{reportlinker_global_2017}
+ReportLinker.
+\newblock Global {{Video Analytics Market}} 2017-2021 - market research report,
+  2017.
 
 \bibitem[SJK09]{sheikh_background_2009}
 Y.~Sheikh, O.~Javed, and T.~Kanade.
@@ -230,6 +339,12 @@ D.~Soendoro and I.~Supriana.
 \newblock In {\em Proceedings of the 2011 {{International Conference}} on
   {{Electrical Engineering}} and {{Informatics}}}, pages 1--6, July 2011.
 
+\bibitem[ST94]{shi_good_1994}
+Jianbo Shi and C.~Tomasi.
+\newblock Good features to track.
+\newblock In {\em 1994 {{Proceedings}} of {{IEEE Conference}} on {{Computer
+  Vision}} and {{Pattern Recognition}}}, pages 593--600, June 1994.
+
 \bibitem[Sto80]{stout_computer_1980}
 K.~J. Stout.
 \newblock Computer vision and robots.
@@ -239,6 +354,11 @@ K.~J. Stout.
 Wikipedia.
 \newblock Connected component labeling, June 2017.
 \newblock Page Version ID: 783324000.
+
+\bibitem[Zad65]{zadeh_fuzzy_1965}
+L.~A. Zadeh.
+\newblock Fuzzy sets.
+\newblock {\em Information and Control}, 8(3):338--353, June 1965.
 
 \bibitem[Ziv04]{zivkovic_improved_2004}
 Z.~Zivkovic.
