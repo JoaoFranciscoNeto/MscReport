@@ -6,15 +6,15 @@
 
 Computer vision appeared as an area of investigation around the mid 60's at the MIT by Professor Larry Roberts, whose doctorate thesis focused on methods to extract 3D information from a 2D image ~\cite{huang_computer_1996} in order to reconstruct entire scenes from the geometry gathered. This area is now considered by the ACM as a branch of artificial intelligence according to the 2012 ACM Computing Classification System ~\cite{acm_2012_2012}. From this point onward scientists began applying the techniques developed in multiple fields.
 
-The use of computer vision in manufacturing industry was among the first to be explored, as there were already multiple robots working in the assembly lines of the factories that needed to be improved, as noted by Stout in 1980 ~\cite{stout_computer_1980}. These robots were becoming outdated due to the lack of interaction with the environment. This meant that for a robot to work with a part in an assembly line it needed to be placed in a pre-determined position, and any deviation could mean that the line needed to be stopped. Michael Baird relates in ~\cite{l._baird_sight-i:_1978} a computer vision system developed to inspect circuit chips rotation deviation in a welding base, indicating to the welder that the chip needed to be adjusted. Computer vision was also used as a tool to automatically analyse weather satellite images ~\cite{binford_computer_1973-2} and multidimensional medical images ~\cite{ayache_medical_1998}, with applications being developed in these areas being now common in our daily life.
+The application of computer vision in the manufacturing industry was amongst the first ones to be explored. Due to the sheer number of robots working in the assembly lines of the factories that needed to be improved, as noted by Stout in 1980 ~\cite{stout_computer_1980}. These robots were becoming outdated due to the lack of interaction with the environment. This meant that for a robot to work with a part in an assembly line it needed to be placed in a pre-determined position, and any deviation could mean that the line needed to be stopped. Michael Baird relates in ~\cite{l._baird_sight-i:_1978} a computer vision system developed to inspect circuit chips rotation deviation in a welding base, indicating to the welder that the chip needed to be adjusted. Computer vision was also used as a tool to automatically analyse weather satellite images ~\cite{binford_computer_1973-2} and multidimensional medical images ~\cite{ayache_medical_1998}, with applications being developed in these areas being now common in our daily life.
 
 \subsection{Computer Vision in Intelligent Transport Systems}
 
 Regarding intelligent transport systems (ITSs), the use of computer vision to aid in the analysis of traffic has been increasing in the last years due to the decreasing costs of hardware, both cameras, storage and processing power, as well as the growing knowledge to extract useful data from the video gathered. In contrast to the high installation and upkeep costs of other traffic control tools such as Inductive Loop Detectors and Microwave Vehicle Detectors, applying computer vision to handle these tasks is a profitable option for entities in charge of the analysis of this data.
 
-One of the first works applying computer vision to analyse traffic was published in 1984 ~\cite{dickinson_image_1984} and detected and measured movement in a sequence of frames. Since then, multiple fields of study have been created, not only for the measuring of traffic, as explored in ~\cite{lira_computer-vision_2016}, ~\cite{buch_review_2011-1} and ~\cite{hashmi_analysis_2012} where the authors evaluate methods to analyse traffic in urban environments, but also for the analysis of the environment around a self-driven vehicle, reading traffic signs using multiple approaches using convolutional neural networks ~\cite{soendoro_traffic_2011} or using bag-of-visual-words ~\cite{supriyanto_unsupervised_2016}, or to automatize the parking process as discussed in ~\cite{hammoudi_self-driven_2016}. Recently some studies have surfaced where the authors discuss the analysis of passenger numbers and behaviour inside vehicles, in order to enforce traffic laws ~\cite{loce_detection_2017-1}.
+One of the first works applying computer vision to analyse traffic, which was published in 1984 ~\cite{dickinson_image_1984} and detected and measured movement in a sequence of frames. Since then, multiple fields of study have been created, not only for the measuring of traffic, as explored in ~\cite{lira_computer-vision_2016}, ~\cite{buch_review_2011} and ~\cite{hashmi_analysis_2012} where the authors evaluate methods to analyse traffic in urban environments, but also for the analysis of the environment around a self-driven vehicle, reading traffic signs using multiple approaches using convolutional neural networks ~\cite{soendoro_traffic_2011} or using bag-of-visual-words ~\cite{supriyanto_unsupervised_2016}, or to automatize the parking process as discussed in ~\cite{hammoudi_self-driven_2016}. Recently some studies have surfaced where the authors discuss the analysis of passenger numbers and behaviour inside vehicles, in order to enforce traffic laws ~\cite{loce_detection_2017-1}.
 
-For our application however we need to focus on the aspect of traffic analysis, and in order to understand what traffic analysis software needs to accomplish, it is convenient to study what composes a typical traffic scene. Usually the scenes are viewed from a top-down perspective that places the cars against the road as background, as seen in ~\ref{fig:hh_traffic}. The vehicles have a roughly regular rectangular shape when viewed from the top, with little variation when the camera is rotated, however their textures vary heavily, making it difficult for a detector to work based on the vehicles image representation ~\cite{badenas_applying_1998}. However, depending on the camera position there can be object occlusion by other objects or scene components, which makes it difficult to detect and track vehicles relying solely on subtraction based segmentation techniques.
+However our work upon this topic is focused on the aspect of traffic analysis. In order to understand what we need to accomplish, it is convenient to study what composes a typical traffic scene. Usually the scenes are viewed from a top-down perspective that places the cars against the road as background, as seen in Figure ~\ref{fig:hh_traffic}. The vehicles have a roughly regular rectangular shape when viewed from the top, with little variation when the camera is rotated, however their textures vary heavily, making it difficult for a detector to work based on the vehicles image representation ~\cite{badenas_applying_1998}. However, depending on the camera position there can be object occlusion by other objects or scene components, which makes it difficult to detect and track vehicles relying solely on subtraction based segmentation techniques.
 
 \begin{figure}[h]
   \begin{center}
@@ -29,7 +29,7 @@ The scenes also have varying light according to the time of the day, and propose
 
 \subsection{Our Challenge}
 
-The "Analytics Server" module of the "Video Server" project had a list of requirements that needed to be addressed:
+The "Analytics Server" module of the "Setup Server" project had a list of requirements that needed to be addressed:
 
 \begin{itemize}
 	\item Detect relevant events:
@@ -48,7 +48,7 @@ This section will review some of the proposed methods to improve image quality b
 
 \subsection{Blur}
 
-In order to blur an image one needs to convolve it using a special kind of filter. The process of convolution in image processing consists in the application of a filter to every pixel of an image, returning a new image where each pixel is the result of the function to the pixel in the same position in the previous image. As we can see in ~\ref{fig:convolution} the application of a 3*3 mask, where all 9 values have the value 1/9, results in a image where each pixel value equals the mean of itself and surrounding neighbours in the original image.
+In order to blur an image one needs to convolve it using a special kind of filter. The process of convolution in image processing consists in the application of a filter to every pixel of an image, returning a new image where each pixel is the result of the function to the pixel in the same position in the previous image. As we can see in Figure ~\ref{fig:convolution} the application of a 3*3 mask, where all 9 values have the value 1/9, results in a image where each pixel value equals the mean of itself and surrounding neighbours in the original image.
 
 \begin{figure}[h]
   \begin{center}
@@ -66,7 +66,7 @@ While this is the simplest blur processing we can apply to an image, there are m
 G(x,y) = \frac{1}{2\pi \sigma ^{2}}e^{-\frac{x^{2}+y^{2}}{2\sigma ^{2}}}
 \end{eqnarray}
 
-This equation returns a filter consisting of concentric circles that results in a smooth blurring of the images due to the application of the same power of blurring from equidistant pixels. The function can be tuned to the needs of the process through the $\sigma$ value, returning a sharper or softer blur filter as seen in figure ~\ref{fig:gaussian}.
+This equation returns a filter consisting of concentric circles that results in a smooth blurring of the images due to the application of the same power of blurring from equidistant pixels. The function can be tuned to the needs of the process through the $\sigma$ value, returning a sharper or softer blur filter as seen in Figure ~\ref{fig:gaussian}.
 
 \begin{figure}[h]
   \begin{center}
@@ -83,7 +83,7 @@ This kind of filters have multiple uses in computer vision. Blurring an image re
 
 Mathematical Morphology is a set theory, offering solutions to multiple image processing problems, where the sets are composed of tuples corresponding to the 2D coordinates of each pixel in the image. These sets identify the white or the black pixels in a binary image, depending on the convention adopted, or the intensity of the pixel in a grey-scale image ~\cite{dougherty_introduction_1992}. During this chapter we will consider that all images are binary and that the pixels to process are black in a white background. This theory provides a set of operators that can be used to detect convexity and connectivity of shapes in an image, enhancing features, detecting edges and removing noise. 
 
-The operators are defined by a structuring element, also known as kernel, a set of coordinates represented in a binary image, usually much smaller than the image to process. The centre of the kernel is not in the top left corner as in most images but rather in the geometrical centre, meaning that there some of the pixels have negative coordinates. The kernel shapes in figure ~\ref{fig:morh_operators} are the ones typically used for most applications, but the process allows the user to design their own if needed.
+The operators are defined by a structuring element, also known as kernel, a set of coordinates represented in a binary image, usually much smaller than the image to process. The centre of the kernel is not in the top left corner as in most images but rather in the geometrical centre, meaning that there some of the pixels have negative coordinates. The kernel shapes in Figure ~\ref{fig:morh_operators} are the ones typically used for most applications, but the process allows the user to design their own if needed.
 
 \begin{figure}[h]
   \begin{center}
@@ -97,7 +97,7 @@ The operators are defined by a structuring element, also known as kernel, a set 
 
 According to Gonzalez and Woods ~\cite{gonzalez_digital_1992} an operator is defined by an image and a structuring element, and to run it the origin point of the element needs to be placed at every pixel of the image. At each of these locations a verification is done depending on the operation being performed and an output image is created using the independent output of these operations.
 
-The two most basic operations are erosion and dilation, essential to morphological processing. The erosion operator translates the structuring element to every black pixel of the image and in each position checks if all the active pixels of the kernel match with black pixels in the image. If it is true then the returned pixel is black, otherwise it is white. An example of the usage of such an operator can be seen in figure ~\ref{fig:erosion}. These operators are mainly used to remove noise from binary images or to separate objects to enable individual labelling and counting.
+The two most basic operations are erosion and dilation, essential to morphological processing. The erosion operator translates the structuring element to every black pixel of the image and in each position checks if all the active pixels of the kernel match with black pixels in the image. If it is true then the returned pixel is black, otherwise it is white. An example of the usage of such an operator can be seen in Figure ~\ref{fig:erosion}. These operators are mainly used to remove noise from binary images or to separate objects to enable individual labelling and counting.
 
 \begin{figure}[h]
   \begin{center}
@@ -109,7 +109,7 @@ The two most basic operations are erosion and dilation, essential to morphologic
   \end{center}
 \end{figure}
 
-The dilation operator works by setting to black all the pixels that match the position of the translated kernel's pixels, resulting in the closing of holes in the image and the enhancing of small features. Results can be seen in figure ~\ref{fig:dilation}. Using a non-symmetrical kernel the dilation will be directional, enabling the user to fine tune the process to their needs.
+The dilation operator works by setting to black all the pixels that match the position of the translated kernel's pixels, resulting in the closing of holes in the image and the enhancing of small features. Results can be seen in Figure ~\ref{fig:dilation}. Using a non-symmetrical kernel the dilation will be directional, enabling the user to fine tune the process to their needs.
 
 \begin{figure}[h]
   \begin{center}
@@ -121,7 +121,7 @@ The dilation operator works by setting to black all the pixels that match the po
   \end{center}
 \end{figure}
 
-The dilation and erosion operators can be combined to form the opening and closing operators. An opening operator is formed by an erosion followed by a dilations using the same structuring element. This results in a less destructive erosion, preserving some of the image details as seen in figure ~\ref{fig:opening}. The closing operator is formed by a dilation followed by an erosion and the results can be seen in figure ~\ref{fig:closing}. It is commonly used to remove salt noise and to extract objects of a particular shape as long as they all share the same orientation ~\cite{fisher_morphology_2003}.
+The dilation and erosion operators can be combined to form the opening and closing operators. An opening operator is formed by an erosion followed by a dilations using the same structuring element. This results in a less destructive erosion, preserving some of the image details as seen in Figure ~\ref{fig:opening}. The closing operator is formed by a dilation followed by an erosion and the results can be seen in Figure ~\ref{fig:closing}. It is commonly used to remove salt noise and to extract objects of a particular shape as long as they all share the same orientation ~\cite{fisher_morphology_2003}.
 
 \begin{figure}[H]
   \begin{center}
@@ -149,7 +149,7 @@ Since shadows can be detected as foreground during the segmentation process, a p
 
 In ~\cite{prati_shadow_2001} Prati et al. discussed how critical the shadow removal process is to traffic analysis, and they proceed to compare two ITS management systems, SAKBOT (Statistical and Knowledge-BasedObject Tracker) and ATON(Autonomous Transportation Agents for On-scene Networked incident manager), developed in Italy and the United States of America respectively.
 
-SAKBOT adopts a method presented in ~\cite{cucchiara_statistic_2000}, which uses the chrominance information, converting pixel colours from RGB to HSV space, as it most closely relates to the human perception of colour. The process then evaluates how the scene colours components change due to the passing of vehicles and shadows, as seen in figure ~\ref{fig:sakbot-hsv}. From this we can extract that a shadow darkens a pixel and saturates its colour, and is the difference between an object point and a shadow point. The model then concludes that a point is considered as shadow if:
+SAKBOT adopts a method presented in ~\cite{cucchiara_statistic_2000}, which uses the chrominance information, converting pixel colours from RGB to HSV space, as it most closely relates to the human perception of colour. The process then evaluates how the scene colours components change due to the passing of vehicles and shadows, as seen in Figure ~\ref{fig:sakbot-hsv}. From this we can extract that a shadow darkens a pixel and saturates its colour, and is the difference between an object point and a shadow point. The model then concludes that a point is considered as shadow if:
 
 \begin{figure}[h]
   \begin{center}
@@ -207,8 +207,6 @@ BackgroundModel _{i+1} = \alpha * Frame_{i} + (1-\alpha)* BackgroundModel _{i}
 
 Instead of the running average one can use the median value of the last n frames, improving the method reaction to outlying values. In both however, the history can be just the n frames or a weighted average where recent frames have more weight. Both these methods cannot cope with intermittent changes on the background, such as moving leaves against a building facade, and to solve this problem a new approach was proposed, the Mixture of Gaussians which models each pixel according to a mixture of Gaussian distributions, usually 3 to 5, but in later research ~\cite{zivkovic_improved_2004} a method was developed to calculate the number of distributions needed on a per pixel basis.
 
-\todo{Copiar resto dos metodos}
-
 \subsection{Feature Tracking}
 
 When the literature mentions features it is referring to interesting parts of the image that can be detected and matched in multiple different images of the same scene. The process of detecting these features is a basic step in many computer vision applications, as they allow for a broad comprehension of the scene being observed. These features can take the shape of:
@@ -264,7 +262,7 @@ In this section we will analyse processes to detect objects of interest in image
 
 \subsection{Connected Component Labelling}
 
-Connected component labelling is a process by witch the subsets of connected components are labelled according to the user needs. We will explore some of the most common implementations and how they evolved over time.
+Connected component labelling is a process by which the subsets of connected components are labelled according to the user needs. We will explore some of the most common implementations and how they evolved over time.
 
 The one-pass solution presented by Abubaker ~\cite{abubaker_one_2007} is a fast and simple method to implement. It begins by labelling the first pixel of the image to 1, if it is a background pixel, skip to the next one, otherwise add it to a queue. While there are elements in the queue remove the one at the top and analyse its neighbours, if they are in the foreground add them to the queue with the current label. When there are no more elements in the queue increase the label number by one and proceed to the next unexplored pixel.
 
@@ -283,7 +281,7 @@ The two-pass solution presented by Shapiro et al. ~\cite{shapiro_computer_2001} 
 		\subitem For each pixel assign the lowest label from the neighbouring table
 \end{itemize}
 
-The process is illustrated in figure ~\ref{fig:two_pass_example}.
+The process is illustrated in Figure ~\ref{fig:two_pass_example}.
 
 \begin{figure}[h]
   \begin{center}
@@ -305,7 +303,7 @@ It is interesting to note the YACCLAB (Yet Another Connected Components Labellin
 
 A convex hull is the smallest convex shape that encompasses all the points of the figure. This problem is usually solved in two or three dimensions, although some solutions can solve it for higher number of dimensions ~\cite{chazelle_optimal_1993}. In the field of computer vision however only the second and third dimension are needed.
 
-An algorithm to calculate a convex hull from a set of points ~\cite{berg_computational_2008} can be seen in listing ~\ref{src:convex_hull}.
+An algorithm to calculate a convex hull from a set of points ~\cite{berg_computational_2008} can be seen in Listing ~\ref{src:convex_hull}.
 
 \begin{lstlisting}[float,language=C, label={src:convex_hull}, caption=Convex Hull calculation] 
 Input: Set of points in the plane
@@ -328,6 +326,39 @@ for i=n-2 down to n
 Remove first and last point from L_{lower} to avoid duplication of the points where the upper and the lower hull meet
 Append L_{lower} and L_{upper} and return that list
 \end{lstlisting}
+
+\section{Object Classification}
+
+Some state-of-the-art approaches to the problem of object classification are explored in this section. 
+
+\subsection{Bounding Box Ratio Method}
+
+To differentiate between pedestrians and vehicles Jiang Qianyin et al. \cite{qianyin_model_2015} provided a method based on the analysis of the bounding box of each blob obtained by the background subtraction method. They propose to compute the ratio of width and height of the rectangle and compare it to pre-calculated tabulated values. Using this approach they are able to distinguish pedestrians from small and large vehicles.
+
+\subsection{Feature Clustering Method}
+
+\begin{figure} [h]
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{feature_clustering}
+    
+    \caption{Overview of the method as in \cite{wang_vehicle_2016}}
+\label{fig:feat_cluster}
+  \end{center}
+\end{figure}
+
+The method proposed by Shu Wang et al. in \citet{wang_vehicle_2016} categorizes three types of vehicles, compact, mid-sized and heavy-duty. It is described in some detail in figure \ref{fig:feat_cluster} It works in four steps which will now be described.
+
+In the first part a region of interest on a certain video is set manually where a pre-trained Fast Region-based Convolutional Neural Network is used to detect a vehicle in the image.
+
+The second part is the feature extraction, and it performs it in two different forms. One of them uses a Deep Network to extract vehicle features and the other uses a pre-trained Extreme Learning Machine from which the authors obtain a weak label. This ELM is trained with cropped vehicle images and outputs in three different nodes representing the three different vehicle types. Both feature descriptors are fused together using a queue model which can be weighted according to specification.
+
+The algorithm then takes these features and performs k-clustering on them, grouping them in three different clusters representing, once again, the three different vehicle types being analyzed.
+
+After training the system we can use it to classify new samples, measuring the distance of the fused feature to the center of the clusters and choosing the one closer to the new point.
+
+\subsection{Artificial Neural Network with Histogram of Gradients}
+
+In their 2015 work \cite{b_traffic_2015} Sakan et al. use an ANN with HOG together with an analysis of the geometric features of to achieve better accuracy than the most used methods. A Histogram of Gradients is constructed by computing the gradients of small blocks of the image and grouping them into bins of 20 degrees each based on their orientation. Besides calculating the HOG, the authors also compute the length to height ratio of the bounding box of the vehicle as well as the ratio between the perimeter and the area. The ANN has as input the HOG and the geometric ratios calculated before and is trained with the backpropagation algorithm.
 
 \section{Fuzzy Sets}
 
@@ -382,8 +413,4 @@ Hashmi et. al ~\cite{hashmi_analysis_2012} propose an approach to gather statist
 
 \section{Summary}
 
-This chapter covered the beginning of the field of computer vision and its multiple usages, reviewed basic concepts of image treatment, focusing on the ones that would be used during the development of the solution. 
-
-When reading the works related to traffic analysis we detected a largely unsolved issue, related to the segmentation of stopped vehicles in urban scenes. 
-
-This review was written taking into consideration that some of the readers may not be familiarized with the area, and thus contains overviews of some basic methodologies that are common in computer vision.
+This chapter covered the basics of the field of computer vision and its multiple usages, reviewed basic concepts of image treatment, focusing on the ones that would be used during the development of the solution. When reading the work related to traffic analysis we detected a largely unsolved issue, related to the segmentation of stopped vehicles in urban scenes. This review was written taking into consideration that some of the readers may not be familiarized with the area, and thus contains overviews of some basic methodologies that are common in computer vision.

@@ -1,29 +1,36 @@
 %!TEX root = mieic-en.tex
 
-\chapter{Conclusões e Trabalho Futuro} \label{chap:concl}
+\chapter{Conclusions and Future Work} \label{chap:concl}
 
 \section*{}
 
-\textit{
-Deve ser apresentado um resumo do trabalho realizado e apreciada a
-satisfação dos objetivos do trabalho, uma lista de contribuições
-principais do trabalho e as direções para trabalho futuro.
-A escrita deste capítulo deve ser orientada para a total compreensão
-do trabalho, tendo em atenção que, depois de ler o Resumo e a
-Introdução, a maioria dos leitores passará à leitura deste capítulo de
-conclusões e recomendações para trabalho futuro.}
-
-Capitulo conclusão
-Continuaçao para tornar cada parte mais robustas (cada um pode ser uma tese)
-
 This chapter presents an overview of the work done, as well as an evaluation of the state of completion achieved during the semester, followed by a list of the contributions and a foresight into the next steps of the project. 
 
-\section{Satisfação dos Objetivos}
+\section{Contributions}
 
+The contributions of the dissertation can by split into Technological, Scientific and Applicational contributions.
 
+\textbf{Technological Contributions} During the dissertation work an issue was found when trying to process a frame in multiple threads at the same time. The solution first implemented meant that the frame collector had to wait for each thread to return for it to go fetch the next one, which meant that some of the threads could have potentially long waiting times. The solution now implemented, described in section ~\ref{sec:architecture}, creates a queue in each of the threads to where the frame collector sends the frames and from where the thread processing them reads them. This solution solves the waiting problem by making the threads totally independent from each other and ensures that the whole system performance is not capped if a slower thread is introduced.
 
-\section{Trabalho Futuro}
+\textbf{Scientific Contributions} One of the main contributions of the project is related to the tracking of stopped vehicles found in urban scenarios, as it was one of the gaps found during the literature review. To solve this issue an alteration is proposed in the segmentation process to keep track of the state of stopped vehicles. The first one is a stabilization step in the background subtraction initialization that waits for the background model to be steady. This steadiness is measured by the number of pixels updated in the last frame after the application of the background subtracter. This step ensures that the background is not initialized with stopped vehicles or other actors in the middle of the scene.
 
-\todo{Referir agrupamento com base no match n para n}
-\todo{Contagem tempo em video}
-\todo{Analise cruzamentos}
+\textbf{Applicational Contributions} All the work developed was made taken into account that the application was to be used by our partners at Armis-Group for vehicle counting and classification in high-way scenarios and as such this was the main focus of the use-cases in which the project was tested. As of the writing of this document an application is being prepared to be tested at Infrastruturas de Portugal with more than 100 camera inputs.
+
+\section{Objective Completion}
+
+The work regarding this dissertation can be divided into two main objectives: event detection and vehicle counting. As specified in the beginning of chapter ~\ref{chap:chap4}, phase two of the project dealt with the event detection portion of the work and phase three with vehicle counting.
+
+During the development of phase two the priority of features shifted to vehicle counting due to a commitment by our partner and as such this phase was aborted to begin the development of phase three. This meant that of the initial list of events to be detected: wrong way driving, suspicious camera approximation, prohibited zone entering and fallen objects only the first three were complete. Regarding phase three, all the points were implemented and the application is now able to successfully count and classify vehicles into the light and heavy categories.
+
+\section{Publications}\label{sec:publications}
+During the development of the project a paper was submitted to the "Artificial Transportation Systems and Simulation" workshop in the IEEE International Conference on Intelligent Transportation Systems 2017. The submitted paper is based on the work done during this presentation with emphasis on the ability to feed information onto traffic simulation systems, based on the data gathered from real world.
+
+\section{Future Work}
+
+During the dissertation work a number of challenges appeared that would be interesting to address.
+
+\textbf{Solve the issue regarding object grouping} As of now the segmentation process cannot distinguish multiple objects occluded by one another or linked through a shadow, although there is written work about how to solve this. Implementing such a solution would improve the results of the counting process.
+
+\textbf{Time counting} The counting process can accurately count vehicles but it cannot detect when a vehicle was counted. To do so in videos, a starting time would be required as well as the frame count and rate. In streams the application needs to take into account both the starting time and the stream delay.
+
+\textbf{Intersection Analysis} It would be interesting to follow some of the work regarding intersection statistics and implement a module on top of the Analytics Module that would work specifically for such cases.

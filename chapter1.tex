@@ -1,69 +1,39 @@
 %!TEX root = mieic-en.tex
 
-\chapter{Introdução} \label{chap:intro}
+\chapter{Introduction} \label{chap:intro}
 
-\section*{}
+\section{Context} \label{sec:context}
 
-\textit{O primeiro capítulo da dissertação deve servir para apresentar o
-enquadramento e a moti\-va\-ção do trabalho e para identificar e
-definir os problemas que a dissertação aborda.
-Deve resumir as metodologias utilizadas no trabalho e termina
-apresentando um breve resumo de cada um dos capítulos
-posteriores.}
+Traffic management in cities is a vast area as it studies the planning and control of the road network, with all the tasks associated with them. As the cities tend to evolve following the concept of \textit{smart cities}, the management of how its people move is a prime area where the information technologies are being applied. With the increase in the number of vehicles using the roads ~\cite{navigant_transportation_2017}, this need to improve the methods of traffic management rise even more, and the development of multiple projects around the world around this issue comes as a confirmation of both it's importance and the pertinence of the work being developed at LIACC in regards to this topic.
 
-\section{Contexto/Enquadramento} \label{sec:context}
-\textit{
-Esta secção descreve a área em que o trabalho se insere, podendo
-referir um eventual projeto de que faz parte e apresentar uma breve
-descrição da empresa onde o trabalho decorreu.
-}
-
-Traffic management in cities is a vast area as it studies the planning and control of the road network. As the cities tend to evolve following the concept of \textit{smart cities}, this is also a field where the information technologies are being applied to improve the effectiveness of these tasks.
-
-With the increase in the number of vehicles using the roads ~\cite{navigant_transportation_2017}, a need to improve the methods of traffic management rose as well. The development of multiple approaches to this issue represents both it's importance and the pertinence of the work being developed at LIACC in regards to this topic.
-
-Evolving the existing solutions involves a process of reformulation of the methods being currently used. With the decreasing costs of cameras for video surveillance, the number of units installed around the world is rising, passing the 245 million mark in 2014 ~\cite{jenkins_245_2015}, over 65\% of that number being from Asia.
-
-With this number of cameras placed globally the amount of data being collected every day is too large to be humanly processed, and thus the need to create autonomous processors arises. The market for automatic analysis of video is expected to be worth 11.17 Billion USD by 2022 ~\cite{reportlinker_global_2017}, with the facial recognition area expected to have the highest CAGR (Compound Annual Growth Rate) due to the potential related to the security applications, even going as far as replacing airport checks in Australia by 2020 ~\cite{koziol_world_2017}.
+With the decreasing costs of cameras for video surveillance, the number of units installed around the world is rising, passing the 245 million mark in 2014 ~\cite{jenkins_245_2015}, over 65\% of that number being from Asia. With this number of cameras placed globally the amount of data being collected every day is too large to be humanly processed, and thus the need to create autonomous processors arises. The market for automatic analysis of video is expected to be worth 11.17 Billion USD by 2022 ~\cite{reportlinker_global_2017}, with the facial recognition area expected to have the highest CAGR (Compound Annual Growth Rate) due to the potential related to the security applications, even going as far as replacing airport checks in Australia by 2020 ~\cite{koziol_world_2017}.
 
 The usage of computer vision to analyse traffic conditions has been around for some time now, with earlier works dating to 1990, such as the work by Rourke et. al ~\cite{rourke_road_1990} where the advantages of using video analysis in this area are listed, as well as some issues that the community is still facing. Since then the field has been explored by many authors, applied to applications ranging from vehicle counting ~\cite{coifman_real-time_1998} ~\cite{beymer_real-time_1997} to incidents detection. 
 
-Armis-Group is a company based in Porto that builds software in the areas of Information Management, Digital Sports and Intelligent Transport Systems.
+Armis-Group is a company based in Porto that builds software in the areas of Information Management, Digital Sports and Intelligent Transport Systems. They are now developing two projects in the area of traffic analysis, Drive and Next ~\cite{administrator_intelligent_2017}. Drive is an innovative Traffic Management and Control solution, flexible and with an easy and fast set-up. Next is a complement to Drive that analyses, simulates and predicts traffic and events data. Due to the data simulation it is a valuable aid to the city operators decision making.
 
 \section{Project} \label{sec:proj}
 
-\textit{
-Na continuação da secção anterior, e apenas no caso de ser um Projeto
-e não uma Dissertação, esta secção apresenta resumidamente o projeto.
-}
-
 The project for this dissertation was part of a collaboration between LIACC and Armis-Group. This collaboration aims to develop solutions in the field of Traffic Management, taking advantage of the laboratory's resources and the company's expertise and experience in the area. The objective of the project was to design and develop a software module capable of analysing video and extracting relevant events on the roads as well as performing counting and basic classification of vehicles. 
 
-In the scope of the mentioned collaboration, LIACC developed a set of applications that form the "Video Server", a software package that 
+In the scope of the mentioned collaboration, LIACC developed a set of applications that form the "Video Server", a software package that aims to provide Computer Vision as a service, treating input streams as per user request. The analytics module developed during this dissertation work is part of its architecture.
 
-\section{Motivation and Goals} \label{sec:goals}
+\section{Aim and Goals} \label{sec:goals}
 
-\textit{
-Apresenta a motivação e enumera os objetivos do trabalho terminando
-com um resumo das metodologias para a prossecução dos objetivos.
-}
-
-The main goal of the dissertation is then to implement a solution that fits the needs of the project as stated above, detecting events in a short window of time to allow for fast response from the authorities, extracting 
-
-This goal can be broke down into more specific tasks to allow for a better understanding of the work ahead:
+The main goal of the dissertation is then to implement a solution that fits the needs of the project as stated above, detecting events in a short window of time to allow for fast response from the authorities. This can be further broken down into more specific tasks to allow for a better understanding of the work ahead. The specific goals are as follows.
 
 \begin{itemize}
-	\item Explore state of the art techniques that address the multiple obstacles to be faced along the process;
-	\item Work in close relationship with the collaborators of the project;
-	\item Implement solutions to perform the following tasks:
-		\subitem Clear the image of noise and other unwanted features;
+	\item To explore the state-of-the-art techniques that address the multiple obstacles to be faced along the process;
+	\item To contribute for the effective integration of the implemented solution of this dissertation into their Armis Group commercial product;
+	\item To implement solutions so as to perform the following tasks:
+		\subitem Clear the image from noise and other unwanted features;
 		\subitem Find objects of interest;
 		\subitem Classify detected objects;
 		\subitem Detect relevant events.
-	\item Testing of the implementation in a real scenario.
+	\item To test the implementation in a real scenarios.
 \end{itemize}
 
 
+\section{Dissertation Structure} \label{sec:struct}
 
-\section{Estrutura da Dissertação} \label{sec:struct}
-
+This document is divided into four chapters. Chapter ~\ref{chap:sota} reviews the beginnings of computer vision, how it evolved and it's applications, followed by an overview of basic image treatment techniques into more advanced ones, as well as presenting the more relevant work in the area of computer vision applied to traffic analysis. Chapter ~\ref{chap:chap4} details the techniques applied during the development in a more practical approach. In Chapter ~\ref{chap:impl_results} the architecture of the implemented solution as well as the results of the work are presented and discussed. Finally, in Chapter ~\ref{chap:concl} conclusions of the work and the contributions of the dissertation are described, as well as where to take the project next.

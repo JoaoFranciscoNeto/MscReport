@@ -24,8 +24,8 @@
 %% English version
 
 %% MIEIC options
-\usepackage[mieic]{feupteses}
-%\usepackage[mieic,juri]{feupteses}
+%\usepackage[mieic]{feupteses}
+\usepackage[mieic,juri]{feupteses}
 %\usepackage[mieic,final]{feupteses}
 %\usepackage[mieic,final,onpaper]{feupteses}
 
@@ -41,6 +41,8 @@
 \usepackage{todonotes}
 \setlength{\marginparwidth}{2cm}
 \usepackage{amsmath}
+
+\usepackage{subcaption}
 %% Include color package
 \usepackage{color}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
@@ -93,7 +95,7 @@
 %%----------------------------------------
 %% Information about the work
 %%----------------------------------------
-\title{Title of the Dissertation}
+\title{Computer‐Vision‐based surveillance of Intelligent Transportation Systems}
 \author{João Neto}
 
 %% Uncomment next line for date of submission
@@ -102,10 +104,10 @@
 %%Uncomment next line for copyright text if used
 %\copyrightnotice{Name of the Author, 2008}
 
-\supervisor{Supervisor}{Name of the Supervisor}
+\supervisor{Supervisor}{Rosaldo Rossetti, PhD}
 
 %% Uncomment next line if necessary
-%\supervisor{Second Supervisor}{Name of the Supervisor}
+\supervisor{Second Supervisor}{Diogo Santos, MsC}
 
 %% Uncomment committee stuff in the final version if used
 %\committeetext{Approved in oral examination by the committee:}
@@ -146,12 +148,12 @@
 %%----------------------------------------
 \StartBody
 
-\listoftodos
 %% TIP: use a separate file for each chapter
 \include{chapter1} 
 \include{chapter2}
 %\include{chapter3}
 \include{chapter4}
+\include{chapterImplResu}
 \include{chapter5} 
 
 %%----------------------------------------

@@ -1,25 +1,9 @@
 %!TEX root = mieic-en.tex
 
-\chapter{Implementation}\label{chap:chap4}
+\chapter{Methodological Approach}\label{chap:chap4}
 \section*{}
 
-\textit{
-Este capítulo pode ser dedicado à apresentação de detalhes de nível
-mais baixo relacionados com o enquadramento e implementação das
-soluções preconizadas no capítulo anterior.
-Note-se no entanto que detalhes desnecessários à compreensão do
-trabalho devem ser remetidos para anexos.
-Dependendo do volume, a avaliação do trabalho pode ser incluída neste
-capítulo ou pode constituir um capítulo separado.
-}
-
-
-Capitulo implementação
-Como resolver os desafios 
-  Estabilizaçao BG Sub
-
-
-As previously stated, the work done for this project consists of a module for the "Video Server" being developed by LIACC, that will perform all the required analytics of the video received. This chapter provides the details of the implementation of this module, developed during the dissertation semester between February and June 2017. Tasks performed involved designing an appropriate architecture, able to scale with the project, treating the images received from the video streams to detect events and extract information. 
+As previously stated, the work done for this project consists of a module for the "Setup Server" being developed by LIACC, that will perform all the required analytics of the video received. This chapter provides the details of the implementation of this module, developed during the dissertation semester between February and June 2017. Tasks performed involved designing an appropriate architecture, able to scale with the project, treating the images received from the video streams to detect events and extract information. 
 
 \begin{figure}[h]
   \begin{center}
@@ -33,7 +17,7 @@ As previously stated, the work done for this project consists of a module for th
 
 It is expected that this chapter provides some insight on how the theoretical backgrounds presented before were used during the project development, namely phase 2 and 3 of the planning presented in~\ref{fig:proj_plan}. Phase 2 focused on the detection of relevant events to the traffic controller such as suspicious approximation to the camera, intrusion in prohibited areas, fallen objects on the road and wrong way travelling, while phase 3 aimed to count and classify vehicles in both urban and high-way scenarios.
 
-\section{Technology}
+\section{Chosen Technology}
 
 In order to build this project we needed both a library of already implemented computer vision algorithms as well as a simple way to retrieve frames from both video streams and files. This section describes what were the chosen technologies including a brief description and why it was chosen.
 
@@ -48,7 +32,7 @@ JavaCV is a wrapper for OpenCV written in Java that works on top of the JavaCPP 
 Even though the code is written in Java and runs inside a Java Virtual Machine, the code from OpenCV is compiled from C/C++ and the memory of the objects created there is allocated in a separate thread. This made it impossible to rely on the garbage collector to do the memory management, and necessary to manually delete the native objects. Failure to address this issue causes the system to run out of memory and a subsequent program crash.
 
 \subsection{FFmpeg}
-FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations in all the well known video formats, across a large number of platforms. It is used in the "Video Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same code, as shown in ~\ref{src:ffmpegframegrabber}.
+FFmpeg is a framework that performs encoding, decoding, transcoding, streaming and filter operations in all the well known video formats, across a large number of platforms. It is used in the "Setup Server" to read streams from any format and restream them all to the same format. In the Analytic module it is used to grab the frames from both the video files and the streams using the same code, as shown in ~\ref{src:ffmpegframegrabber}.
 
 \begin{lstlisting}[float,language=Java, label={src:ffmpegframegrabber}, caption=FFmpegFrameGrabber usage example] 
 // videopath can be either a stream path or a file path
@@ -60,36 +44,12 @@ while( (currentFrame = _frameGrabber.grabImage()) != null) {
 }
 \end{lstlisting}
 
-\section{Architecture}
+\section{Techniques}
 
-\subsection{Implementation Architecture}
+The following section presents a list of the techniques applied during the project, as they were described in Chapter ~\ref{chap:sota}, now diving into more technical details. Following this section a reader can implement a similar solution to the one presented in this document.
 
-\begin{figure}[h]
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=0.95\textwidth]{ManagerArch}
-    \caption{Manager Architecture}
-    \label{fig:manager_arch}
-  \end{center}
-\end{figure}
-
-
-The Analytics module was designed to comply with the following specifications, imposed by both our partner and to comply with the already developed modules. 
-
-\begin{itemize}
-	\item Run uninterruptedly waiting for requests to be made;
-	\item Allow for video analysis with no significant delay;
-	\item Process a large number of video inputs at the same time;
-	\item Receive input from streams or files;
-	\item Specify which analysis are to be run on a specific video;
-	\item Use free-to-use or open-source tools;
-	\item Allow for deployment scalability.
-\end{itemize}
-
-
-The application main thread runs an instance of the AnalyticsManager class that implements the Java Runnable interface. This thread will launch one CameraAnalyticsManager instance for each video to be analysed, be it from stream or from file, and keep track of each worker status, disposing of them when they finish, and launching new ones when a request is received. The CameraAnalyticsManager is then responsible to query the database in order to find out what are the analytics the user wants to retrieve from the video through information that is stored in the \textit{camera} table of the database. This process then starts a frame grabber that will convert each frame of the video into its representation in OpenCV and feed it to each Analyser through a queue. This enables each one of these workers to run at his own pace and if one of them runs slower than the pace at which the frame grabber reads the images, it will simply queue them up and not slow down the remaining workers. The drawback of this solution is that it is theoretically possible to run out of memory to keep these frames, although this limit was not reached during the testing phase.
-
-\section{Segmentation}
+\subsection{Segmentation}
+\label{sub:segmentation}
 
 This section describes how the segmentation of the received images is performed, and how it returns a foreground mask representing the moving areas of the scene. 
 
@@ -102,7 +62,7 @@ This section describes how the segmentation of the received images is performed,
   \end{center}
 \end{figure}
 
-In figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame in order to prevent uninteresting regions of the image from being processed by the Background Subtracter. The masking process consists in placing a binary image, called a mask, over the original image and removing all the information where the mask has false values. 
+In Figure ~\ref{fig:bgsub_01} we can see the original frame on the left and the calculated background model of the scene on the right. To achieve this result, the first step is to mask the obtained frame in order to prevent uninteresting regions of the image from being processed by the Background Subtracter. The masking process consists in placing a binary image, called a mask, over the original image and removing all the information where the mask has false values. 
 
 The application of the mask solves an issue where moving or changing regions of the image outside our area of interest would create unwanted artefacts, for example moving trees due to the wind blowing, or the issue that occurred in this scene, where a car passing would be reflected in the windows of the building.
 
@@ -125,9 +85,9 @@ After updating the background model we can retrieve from the Background Subtract
   \end{center}
 \end{figure}
 
-As we can see in the middle image of figure~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image: a squared erosion filter to remove the small speckles that appear in the mask; followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
+As we can see in the middle image of Figure~\ref{fig:bgsub_02} the foreground mask from the Background Subtracter can have a lot of noise due to lighting conditions. To solve this issue two morphology filters are applied to the image: a squared erosion filter to remove the small speckles that appear in the mask; followed by a larger circular dilation filter to consolidate the positive regions of the mask, as the wind shield and windows of the vehicles are usually detected as background due to their dark colour and/or reflection of the environment.
 
-\section{Object Detection}
+\subsection{Object Detection}
 
 This section describes how the information about the objects' size and position are retrieved from the binary mask returned from the segmentation process. 
 
@@ -142,7 +102,8 @@ OpenCV provides BlobDetector~\cite{opencv_opencv:_2017},  a family of functions 
 
 This however does not work as intended for our input, an already binarized image where we just need to group the connected pixels. For this the project uses the OpenCV function \textit{connectedComponentsWithStats}, that retrieves the groups of connected pixels in a binary image along with their area, width, height and both the leftmost and topmost coordinate of the group's bounding box. From this data we can create an ImageObject instance that will represent a moving object in the scene, using the regions with a size above a given threshold, in order to prevent detection of small objects or noise that got through the filtering process.
 
-\section{Object Tracking}
+
+\subsection{Object Tracking}
 
 In order for the solution to correctly analyse the objects of the scene it needs to track them during their lifetime, in other words, establish a relation between the objects identified on a frame with the objects identified in the next one. This is done by iterating through each one of the new objects and finding which existing object is closer to him. If the distance between them is smaller than the size of the existing object then they are matched.
 
@@ -155,7 +116,7 @@ In order for the solution to correctly analyse the objects of the scene it needs
   \end{center}
 \end{figure}
 
-To enhance this mechanism a sub-set of the state machine presented by Jodoin et. al~\cite{jodoin_urban_2014} which allows us to model the life cycle of an object. As seen in~\ref{fig:object_state_machine} an object starts as an Hypothesis, and cannot be used for analytics while in this state. After being tracked for 5 frames it then changes its state to Normal, where it stays until no match can be found, either from leaving the scene or due to problems with the input frame. An object in this state remains for a maximum of 5 frames, after which it is deleted or until a new object is found in the vicinities of it's last known position.
+To enhance this mechanism a sub-set of the state machine presented by Jodoin et. al~\cite{jodoin_urban_2014} which allows us to model the life cycle of an object. As seen in Figure ~\ref{fig:object_state_machine} an object starts as an Hypothesis, and cannot be used for analytics while in this state. After being tracked for 5 frames it then changes its state to Normal, where it stays until no match can be found, either from leaving the scene or due to problems with the input frame. An object in this state remains for a maximum of 5 frames, after which it is deleted or until a new object is found in the vicinities of it's last known position.
 
 This technique relies on objects appearing close to their previous position in the next scene, and because the project was designed to run in high-way scenarios, where vehicles travel at high speeds, there was the need to improve it. The chosen solution was to follow a method used by Chris Dahms in his vehicle counting software ~\cite{dahms_opencv_3_car_counting_cpp_2017} that predicts an object next position by calculating an weighted average of the previous inter-position deltas and summing it to its current position as shown in ~\ref{eq:pos_pred}.
 
@@ -175,7 +136,20 @@ In figure \ref{fig:object_tracking} we can see the result of the tracking proces
   \end{center}
 \end{figure}
 
-\section{Object Classification}
+\subsection{Object Counting}
+
+This section will provide an overview of the environment created to support the development of the project, a flexible multi feed visualizer as seen in Figure ~\ref{fig:mfeed}. The top-left image shows the tracking process with the green zones indicating the virtual counting sensors. When a vehicle enters the sensor it is counted and classified. The middle top image shows the background model as calculated via the background subtracter explained in Section ~\ref{sub:segmentation}. The top right image and the bottom left one show the foreground mask before and after being processed by the morphological operators to remove the noise.
+
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.95\textwidth]{full_process}
+    \caption{Multi Feed Visualizer}
+    \label{fig:mfeed}
+  \end{center}
+\end{figure}
+
+\subsection{Object Classification}
 
 \begin{figure}[h]
   \begin{center}
@@ -194,20 +168,14 @@ The red series peaks at 2*A\textsubscript{Light}, and any object whose area is l
 
 When an object is counted in one of the virtual sensors its area is passed to this classifier where an interpolation is calculated for each series, returning the certainty with which it belongs to each one of the classes. Using these values the process can distinguish classifications with certainty below and above a user specified threshold to be treated separately.
 
-\section{Feature Point Tracking}
+\subsection{Feature Point Tracking}
 
 The need to track feature points stems from the fact that without them we rely wholly on the background subtraction to process the image. Using feature points we can extract and track details of the vehicles that would otherwise be lost due to the process only working with a binary mask. 
 
-We can use these points to distinguish vehicles grouped in a single binary region, as they are characterized by 
-This way, even if a vehicle stops for a long time and starts to be considered background we can use its tracked points to maintain the position of these stopped vehicles as they regain motion.
+We can use these points to distinguish vehicles grouped in a single binary region, as they are characterized by these features. This way, even if a vehicle stops for a long time and starts to be considered background we can use its tracked points to maintain the position of these stopped vehicles as they regain motion.
 
-\section{Utility}
 
-Over the development of the project the rise needed to implement some functionalities to enhance the code flow and to help the visualization of the implemented algorithms. This section will describe the most relevant ones for the reader to analyse and implement in its own projects.
 
-% \subsection{Video Wall}
-
-% \subsection{Image Processors}
 
 \section{Summary}
 

@@ -1,22 +1,26 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Typical High-Way Traffic Scene\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Convolution Example ~\cite {labs_theory_2017}\relax }}{9}{figure.caption.11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Gaussian Function Variation with Sigma Value\relax }}{10}{figure.caption.12}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Morphology Operators typical structuring elements (5x5) a) Rectangular b) Cross c) Diamond d) Elliptical\relax }}{11}{figure.caption.13}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Result of the Erosion operator using a cross 3x3 kernel\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Result of the Dilation operator using a cross 3x3 kernel\relax }}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Result of the Opening operator using a cross 3x3 kernel\relax }}{12}{figure.caption.16}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Result of the Closing operator using a cross 3x3 kernel\relax }}{12}{figure.caption.17}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces HSV color space components change due to shadows. Red arrows indicate a shadow passing on the point. Blue arrow indicates a vehicle passing ~\cite {prati_shadow_2001} \IeC {\textcopyright }[2001] IEEE\relax }}{13}{figure.caption.18}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Graphical example of the two-pass algorithm ~\cite {wikipedia_connected_2017} a) Original Image b) First Pass c) Second Pass d) Coloured Result\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Typical High-Way Traffic Scene\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Convolution Example ~\cite {labs_theory_2017}\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gaussian Function Variation with Sigma Value\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Morphology Operators typical structuring elements (5x5) a) Rectangular b) Cross c) Diamond d) Elliptical\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Result of the Erosion operator using a cross 3x3 kernel\relax }}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Result of the Dilation operator using a cross 3x3 kernel\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Result of the Opening operator using a cross 3x3 kernel\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Result of the Closing operator using a cross 3x3 kernel\relax }}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces HSV color space components change due to shadows. Red arrows indicate a shadow passing on the point. Blue arrow indicates a vehicle passing ~\cite {prati_shadow_2001} \IeC {\textcopyright }[2001] IEEE\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Graphical example of the two-pass algorithm ~\cite {wikipedia_connected_2017} a) Original Image b) First Pass c) Second Pass d) Coloured Result\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Overview of the method as in \cite {wang_vehicle_2016}\relax }}{18}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Project Planning\relax }}{23}{figure.caption.23}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Manager Architecture\relax }}{25}{figure.caption.25}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Background Subtraction - Background Model\relax }}{26}{figure.caption.26}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Background Subtraction - Foreground Mask\relax }}{27}{figure.caption.27}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Object Life Cycle State Machine\relax }}{28}{figure.caption.28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Object Tracking\relax }}{29}{figure.caption.29}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Object Classifier\relax }}{30}{figure.caption.30}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Project Planning\relax }}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Background Subtraction - Background Model\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Background Subtraction - Foreground Mask\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Object Life Cycle State Machine\relax }}{27}{figure.caption.24}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Object Tracking\relax }}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Multi Feed Visualizer\relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Object Classifier\relax }}{30}{figure.caption.27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Manager Architecture\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Frames from videos used to test\relax }}{33}{figure.caption.30}
 \addvspace {10\p@ }

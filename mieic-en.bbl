@@ -6,6 +6,10 @@ ACM.
 \newblock The 2012 {{ACM Computing Classification System}} \textemdash{}
   {{Association}} for {{Computing Machinery}}, 2012.
 
+\bibitem[Adm17]{administrator_intelligent_2017}
+Administrator.
+\newblock Intelligent {{Transport Systems}} | {{Armis ITS}}, 2017.
+
 \bibitem[AQIS07]{abubaker_one_2007}
 A.~AbuBaker, R.~Qahwaji, S.~Ipson, and M.~Saleh.
 \newblock One {{Scan Connected Component Labeling Technique}}.
@@ -18,6 +22,12 @@ N.~Ayache.
 \newblock In {\em Proceedings. {{Fourteenth International Conference}} on
   {{Pattern Recognition}} ({{Cat}}. {{No}}.{{98EX170}})}, volume~2, pages
   1255--1256 vol.2, August 1998.
+
+\bibitem[BG15]{b_traffic_2015}
+Saran~K. B and Sreelekha G.
+\newblock Traffic video surveillance: {{Vehicle}} detection and classification.
+\newblock In {\em 2015 {{International Conference}} on {{Control Communication
+  Computing India}} ({{ICCC}})}, pages 516--521, November 2015.
 
 \bibitem[BMCM97]{beymer_real-time_1997}
 D.~Beymer, P.~McLauchlan, B.~Coifman, and J.~Malik.
@@ -41,6 +51,13 @@ Jorge Badenas and Filiberto Pla.
 T.~O. Binford and J.~M. Tenenbaum.
 \newblock Computer vision.
 \newblock {\em Computer}, 6(5):19--24, May 1973.
+
+\bibitem[BVO11]{buch_review_2011}
+N.~Buch, S.~A. Velastin, and J.~Orwell.
+\newblock A {{Review}} of {{Computer Vision Techniques}} for the {{Analysis}}
+  of {{Urban Traffic}}.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  12(3):920--939, September 2011.
 
 \bibitem[Can86]{canny_computational_1986}
 J.~Canny.
@@ -290,6 +307,13 @@ A.~Prati, I.~Mikic, C.~Grana, and M.~M. Trivedi.
   Systems}}. {{Proceedings}} ({{Cat}}. {{No}}.{{01TH8585}})}, pages 340--345,
   2001.
 
+\bibitem[QGJX15]{qianyin_model_2015}
+J.~Qianyin, L.~Guoming, Y.~Jinwei, and L.~Xiying.
+\newblock A model based method of pedestrian abnormal behavior detection in
+  traffic scene.
+\newblock In {\em 2015 {{IEEE First International Smart Cities Conference}}
+  ({{ISC2}})}, pages 1--6, October 2015.
+
 \bibitem[RBH90]{rourke_road_1990}
 A.~Rourke, M.~G.~H. Bell, and N.~Hoose.
 \newblock Road traffic monitoring using image processing.
@@ -354,6 +378,13 @@ K.~J. Stout.
 Wikipedia.
 \newblock Connected component labeling, June 2017.
 \newblock Page Version ID: 783324000.
+
+\bibitem[WLGC16]{wang_vehicle_2016}
+S.~Wang, F.~Liu, Z.~Gan, and Z.~Cui.
+\newblock Vehicle type classification via adaptive feature clustering for
+  traffic surveillance video.
+\newblock In {\em 2016 8th {{International Conference}} on {{Wireless
+  Communications Signal Processing}} ({{WCSP}})}, pages 1--5, October 2016.
 
 \bibitem[Zad65]{zadeh_fuzzy_1965}
 L.~A. Zadeh.
